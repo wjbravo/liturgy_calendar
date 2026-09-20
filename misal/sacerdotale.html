@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+<title>TEMPORA</title>
+
+<link rel="stylesheet" href="../misal.css" type="text/css">
+<script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+<script src="../../iscroll-lite.js"></script> 
+<script type="text/javascript" charset="utf-8" src="../../jquery.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="../mis_funciones_misal.js"></script>
+<script> var mipestana='sac' </script>
+</head>
+<body onload="alCargar(mipestana);" >
+<script type="text/javascript"> pinta_tabs('../../',mipestana);</script>
+
+
+<div id='contenedor' >
+<div id='scroller'>
+
+<!-- Todo lo anterior debe estar al comienzo de todos los archivos -->
+<style>
+ div {
+margin-top: 2%;
+}
+a:link , a:visited {
+color: #B50000;
+text-decoration: none;
+}
+</style>
+<div><h2>Sacerdotale</h2></div>
+
+<div><h4><span ontouchend='cambia_vista("latin")'>Latin</span></h4></div>
+
+
+<div style='display: none; width: 100%; ' id="latin">
+<div><a href="sacerdotale_latin.html#confseip_latin" >Oratio ante et post ipsius Confessionem</a></div>
+
+<div><a href="sacerdotale_latin.html#confalt_latin" >Oratio sacerdotis ante et post excipere Confessiones</a></div>
+
+<div><a href="sacerdotale_latin.html#penit_latin" >Ordo Pænitentiæ</a></div>
+
+<div><a href="sacerdotale_latin.html#cfm_latin" >Communio extra Missam</a></div>
+
+<div><a href="sacerdotale_latin.html#cenf_latin" >Ordo ministrandi Communionem infirmorum</a></div>
+
+<div><a href="sacerdotale_latin.html#bendag_latin" >Benedictio aquæ extra Missam</a></div>
+
+<div><a href="sacerdotale_latin.html#recom_latin" >Ordo Commendationis Animæ</a></div>
+
+
+</div>
+
+<hr class=red>
+<div  ><h4><span ontouchend='cambia_vista("espanol")'>Español</span></h4></div>
+
+
+<div style='display: none; width: 100%; ' id="espanol">
+<div><a href="sacerdotale_cast.html#exp_cast" >Exposición y Bendición Eucarística</a></div>
+
+<div><a href="sacerdotale_cast.html#penit_cast" >Rito de la Penitencia</a></div>
+
+<div><a href="sacerdotale_cast.html#cfm_cast" >Rito para distribuir la Sagrada Comunión fuera de la Misa</a></div>
+
+<div><a href="sacerdotale_cast.html#cenf_cast" >Rito para la Comunión de enfermos</a></div>
+
+<div><a href="sacerdotale_cast.html#bendag_cast" >Bendición del agua fuera de la Misa</a></div>
+
+<div><a href="sacerdotale_cast.html#baut_npm" >Bautismo de un niño en peligro de muerte</a></div>
+
+<div><a href="sacerdotale_cast.html#confirm_epm" >Confirmación de un enfermo en peligro de muerte</a></div>
+
+<div><a href="sacerdotale_cast.html#pen_epm" >Sacramento de la Penitencia</a></div>
+
+<div><a href="sacerdotale_cast.html#absol_cens" >Absolución de censuras</a></div>
+
+<div><a href="sacerdotale_cast.html#disp_irr" >Dispensa de irregularidad</a></div>
+
+<div><a href="sacerdotale_cast.html#unc_cond" >Unción bajo condición</a></div>
+
+<div><a href="sacerdotale_cast.html#form_brev" >Fórmulas brevísimas<br>(Bautismo, Confirmación, Penitencia, Unción)</a></div>
+
+<div><a href="sacerdotale_cast.html#pen_unc_viat" >Rito continuo de la Penitencia, Unción y Viático</a></div>
+
+<div><a href="sacerdotale_cast.html#unc_sin_viat" >Sagrada Unción sin Viático</a></div>
+
+<div><a href="sacerdotale_cast.html#bend_apost" >Fórmula de Bendición Apostólica para el momento de la muerte</a></div>
+
+<div><a href="sacerdotale_cast.html#recom_alma" >Recomendación del alma</a></div>
+
+<div><a href="sacerdotale_cast.html#resp_1" >Responso I (breve)</a></div>
+
+<div><a href="sacerdotale_cast.html#resp_2" >Responso II (breve)</a></div>
+
+<div><a href="sacerdotale_cast.html#resp_3" >Responso III (largo)</a></div>
+
+<div><a href="sacerdotale_cast.html#est_dif" >Estación en la casa del difunto</a></div>
+
+<div><a href="sacerdotale_cast.html#est_igl" >Estación en la Iglesia</a></div>
+
+<div><a href="sacerdotale_cast.html#misa_exeq" >Misa exequial o Liturgia de la Palabra</a></div>
+
+<div><a href="sacerdotale_cast.html#ult_adios" >Último adiós al cuerpo del difunto (en el cementerio)</a></div>
+
+<div><a href="sacerdotale_cast.html#orac_div_dif" >Oraciones diversas por algunos difuntos</a></div>
+
+</div>
+
+
+<hr class=red>
+<div  ><h4><span ontouchend='cambia_vista("english")'>English</span></h4></div>
+
+
+<div style='display: none; width: 100%; ' id="english">
+<div><a href="sacerdotale_engl.html#exp_engl" >Eucharistic Exposition and Benediction</a></div>
+
+<div><a href="sacerdotale_engl.html#penit_engl" >Rite of Penance</a></div>
+
+<div><a href="sacerdotale_engl.html#cfm_engl" >Communion outside Mass</a></div>
+
+<div><a href="sacerdotale_engl.html#cenf_engl" >Administration of Communion to the sick</a></div>
+
+<div><a href="sacerdotale_engl.html#bendag_engl" >Blessing of Holy Water Outside of Mass</a></div>
+
+<div><a href="sacerdotale_engl.html#recom_engl" >Recommendation of a Soul Departing</a></div>
+
+<div><a href="sacerdotale_engl.html#death_near" >Prayer When Death Is Near.</a></div>
+
+</div>
+
+
+<hr class=red>
+<div  ><h4><span ontouchend='cambia_vista("italiano")'>Italiano</span></h4></div>
+
+<div style='display: none; width: 100%; ' id="italiano">
+
+<div><a href="sacerdotale_ital.html#exp_ital" >Esposizione e Benedizione eucaristica</a></div>
+
+<div><a href="sacerdotale_ital.html#penit_ital" >Rito della Penitenza</a></div>
+
+<div><a href="sacerdotale_ital.html#cfm_ital" >La Santa Comunione fuori della Messa</a></div>
+
+<div><a href="sacerdotale_ital.html#cenf_ital" >La Santa Comunione agli infermi</a></div>
+
+<div><a href="sacerdotale_ital.html#bendag_ital" >Benedizione dell'acqua lustrale fuori della messa</a></div>
+
+<div><a href="sacerdotale_ital.html#absol_cens" >Rito per conferire l'assoluzione dalle censure</a></div>
+
+<div><a href="sacerdotale_ital.html#disp_irr" >La dispensa dall' irregolarita'</a></div>
+
+<div><a href="sacerdotale_ital.html#unc_cond" >L'Unzione sotto condizione</a></div>
+
+<div><a href="sacerdotale_ital.html#form_brev" >Estrema necessità<br>(Battesimo, Confermazione, Penitenza, Unzione)</a></div>
+
+<div><a href="sacerdotale_ital.html#confirm_epm" >La Confermazione in pericolo di morte</a></div>
+
+<div><a href="sacerdotale_ital.html#pen_unc_viat" >Rito continuo della Penitenza, dell'Unzione e del Viatico</a></div>
+
+<div><a href="sacerdotale_ital.html#unc_sin_viat" >rito dell'Unzione senza il Viatico</a></div>
+
+<div><a href="sacerdotale_ital.html#bend_apost" >Indulgenza plenaria</a></div>
+
+<div><a href="sacerdotale_ital.html#recom_ital" >Raccomandazione dei moribondi</a></div>
+
+</div>
+<hr class=red>
+
+
+<div class=final_pagina>
+<div style='margin-bottom: 10pt; text-align: center;'>
+<a class="boton" ontouchend="myScroll.scrollToPage(0,0,100)">&#9679;</a>
+</div>
+<hr class='red'>
+<hr class='red'>
+</div>
+
+
+<!-- Todo lo siguiente debe estar al final de todos los archivos --> 
+</div> 
+</div> 
+<script>pinta_botones('../../',mipestana);</script> 
+</body> 
+</html> 

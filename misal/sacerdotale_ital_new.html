@@ -1,0 +1,1792 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text.html;" charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+<title>TEMPORA</title>
+
+
+<link rel="stylesheet" href="../../jquery.mobile.css" type="text/css">
+<link rel="stylesheet" href="../../mitema-rcr.css" type="text/css">
+
+
+<script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="../../jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../jquery.mobile-1.4.2.js"></script>
+
+
+
+<script>
+
+function getUrlVars() {
+	var url=window.location.href.replace(window.location.hash,'')
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+function dime_pref (key, defecto) {
+  var resultado = window.localStorage.getItem(key)
+
+  if (resultado == null)  resultado = defecto
+   //console.log('Saco: '+ key+ '... -> ... '+resultado)
+  return resultado
+}
+function cambialengua (objeto){
+// según sean las preferencias y la primera letra del id del div padre del elemento desde el que se ha llamado esta funcion muestra/oculta un idioma, u otro
+
+
+if (mipreferencia['presentaciontexto']<=1 || mimisal_1 == mimisal_2 ) return
+
+
+cambia = false
+cambiaAlatin = false
+cambiaAcast = false
+if (objeto.tagName=='SPAN') objeto = objeto.parentNode
+
+if  (objeto.parentNode.className=='pueblo'  || mipreferencia['presentacionrespuestas']==5 )   { cambia = true;
+} else if  (mipreferencia['presentaciontexto']==2 && (objeto.className !='botonlengua')) { cambia = true ;
+} else if  (mipreferencia['presentaciontexto']==3 && (objeto.className =='botonlengua'))   cambia = true
+
+
+if (cambia) {
+
+	encontrado = false
+
+	if (objeto.className== mimisal_2 ) {
+		cambiaAlatin = true ;
+		encontrado= true ;
+	} else if (objeto.className== mimisal_1 ) {
+		cambiaAcast = true ;
+		encontrado= true ;
+	}
+
+	if (!encontrado) {
+	if ($(objeto).parents('.'+mimisal_2).length > 0)  { cambiaAlatin = true ; } else if ($(objeto).parents('.'+mimisal_1).length > 0)  cambiaAcast = true ;
+	}
+
+
+	if (cambiaAlatin ) {
+			if (encontrado) {
+				padre = $(objeto).parents()[0]
+			} else {
+				padre = $(objeto).parents('.'+mimisal_2)[0].parent()[0]
+			}
+			if ($(padre).children("."+mimisal_1).length >0) {
+				$(padre).children("."+mimisal_2).css('display', 'none')
+				$(padre).children("."+mimisal_1).css('display', 'block')
+				$(padre).children("."+mimisal_1+':empty').text('--- ??? ---')
+				}
+			} else  if (cambiaAcast ) {
+			if (encontrado) {
+						padre = $(objeto).parents()[0]
+			} else {
+				padre = $(objeto).parents('.'+mimisal_1)[0].parent()[0]
+			}
+			if ($(padre).children("."+mimisal_2).length >0) {
+				$(padre).children("."+mimisal_2).css('display', 'block')
+				$(padre).children("."+mimisal_1).css('display', 'none')
+				$(padre).children("."+mimisal_2+':empty').text('--- ??? ---')
+				}
+		}
+
+
+}
+
+
+
+
+return
+}
+function extrae_preferencias() {
+	var url=preferencias
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+function pon_pref(key,value) {
+window.localStorage.setItem(key, value);
+//console.log('Guardo: '+value + ' ...  --> ... ' + key)
+ }
+function cambia_pref(pref,nuevovalor) {
+
+mipreferencia[pref] = nuevovalor
+preferencias = "?fondo="+mipreferencia["fondo"]
+preferencias +=  "&tamanotexto="+mipreferencia["tamanotexto"]
+preferencias +=  "&avance="+mipreferencia["avance"]
+preferencias +=  "&tipoletra="+mipreferencia["tipoletra"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma"]
+preferencias += "&tamanomenus="+mipreferencia["tamanomenus"]
+preferencias +=  "&presentaciontexto="+mipreferencia["presentaciontexto"]
+preferencias +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas"]
+preferencias +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas"]
+preferencias +=  "&presentacionbotones="+mipreferencia["presentacionbotones"]
+preferencias += "&oracionestodos="+mipreferencia["oracionestodos"]
+preferencias +=  "&botoneszurdos="+mipreferencia["botoneszurdos"]
+window.localStorage.setItem('preferencias', preferencias);
+
+pon_pref("cambiartamano",1);
+}
+function cambia_vista(miId) {
+
+mielemento= document.getElementById(miId)
+
+$('#'+miId).toggle();
+// ahora guardamos el nuevo estado de lo que hemos variado en la variable embutidos
+//embutir(miId,mielemento.style.display)
+embutir(miId,$('#'+miId).css("display"))
+
+}
+function mi_oracion() {
+var hoy = new Date()
+            var dl = hoy.getDate();
+			var dia = hoy.getDay();
+if (dl>14 && dl<22 && dia == 0) {
+muestraono('otras',true)
+muestraono('orac23',true)
+	$("#orac23").get(0).scrollIntoView();
+
+} else if (dia == 2) {
+muestraono('otras',true)
+muestraono('orac18',true)
+	$("#orac18").get(0).scrollIntoView();
+} else if (dia == 4) {
+muestraono('otras',true)
+muestraono('orac25',true)
+	$("#orac25").get(0).scrollIntoView();
+} else {
+muestraono('gracias',true)
+muestraono('orac17',true)
+	$("#orac17").get(0).scrollIntoView();
+
+}
+	window.scrollBy(0, -80)
+
+	contador=0
+}
+function muestraono(miId,siono) {
+var mielemento= document.getElementById(miId)
+if (siono) { mielemento.style.display = 'block'; } else mielemento.style.display = 'none';
+
+// ahora guardamos el nuevo estado de lo que hemos variado en la variable embutidos
+embutir(miId,mielemento.style.display)
+
+}
+function embutir(miId,mivalor) {
+
+if ( typeof embutidos === 'undefined' || embutidos.length==0)  {
+embutidos = miId+ 'YYY' +mivalor
+} else {
+//		alert ('embutir :' + miId + ' / '+ mivalor + embutidos + embutidos.length)
+		encontrado=false
+		embutidos2=""
+
+	var trocito=embutidos.split("XXX");
+	var tamano = trocito.length,
+    elemento = null;
+for (var i = 0; i < tamano; i++) {
+  miparrafo = trocito[i];
+
+				mivariable=miparrafo.split('YYY')
+				var otroId=mivariable[0]
+				var otrovalor=mivariable[1]
+			//		alert(otroId+otrovalor)
+			if (otroId==miId) {
+				encontrado=true
+				otrovalor=mivalor
+			}
+
+			embutidos2 +=otroId+'YYY'+otrovalor+'XXX'
+
+		}
+		if (!encontrado) embutidos2 += miId + 'YYY' + mivalor + 'XXX'
+		embutidos=embutidos2.substr(0,embutidos2.length-3)
+	}
+ //alert('embutidos :' + embutidos )
+}
+function editarCampo(operacion) {
+  if (operacion==4) {
+$("#micampo").val('')
+} else {
+$("#misinttxt").toggle();
+ $("#micampo").toggle();
+ $("#boton_editar").toggle();
+ $("#boton_guardar").toggle();
+ if (operacion==0) {
+ $("#micampo").get(0).scrollIntoView();
+} else  if (operacion==1) {
+ pon_pref("misintenciones",$("#micampo").val().replace(/\n/g,"<br>"));
+ $("#misinttxt").html(dime_pref("misintenciones","---"));
+ $("#misintenciones").get(0).scrollIntoView();
+} else if (operacion==3) {
+$("#micampo").val(misintenciones_inic.replace(/<br>/gi,"\n"));
+}
+}
+}
+function loaded() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+if (mimisal_1!='latin' && mimisal_2!='latin') $('.latin').remove()
+if (mimisal_1!='cast' && mimisal_2!='cast') $('.cast').remove()
+if (mimisal_1!='engl' && mimisal_2!='engl') $('.engl').remove()
+if (mimisal_1!='germ' && mimisal_2!='germ') $('.germ').remove()
+if (mimisal_1!='ital' && mimisal_2!='ital') $('.ital').remove()
+
+
+
+
+  }
+function backKeyDown() {
+  //console.log("Back Button Pressed!");
+      navigator.app.exitApp();
+  }
+function onDeviceReady() {
+    // Register the event listener
+        //console.log("PhoneGap preparado!");
+    document.addEventListener("backbutton", backKeyDown, true);
+navigator.splashscreen.hide()
+document.addEventListener("volumeupbutton", retrasa_pantalla, false);
+
+document.addEventListener("volumedownbutton", avanza_pantalla, false);
+}
+
+function    retrasa_pantalla() {
+	window.scrollBy(0, -eval(window.innerHeight-10))
+
+}
+
+function    avanza_pantalla() {
+	window.scrollBy(0, eval(window.innerHeight-10))
+}
+function cambia_vista2(miId) {
+
+ $("#"+miId).popup("close");
+}
+function ponletreros(num) {
+
+ $("#titulo"+num).html('-> '+num+': ('+dime_pref('titulo'+num,'- '+num+' -')+')');
+ $("#titulo0"+num).html(num+': '+dime_pref('titulo'+num,'- '+num+' -'));
+
+
+}
+function cambiafuente() {
+if (mipreferencia["tipoletra"]==1) { $("body").css('font-family','Times New Roman'); nuevaletra=0; } else { $("body").css('font-family','Arial'); nuevaletra=1;}
+}
+function cambiatamanoletra(num) {
+$("body").css('font-size',num+'pt'); maspeq=num-1; masgrande=num+1;
+
+$('.titulo002').html(mipreferencia['tamanotexto']+"&nbsp;&#9654;&#xFE0E;&nbsp;<span style='  font-size: 120%;  '>"+masgrande+"</span>");
+$('.titulo003').html(mipreferencia['tamanotexto']+"&nbsp;&#9654;&#xFE0E;&nbsp;<span style='  font-size: 80%;  '>"+maspeq+"</span>");
+}
+
+var desplaz = getUrlVars()["posicion"];
+if (typeof desplaz === 'undefined') {desplaz = 0 ; } else   $(function() {
+    $.mobile.defaultHomeScroll = desplaz;
+  });
+
+var estoymac_def = window.localStorage.getItem('estoymac')
+var idiomas = ['latin','cast','engl','germ','ital']
+var mipestana='dev'
+var sinmisal = false
+var mipreferencia = new Array()
+var embutidos = getUrlVars()["embutidos"];
+if ((typeof embutidos === 'undefined' )) embutidos=''
+var misintenciones_inic=dime_pref("misintenciones","---")
+var miposicion=0
+
+mipreferencia=getUrlVars()
+
+if (estoymac_def == null ) { estoymac = false; } else estoymac = true ;
+
+
+
+
+preferencias = window.localStorage.getItem('preferencias')
+mipreferencia=extrae_preferencias()
+
+
+var mimisal_1='lengua1'
+var mimisal_2='lengua2'
+
+var parcial2 = getUrlVars()['parcial']
+
+
+ mitexto='';
+  if  (mipreferencia['tipoletra']==1) {
+mitexto=' body  { font-family: "Times New Roman"; }  '
+} else  mitexto=' body  { font-family: "Arial"; }  '
+
+  if  (mipreferencia['fondo']==0) {
+mitexto=+'  body  {background-color: white; background-image: none; font-size: '+ mipreferencia['tamanotexto']+'pt }    ';
+} else  if  (mipreferencia['fondo']==1) {
+mitexto+='  body  { font-size: '+ mipreferencia['tamanotexto']+'pt; }   ';
+}
+mitexto +='   .red , .roja  {  	color:#B50000;  } span.boton { background: url("../../boton.png") top right no-repeat; color: white; padding: 5px; }  ';
+mitexto +='   .latin , .cast , .engl , .ital , .misal_latin , .misal_cast , .misal_engl , .misal_ital { display: none;  }    ';
+mitexto +='  div div.latin , div div.cast , div div.engl , div div.ital  { margin-top: 1em;  }    ';
+mitexto +=' .cruzroja { 	color:#B50000; font-size: 100%; font-weight: bold;}	';
+mitexto +='a h4  { width: 100%;  }    ';
+mitexto +=' h2 {border: 1px solid; width: 90%; padding: 10px; color: #660000; font-size: 120%;font-weight: normal; margin-left: auto; text-align: center; margin-right: auto;}  ';
+
+
+	mitexto += ' .ui-grid-solo , .ui-block-a , .titulo_orac { clear: both; } ';
+// presentaciontexto: 0	Sin traduccion	1	dos columnas	2	cambio tocando
+	  if  (mipreferencia['presentaciontexto']==0 || ( mipreferencia['misal_pral'] == mipreferencia['segundoidioma'] ) ) {
+		mitexto +='   div .re ,  hr .re  { float: left; width: 100%; } .'+ mimisal_1+' , .lengua1 { float: left; width: 98%; display: block; margin: 1%; }   .botonlengua { background-image: none; padding-left: 0; padding-right: 0; } ';
+		} else  if  (mipreferencia['presentaciontexto']==1) {
+
+//	mitexto += ' .texto_oracion { margin-right: 1%; margin-left: 1%; width: 98%; } ';
+	mitexto +='   div .re ,  hr .re  { float: left; width: 100%; } .'+ mimisal_1+' , .lengua1 { float: left; width: 49%; display: block;  } .'+ mimisal_2+' , .lengua2 { float: right; display: block; width: 47%; margin-right: 1%; }   .botonlengua { background-image: none; padding-left: 0; padding-right: 0; }  h1 { width: 80%; }';
+		} else if  (mipreferencia['presentaciontexto']==2) {
+		mitexto +='   div .re ,  hr .re  { float: left; width: 100%; } .'+ mimisal_1+' , .lengua1 { float: left; width: 98%; display: block; margin: 1%; } .'+ mimisal_2+' , .lengua2 { float: left; display: none; width: 98%; margin: 1%; }  .botonlengua { background-image: none;  padding-left: 0; padding-right: 0; }   ';
+		}
+
+
+	mitexto +=' .misal_'+ mimisal_1+' { display: block; margin: 1%;  overflow: hidden; text-overflow: ellipsis; } ';
+
+
+var contador=0
+
+document.write ('<style> '+ mitexto + ' </style>');
+
+	directorio2 = '../'
+
+   // menu diamante
+
+  masgrande = eval(mipreferencia['tamanotexto']) + 1
+  maspeq = eval(mipreferencia['tamanotexto']) - 1
+
+  if (mipreferencia['tipoletra']==1) { nuevaletra=0; } else nuevaletra=1;
+
+
+</script>
+</head>
+<body >
+
+
+<div data-role='page' id='exp_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>ESPOSIZIONE E DELLA BENEDIZIONE EUCARISTICA</h2></div>
+
+
+
+<div>
+	<div class='lengua1' ><p>Pange, lingua, gloriósi<br>Córporis mystérium,<br>Sanguinísque pretiósi,<br>quem in mundi prétium<br>fructus ventris generósi<br>Rex effúdit géntium.</p></div>
+	<div class='lengua2' ><p>Canta, o mia lingua,<br>il mistero del corpo glorioso<br>e del sangue prezioso<br>che il Re delle nazioni,<br>frutto benedetto di un grembo generoso,<br>sparse per il riscatto del mondo.</p></div>
+</div>
+
+<div class=red style='clear: both;  text-align: center; margin: 5%;'>* * *</div>
+
+<div>
+	<div class='lengua1' ><p>Tantum ergo sacraméntum<br>venerémur cérnui,<br>et antiquum documéntum<br>novo cedat rítui;<br>præstet fides suppleméntum<br>sénsuum deféctui.</p></div>
+	<div class='lengua2' ><p>Adoriamo, dunque, prostrati<br>un sì gran sacramento;<br>l’antica legge<br>ceda alla nuova,<br>e la fede supplisca<br>al difetto dei nostri sensi.</p></div>
+</div>
+
+<div style='clear: both; '>
+	<div class='lengua1' ><p>Genitóri Genitóque<br>laus et iubilátio,<br>salus, honor, virtus quoque<br>sit et benedíctio;<br>procedénti ab utróque<br>compar sit laudátio.</p></div>
+	<div class='lengua2' ><p>
+
+Gloria e lode,<br>salute, onore,<br>potenza e benedizione<br>al Padre e al Figlio:<br>pari lode sia allo Spirito Santo,<br>che procede da entrambi.</p></div>
+</div>
+
+<div style='clear: both; '>
+	<div class='lengua1' ><span class=red>V/. </span>Panem de cælo præstitísti eis <span class=red>(T. P. </span>Allelúia<span class=red>)</span>.</div>
+
+</div>
+<div style='clear: both; '>
+	<div class='lengua1' ><span class=red>R/. </span>Omne delectamén­tum in se habéntem <span class=red>(T. P. </span>Allelúia<span class=red>)</span>.</div>
+
+</div>
+
+<div style='clear: both; '><br><div class='lengua2' >Preghiamo.</div>
+	<div class='lengua1' >ORÉMUS</div>
+<div style='clear: both; ' class=red ><br>Dopo una breve pausa di silenzio, prosegue:</div>
+	<div class='lengua1' >Deus, qui nobis sub sacraménto mirábili passiónis tuæ  memóriam Reliquísti,<br>tríbue, quǽsumus,<br>ita nos Córporis et Sánguinis tui sacra mystéria venerári,<br>ut redemptiónis tuæ fructum in nobis iúgiter sentiámus.<br>Qui vivís et regnas in sǽcula sǽculórum.
+</div>
+	<div class='lengua2' >Signore Gesù Cristo,<br>che nel mirabile sacramento dell'Eucaristia<br>ci hai lasciato il memoriale della tua Pasqua,<br>fa' che adoriamo con viva fede<br>il santo mistero del tuo corpo e del tuo sangue,<br>per sentire sempre in noi i benefici della redenzione.<br>Tu che vivi e regni nei secoli dei secoli.</div>
+</div>
+<div><span class=red>R/﻿. </span>Amen.</div>
+
+<div class=red style='text-align: center; margin: 5%; clear: both; '>* * *</div>
+
+<div style='clear: both; '>
+
+    <p class="s68">Dio sia benedetto<br>Benedetto il Suo santo Nome.<br>Benedetto Gesù Cristo, vero Dio e vero Uomo.<br>Benedetto il Nome di Gesù.<br>Benedetto il Suo Sacratissimo Cuore.<br>Benedetto il Suo Preziosissimo Sangue.<br>Benedetto Gesù nel Santissimo Sacramento dell'altare.<br>Benedetto lo Spirito Santo Paraclito.<br>Benedetta la gran Madre di Dio, Maria Santissima.<br>Benedetta la Sua santa e Immacolata Concezione.<br>Benedetta la Sua gloriosa Assunzione.<br>Benedetto il Nome di Maria, Vergine e Madre.<br>Benedetto San Giuseppe, suo castissimo Sposo.<br>Benedetto Iddio nei suoi Angeli e nei suoi Santi.</p></div>
+<div class=red style='text-align: center; margin: 5%; clear: both; '>* * *</div>
+
+<div style='clear: both; '>
+	<div class='lengua1' >Laudáte Dóminum omnes gentes:<br>laudáte eum, omnes pópuli.<br>Quóniam confirmáta est super nos misericórdia eius,<br>et véritas Dómini manet in ætérnum.<br>Glória Patri, et Fílio, et Spirítui Sancto.<br>Sicut erat in princípio, et nunc, et semper, et in sǽcula sæculórum. Amen.</div>
+
+</div>
+
+
+</div>
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup1_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup1_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup1_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='penit_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+<div><h2>RITO DELLA PENITENZA</h2></div>
+<div class=red>Il penitente rivolge il saluto abituale e si fa il segno della croce. Il sacerdote dice:</div>
+<div><span class=red>V/. </span>Il Signore sia nel tuo cuore, perché tu possa pentirti e confessare umilmente i tuoi peccati.</div>
+<div class=red>Il sacerdote o il penitente può dire alcune parole della Sacra Scrittura sulla misericordia di Dio e la penitenza, ad esempio:</div>
+<div><span class=red>R/. </span>Tu sai tutto, o Signore, tu sai che ti amo. <span class=red>(Gv 21,17)</span></div>
+<div class=red>Il penitente confessa poi i suoi peccati. Il sacerdote gli dà i consigli opportuni e gli impone la penitenza ed invita il penitente a manifestare la contrizione, dicendo ad esempio:</div>
+<div><span class=red>R/. </span>Signore Gesù, Figlio di Dio, abbi pietà di me peccatore.</div>
+<div><span class=red>V/. </span>Dio, Padre di misericordia, che ha riconciliato a sé il mondo nella morte e risurrezione del suo Figlio, e ha effuso lo Spirito Santo per la remissione dei peccati, ti conceda, mediante il ministero della Chiesa, il perdono e la pace.<br>E IO TI ASSOLVO DAI TUOI PECCATI NEL NOME DEL PADRE E DEL FIGLIO <span class='cruzroja'>&#10016;</span> E DELLO SPIRITO SANTO.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div><span class=red>V/. </span>La passione di Gesù Cristo nostro Signore, l’intercessione della Beata Vergine Maria e di tutti i santi, il bene che farai e il male che dovrai sopportare ti giovino per il perdono dei peccati, l’aumento della grazia e il premio della vita eterna. Va’ in pace.</div>
+
+
+</div>
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup2_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup2_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup2_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='cfm_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>LA SANTA COMUNIONE FUORI DELLA MESSA</h2></div>
+<div class=red>RITI INIZIALI</div>
+<div class=red>Il ministro saluta i presenti.</div>
+<div><span class=red>V/. </span>Il Signore sia con voi.</div>
+<div><span class=red>R/. </span>E con il tuo spirito.</div>
+<div><span class=red>V/. </span>Fratelli, riconosciamo i nostri peccati
+e chiediamo il perdono del Signore per esser degni di partecipare a questa sacra celebrazione.</div>
+<div class=red>Si fa una breve pausa di silenzio. Poi tutti insieme fanno la confessione:</div>
+<div>Confesso a Dio onnipotente e a voi, fratelli,<br>che ho molto peccato<br>in pensieri, parole, opere e omissioni,<br><span class=red>e, battendosi il petto, dicono:</span><br>per mia colpa, mia colpa, mia grandissima colpa.<br><span class=red>E proseguono:</span><br>E supplico la beata sempre vergine Maria,<br>gli angeli, i santi e voi, fratelli,<br>di pregare per me il Signore Dio nostro.</div>
+<div><span class=red>V/. </span>Dio onnipotente abbia misericordia di noi,<br>perdoni i nostri peccati,<br>e ci conduca alla vita eterna.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>Omessa a questo punto la celebrazione della parola di Dio, uno dei presenti o il ministro stesso legge, secondo l'opportunità, un breve testo della sacra Scrittura, in cui si accenna al pane della vita come, per esempio, uno dei seguenti che si può introdurre con queste parole o con altre simili:</div>
+
+<div>Dice il Signore:</div>
+<div><span class=alin_dcha>Gv 6, 51</span><br>Io sono il pane vivo, disceso dal cielo.<br>Se uno mangia di questo pane vivrà in eterno<br>e il pane che io darò è la mia carne<br>per la vita del mondo.</div>
+
+<div><span class=red>Oppure:</span><span class=alin_dcha>Gv 6, 54-55</span></div>
+
+<div>Chi mangia la mia carne<br>e beve il mio sangue<br>ha la vita eterna<br>e io lo risusciterò nell'ultimo giorno.<br>Perché la mia carne è vero cibo<br>e il mio sangue vera bevanda.</div>
+
+<div class=red>Il ministro prende la pisside con il corpo del Signore, la depone sull'altare e genuflette. Quindi fa l'introduzione alla preghiera del Signore con queste parole o con altre simili:</div>
+<div>Obbedienti alla parola del Salvatore
+e formati al suo divino insegnamento,
+osiamo dire:</div>
+<div class=red>e tutti insieme dicono:</div>
+<div>Padre nostro, che sei nei cieli,<br>sia santificato il tuo nome,<br>venga il tuo regno,<br>sia fatta la tua volontà, come in cielo così in terra.<br>Dacci oggi il nostro pane quotidiano,<br>e rimetti a noi i nostri debiti<br>come noi li rimettiamo ai nostri debitori,<br>e non ci indurre in tentazione, ma liberaci dal male.</div>
+
+<div class=red>Poi il ministro genuflette, prende l'ostia e tenendola alquanto sollevata sulla pisside, rivolto ai comunicandi, dice:</div>
+<div><span class=red>V/. </span>Beati gli invitati alla Cena del Signore.<br>Ecco l'Agnello di Dio,<br>che toglie i peccati del mondo.</div>
+<div class=red>E i comunicandi soggiungono insieme:</div>
+<div><span class=red>R/. </span>O Signore, non sono degno<br>di partecipare alla tua mensa:<br>ma di' soltanto una parola e io sarò salvato.</div>
+
+<div class=red>Prende poi la pisside, si reca verso i comunicandi, e presenta a ognuno l'ostia tenendola alquanto sollevata e dice:</div>
+
+<div><span class=red>V/. </span>Il corpo di Cristo.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>E riceve la comunione.<br>Terminata la distribuzione della comunione, il ministro fa cadere nella pisside gli eventuali frammenti rimasti sulla patena e, secondo l'opportunità, si lava le mani. Se avanzano particole, ripone il Sacramento nel tabernacolo e genuflette.<br>Quindi, secondo l'opportunità, si può fare una pausa di sacro silenzio.<br>Poi il ministro dice l'orazione conclusiva:</div>
+
+<div><span class=red>V/. </span>Preghiamo.<br>Signore Gesù Cristo,<br>che nel mirabile sacramento dell'Eucaristia<br>ci hai lasciato il memoriale della tua Pasqua,<br>fa' che adoriamo con viva fede<br>il santo mistero del tuo corpo e del tuo sangue,<br>per sentire sempre in noi i benefici della redenzione.<br>Tu che vivi e regni nei secoli dei secoli.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure NEL TEMPO DI PASQUA:</div>
+
+<div><span class=red>V/. </span>Preghiamo.<br>Infondi in noi, o Padre,<br>lo Spirito della tua carità,<br>perché saziati con i sacramenti pasquali,<br>viviamo concordi nel vincolo del tuo amore.<br>Per Cristo nostro Signore.</div>
+<div><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Quindi il ministro, se è sacerdote o diacono, rivolto verso il popolo, aprendo le braccia dice:</div>
+
+<div><span class=red>V/. </span>Il Signore sia con voi.</div>
+<div><span class=red>R/. </span>E con il tuo spirito.</div>
+
+<div><span class=red>V/. </span>Vi benedica Dio onnipotente,
+Padre e Figlio <span class='cruzroja'>&#10016;</span> e Spirito Santo.</div>
+<div><span class=red>R/. </span>Amen.</div>
+
+<div class=red>E fatta la debita riverenza, il ministro si ritira.</div>
+</div>
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup3_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup3_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup3_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='cenf_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>LA SANTA COMUNIONE AGLI INFERMI</h2></div>
+<div class=red>RITI INIZIALI</div>
+<div class=red>Il ministro, entrando dal malato, rivolge a lui e a tutti i presenti un fraterno saluto. Lo può fare con queste parole o con altre simili:</div>
+<div><span class=red>V/. </span>Pace a questa casa e a quanti vi abitano.</div>
+<div class=red><p>Poi, deposto il Santissimo sulla mensa, lo adora insieme con i presenti.</p><p>Quindi, secondo l'opportunità, asperge con l'acqua benedetta l'infermo e la stanza, dicendo la formula seguente:</p></div>
+<div><span class=red>V/. </span>Ravviva in noi, Signore,<br>nel segno di quest'acqua benedetta,<br>il ricordo del Battesimo<br>e la nostra adesione a Cristo Signore,<br>crocifisso e risorto per la nostra salvezza.</div>
+
+<div class=red>Il ministro invita l'infermo e i presenti a fare l'atto penitenziale con queste parole o con altre simili:</div>
+
+<div><span class=red>V/. </span>Fratelli, riconosciamo i nostri peccati
+e chiediamo il perdono del Signore
+per esser degni
+di partecipare a questo santo rito
+insieme al nostro fratello infermo.</div>
+<div class=red>Si fa una breve pausa di silenzio. Poi tutti insieme fanno la confessione:</div>
+<div>Confesso a Dio onnipotente e a voi, fratelli,<br>che ho molto peccato<br>in pensieri, parole, opere e omissioni,<br><span class=red>e, battendosi il petto, dicono:</span><br>per mia colpa, mia colpa, mia grandissima colpa.<br><span class=red>E proseguono:</span><br>E supplico la beata sempre vergine Maria,<br>gli angeli, i santi e voi, fratelli,<br>di pregare per me il Signore Dio nostro.</div>
+<div><span class=red>V/. </span>Dio onnipotente abbia misericordia di noi,<br>perdoni i nostri peccati,<br>e ci conduca alla vita eterna.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>A questo punto, secondo l'opportunità, uno dei presenti o lo stesso ministro può leggere un brano della sacra Scrittura come, per esempio, uno dei seguenti che si può introdurre con queste parole o con altre simili:</div>
+
+<div>Dice il Signore:</div>
+<div><span class=alin_dcha>Gv 6, 51</span><br>Io sono il pane vivo, disceso dal cielo.<br>Se uno mangia di questo pane vivrà in eterno<br>e il pane che io darò è la mia carne<br>per la vita del mondo.</div>
+
+<div><span class=red>Oppure:</span><span class=alin_dcha>Gv 6, 54-55</span></div>
+
+<div>Chi mangia la mia carne<br>e beve il mio sangue<br>ha la vita eterna<br>e io lo risusciterò nell'ultimo giorno.<br>Perché la mia carne è vero cibo<br>e il mio sangue vera bevanda.</div>
+
+<div class=red>Il ministro introduce la preghiera del Signore con queste parole o con altre simili:</div>
+<div>E ora, tutti insieme, rivolgiamo al Padre la preghiera,
+che Gesù Cristo nostro Signore ci ha insegnato.</div>
+<div class=red>E tutti insieme dicono:</div>
+<div>Padre nostro, che sei nei cieli,<br>sia santificato il tuo nome,<br>venga il tuo regno,<br>sia fatta la tua volontà, come in cielo così in terra.<br>Dacci oggi il nostro pane quotidiano,<br>e rimetti a noi i nostri debiti<br>come noi li rimettiamo ai nostri debitori,<br>e non ci indurre in tentazione, ma liberaci dal male.</div>
+
+<div class=red>Il ministro fa l'ostensione del santissimo Sacramento dicendo:</div>
+<div><span class=red>V/. </span>Beati gli invitati alla Cena del Signore.<br>Ecco l'Agnello di Dio,<br>che toglie i peccati del mondo.</div>
+<div class=red>L'infermo e gli altri che desiderano comunicarsi, dicono:</div>
+<div><span class=red>R/. </span>O Signore, non sono degno<br>di partecipare alla tua mensa:<br>ma di' soltanto una parola e io sarò salvato.</div>
+
+<div class=red>Il ministro si accosta all'infermo e gli presenta il Sacramento, dicendo:</div>
+
+<div><span class=red>V/. </span>Il corpo di Cristo.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>E riceve la comunione.<br>Terminata la distribuzione della comunione, il ministro fa le necessarie abluzioni.<br>Secondo l'opportunità, si può fare una pausa di sacro silenzio.<br>Poi il ministro dice l'orazione conclusiva:</div>
+
+<div><span class=red>V/. </span>Preghiamo.<br>Signore, Padre santo,<br>la comunione al Corpo [Sangue] del tuo Figlio<br>protegga e conforti questo nostro fratello,<br>gli rechi sollievo nel corpo e nello spirito<br>e sia per lui pegno sicuro di vita eterna.<br>Per Cristo nostro Signore.</div>
+<div><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure NEL TEMPO DI PASQUA:</div>
+
+<div><span class=red>V/. </span>Preghiamo.<br>Infondi in noi, o Padre,<br>lo Spirito della tua carità,<br>perché saziati con i sacramenti pasquali,<br>viviamo concordi nel vincolo del tuo amore.<br>Per Cristo nostro Signore.</div>
+<div><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Quindi il ministro, se è sacerdote o diacono, rivolto verso il popolo, aprendo le braccia dice:</div>
+
+<div><span class=red>V/. </span>Il Signore sia con voi.</div>
+<div><span class=red>R/. </span>E con il tuo spirito.</div>
+
+<div><span class=red>V/. </span>Vi benedica Dio onnipotente,
+Padre e Figlio <span class='cruzroja'>&#10016;</span> e Spirito Santo.</div>
+<div><span class=red>R/. </span>Amen.</div>
+
+</div>
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup4_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup4_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup4_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='bendag_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>BENEDIZIONE DELL'ACQUA LUSTRALE FUORI DELLA MESSA</h2></div>
+
+
+
+<div class=red>Premesse</div>
+
+<div class=red>Tra i segni di cui la Chiesa si serve per benedire i fedeli, è di uso frequente, per antica consuetudine, quello dell'acqua. L'acqua benedetta richiama alla mente dei fedeli Cristo Signore in lui si compendia la benedizione divina, che si riversa su di noi, è lui che ha chiamato se stesso «acqua viva», e ha istituito per noi il Battesimo, sacramento dell'acqua, segno della benedizione che salva.</div>
+
+<div class=red>La benedizione e l'aspersione dell'acqua si fa d'ordinario in domenica, secondo il rito prescritto nel Messale Romano. Quando invece la benedizione dell'acqua viene fatta fuori della Messa, si usa il formulario seguente.</div>
+
+<div class=red>Il rito qui proposto può essere usato dal sacerdote e dal diacono.</div>
+
+<div class=red>Nel rispetto della struttura del rito e dei suoi elementi essenziali, si potranno adattare le singole parti alle circostanze di persone e di luoghi.</div>
+
+
+
+<div class=red>Rito della benedizione</div>
+
+
+
+<div class=red>INIZIO</div>
+
+<div class=red>Quando tutti sono riuniti, si esegue un canto adatto o si fa una pausa di raccoglimento. Poi tutti si fanno il segno della croce, mentre il ministro dice:</div>
+
+<div>Nel nome del Padre e del Figlio e dello Spirito Santo.</div>
+
+<div><span class=red>R/. </span>Amen.</div>
+
+
+<div class=red>SALUTO</div>
+
+<div class=red>Il ministro saluta i presenti con le seguenti parole o altre adatte, tratte di preferenza dalla Sacra Scrittura:</div>
+
+<div>Dio, che ci ha rigenerati in Cristo<br>dall'acqua e dallo Spirito Santo,<br>sia con tutti voi.</div>
+
+<div><span class=red>R/. </span>E con il tuo spirito.</div>
+
+<div class=red>o in un altro modo adatto.</div>
+
+
+<div class=red>MONIZIONE INTRODUTTIVA</div>
+
+<div class=red>Il ministro introduce il rito di benedizione con queste parole o altre simili:</div>
+
+<div>Con la benedizione dell'acqua noi facciamo memoria di Cristo, acqua viva, e del sacramento della nostra rinascita dall'acqua e dallo Spirito Santo. Ogni volta che ne saremo aspersi, o faremo con essa il segno della croce all'entrata della chiesa o nelle nostre case, renderemo grazie a Dio per il dono inestimabile del Battesimo e imploreremo il suo aiuto, perché possiamo confermare con la vita ciò che è stato trasmesso nella fede.</div>
+
+
+<div class=red>LETTURA DELLA PAROLA DI DIO</div>
+
+<div class=red>Un lettore o uno dei presenti legge un testo della Sacra Scrittura: <span class=red>Ez 36,25-26</span></div>
+
+
+<div>Dice il Signore:<br>«Vi prenderò dalle genti,<br>vi radunerò da ogni terra e vi condurrò sul vostro suolo.<br>Vi aspergerò con acqua pura e sarete purificati;<br>io vi purificherò da tutte le vostre sozzure<br>e da tutti i vostri idoli;<br>vi darò un cuore nuovo,<br>metterò dentro di voi uno spirito nuovo.</div>
+
+
+<div class=red>Breve silenzio.</div>
+
+
+
+<div class=red>PREGHIERA DI BENEDIZIONE</div>
+
+<div class=red>Quindi il ministro dice:</div>
+
+<div>Preghiamo.</div>
+
+<div class=red>Tutti pregano per qualche momento in silenzio.</div>
+
+<div class=red>* Segue la preghiera del Signore:</div>
+<div>Padre nostro.</div>
+
+<div class=red>Il ministro, con le braccia allargate, pronuncia la preghiera di benedizione:</div>
+
+<div>Sii benedetto, Signore, Dio onnipotente,<br>che in Cristo, acqua viva della nostra salvezza,<br>ci hai colmato di ogni benedizione<br>e hai fatto di noi una creatura nuova.<br>Fa' che, mediante l'aspersione<br>e il devoto uso di quest'acqua,<br>richiamiamo la realtà del Battesimo,<br>perché purificati e fortificati<br>con la grazia del tuo Spirito,<br>ricuperiamo la giovinezza interiore<br>e camminiamo sempre in novità di vita.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Oppure:</div>
+
+<div>Padre santo, sorgente di ogni benedizione,<br>volgi il tuo sguardo su di noi<br>redenti dal tuo Figlio<br>e rinati dall'acqua e dallo Spirito<br>mediante il Battesimo;<br>fa' che aspersi con quest'acqua benedetta,<br>ci rinnoviamo nel corpo e nell'anima,<br>per renderti un servizio puro e santo.<br>A te lode e gloria nei secoli.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+
+
+<div class=red>Dopo la preghiera di benedizione, il ministro asperge se stesso e i presenti con l'acqua benedetta dicendo, secondo l'opportunità:</div>
+
+<div>Ravviva in noi, Signore,<br>nel segno di quest'acqua benedetta,<br>il ricordo del Battesimo e l'adesione a Cristo Signore,<br>crocifisso e risorto per la nostra salvezza.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Nel frattempo si può eseguire un canto adatto.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup5_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup5_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup5_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='absol_cens' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>RITO PER CONFERIRE L'ASSOLUZIONE DALLE CENSURE</h2></div>
+<div class=red>Per i peccati attualmente riservati, o per se stessi o per effetto della censura, nessun cambiamento si apporta alla formula dell'assoluzione: basta che il confessore intenda assolvere anche da questi peccati riservati il penitente ben disposto, osservando - fino a nuove disposizioni e se la situazione lo comporta - le norme del diritto vigente sull'obbligo del ricorso all'Autorità competente. Il confessore tuttavia può, prima di assolvere dai peccati, assolvere dalla censura con la formula qui sotto proposta per l'uso fuori del sacramento della Penitenza.</div>
+<div class=red>Quando il sacerdote, a norma del diritto, assolve un penitente dalla censura fuori del sacramento della Penitenza, usa la formula seguente:</div>
+<div>In forza del potere a me concesso<br>io ti assolvo dal vincolo di scomunica<br><span class=red>(</span>o sospensione o interdetto<span class=red>)</span>.<br>Nel nome del Padre e del Figlio <span class='cruzroja'>&#10016;</span> e dello Spirito Santo.<br><span class=red>R/. </span>Amén.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup6_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup6_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup6_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='disp_irr' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>LA DISPENSA DALL' IRREGOLARITA'</h2></div>
+<div class=red>Se il penitente è incorso in qualche irregolarità, il sacerdote che a norma del diritto, lo dispensa dall'irregolarità stessa, sia in confessione, dopo l'assoluzione, sia fuori del sacramento della Penitenza, dice:</div>
+<div>In forza del potere a me concesso,<br>io ti dispenso<br>dall'irregolarità in cui sei incorso.<br>Nel nome del Padre e del Figlio <span class='cruzroja'>&#10016;</span> e dello Spirito Santo.<br><span class=red>R/. </span>Amén.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup7_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup7_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup7_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='unc_cond' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>L'UNZIONE SOTTO CONDIZIONE</h2></div>
+<div class=red>Nel dubbio se l'infermo sia ancora in vita, il sacerdote può conferire l'Unzione in questo modo:<br>Accostandosi all'infermo, dice anzitutto, se ne ha il tempo:</div>
+<div>Rivolgiamo al Signore la preghiera della fede per il nostro fratello, <span class='red'>N.</span>, perché il Signore nella sua misericordia venga a visitarlo e confortarlo con la santa Unzione.</div>
+<div><span class=red>R/.</span> Ascoltaci, Signore.</div>
+<div class=red>E subito gli conferisce l'Unzione, adattando la formula in questo modo:</div>
+<div>Se vivi, per questa santa Unzione<br>e la sua piissima misericordia<br>ti aiuti il Signore con la grazia dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+
+<div>E, liberandoti dai peccati, ti salvi<br>e nella sua bontà ti sollevi.<br><span class=red>R/. </span>Amen.</div>
+
+</div>
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup8_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup8_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup8_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='form_brev' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>Estrema necessità<br>(Battesimo, Confermazione, Penitenza, Unzione)</h2></div>
+<div class=red>Battesimo</div>
+<div class=red></div>
+<div><span class='red'>N.</span>, io ti battezzo nel nome del Padre<br><span class='red'>(prima infusione)</span><br>e del Figlio<br><span class='red'>(seconda infusione)</span><br>e dello Spirito Santo.<br><span class='red'>(terza immersione o infusione)</span><br><span class=red>R/. </span>Amén.</div>
+
+<div class=red>Cnfermazione</div>
+<div class=red>In caso di estrema necessità, è sufficiente fare la crismazione con la formula sacramentale:</div>
+<div><span class='red'>N.</span>, ricevi il sigillo dello Spirito Santo
+che ti è dato in dono.</div>
+<div><span class=red>E il cresimato, se lo può, risponde:</span> Amén.</div>
+
+<div class=red>Penitenza</div>
+<div class=red></div>
+<div>Io ti assolvo dai tuoi peccati nel nome del Padre e del Figlio <span class='cruzroja'>&#10016;</span> e dello Spirito Santo.</div>
+
+<div class=red>Unzione</div>
+<div class=red>Se si deve benedire l'olio, il sacerdote pronunzia questa formula di benedizione:</div>
+<div>Benedici,  <span class='cruzroja'>&#10016;</span>  Signore, quest'olio<br>e benedici il nostro fratello infermo,<br>che ne riceve l'Unzione e il conforto.</div>
+
+<div class=red>Il sacerdote prende l'Olio santo e unge l'infermo sulla fronte e sulle mani, dicendo una sola volta:</div>
+<div><span class=red>V/. </span>Per questa santa Unzione<br>e la sua piissima misericordia<br>ti aiuti il Signore con la grazia dello Spirito Santo.<br><span class=red>R/. </span>Amén.</div>
+<div><span class=red>V/. </span>Para que, libre de tus pecados, te conceda la salvación y te conforte en tu enfermedad.<br><span class=red>R/. </span>Amén.</div>
+<div><span class=red>V/. </span>E, liberandoti dai peccati, ti salvi<br>e nella sua bontà ti sollevi.<br><span class=red>R/. </span>Amén.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup9_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup9_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup9_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='confirm_epm' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>LA CONFERMAZIONE IN PERICOLO DI MORTE</h2></div>
+<div class=red>In caso di urgenza, il sacerdote impone le mani sull'infermo, dicendo:</div>
+<div>O Dio onnipotente,<br>Padre del Signore nostro Gesù Cristo,<br>che hai rigenerato questo tuo figlio<br>dall'acqua e dallo Spirito Santo<br>liberandolo dal peccato,<br>infondi in lui il tuo santo Spirito Paràclito:<br>spirito di sapienza e di intelletto,<br>spirito di consiglio e di fortezza,<br>spirito di scienza e di pietà,<br>e riempilo dello spirito del tuo santo timore.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Quindi, intinta nel Crisma l'estremità del pollice della mano destra, traccia con il pollice stesso un segno di croce sulla fronte del cresimando, dicendo:</div>
+<div><span class='red'>N.</span>, ricevi il sigillo dello Spirito Santo
+che ti è dato in dono.</div>
+<div><span class=red></span> Amén.</div>
+
+<div class=red>Nei singoli casi, e tenute presenti le circostanze, si possono aggiungere altri elementi della preparazione e della conclusione, come indicato nel Rito della Confermazione.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup10_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup10_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup10_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='pen_unc_viat' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>RITO CONTINUO DELLA PENITENZA, DELL'UNZIONE E DEL VIATICO</h2></div>
+
+<div class=red>Se l'infermo desidera confessarsi, il sacerdote ascolti possibilmente la confessione prima del conferimento dell'Unzione e del Viatico. Nel caso che solo durante la celebrazione sia possibile al sacerdote ascoltare la confessione sacramentale dell'infermo, l'ascolti all'inizio del rito, prima dell'Unzione. Quando durante il rito non si fa la confessione, è bene inserire l'atto penitenziale.</div>
+<div class=red>In caso di pericolo prossimo, si dia prontamente all'infermo l'Unzione sulla fronte soltanto e poi il Viatico.</div>
+<div class=red>Se il pericolo si fa imminente, gli si dia subito il Viatico, a norma del n. 30, in modo che nel suo passaggio da questa all'altra vita, rinvigorito dal Corpo di Cristo, abbia il sostegno e il conforto del pegno della risurrezione: in pericolo di morte infatti, c'è l'obbligo per i fedeli di ricevere
+l'Eucaristia.</div>
+<div class=red>La Confermazione in pericolo di morte e l'Unzione degli infermi non si dovrebbero conferire con rito continuo, per evitare che si faccia confusione tra due sacramenti diversi, conferiti entrambi con il segno dell'unzione.</div>
+<div class=red>Se però fosse necessario, si conferisca la Confermazione immediatamente prima della benedizione dell'olio degli infermi, omettendo l'imposizione delle mani indicata nel rito dell'Unzione.</div>
+
+<div class=red>RITI INIZIALI</div>
+<div class=red>Il sacerdote, entrando dal malato, rivolge a lui e a tutti i presenti un fraterno saluto. Lo può fare con queste parole o con altre simili:</div>
+<div>Pace a questa casa e a quanti vi abitano.</div>
+<div class=red>Oppure:</div>
+<div>La pace del Signore sia con voi.</div>
+<div class=red>Poi, deposto il Santissimo sulla mensa, lo adora insieme con i presenti.</div>
+<div class=red>* Lo può fare con una delle seguenti antifone o con altre formule.</div>
+<div>O sacro convito, in cui Cristo è nostro cibo,<br>si perpetua il memoriale della sua Pasqua,<br>l'anima nostra è colmata di grazia,<br>e ci è dato il pegno della gloria futura.</div>
+<div class=red>Oppure:</div>
+<div><p>Ecco il pane degli angeli,<br>pane dei pellegrini,<br>vero pane dei figli.</p><p>Buon pastore, vero pane,<br>o Gesù, pietà di noi:<br>nutrici e difendici,<br>portaci ai beni eterni<br>nella terra dei viventi.</p><p>Tu che tutto sai e puoi,<br>che ci nutri sulla terra,<br>conduci i tuoi fratelli<br>alla tavola del cielo<br>nella gioia dei tuoi santi.</p></div>
+<div class=red>Oppure:</div>
+<div>Adoriamo, o Cristo, il tuo corpo glorioso,<br>nato dalla Vergine Maria;<br>per noi hai voluto soffrire,<br>per noi ti sei offerto vittima sulla croce<br>e dal tuo fianco squarciato<br>hai versato l'acqua e il sangue del nostro riscatto.<br>Sii nostro conforto nell'ultimo passaggio<br>e accoglici benigno nella casa del Padre:<br>o Gesù dolce, o Gesù pio,<br>o Gesù, Figlio di Maria.</div>
+<div class=red>Quindi, secondo l'opportunità, asperge con l'acqua benedetta l'infermo e la stanza, dicendo la formula seguente:</div>
+<div>Ravviva in noi, Signore,<br>nel segno di quest'acqua benedetta,<br>il ricordo del Battesimo<br>e la nostra adesione a Cristo Signore,<br>crocifisso e risorto per la nostra salvezza.</div>
+<div class=red>Se necessario, il sacerdote prepari fraternamente l'infermo alla celebrazione dei sacramenti, suggerendo, secondo l'opportunità, qualche breve testo del Vangelo, che richiami la penitenza e l'amor di Dio. Può anche fare questa monizione, o un' altra simile, meglio adatta alla condizione dell'infermo.</div>
+<div>Fratelli carissimi, Cristo Gesù nostro Signore è sempre in mezzo a noi e ci sostiene con la grazia dei suoi sacramenti: per mezzo dei sacerdoti suoi ministri egli assolve i peccatori pentiti, conforta gli infermi con la santa Unzione e in coloro che attendono la sua venuta rafforza la speranza della vita eterna col santo Viatico del suo Corpo. Uniti dunque nella carità e nella preghiera, aiutiamo questo nostro fratello nel suo cammino verso il Signore.</div>
+<div class=red>PENITENZA</div>
+<div class=red>Confessione sacramentale</div>
+<div class=red>Se necessario, il sacerdote riceva la confessione sacramentale dell'infermo; in caso di necessità, e nell'impossibilità di un'altra soluzione, la confes­sione può essere generica.</div>
+<div class=red>Atto penitenziale</div>
+<div class=red>Quando l'infermo non fa la confessione sacramentale o quando vi sono altri che desiderano comunicarsi, il sacerdote invita l'infermo e i presenti a fare l'atto penitenziale con queste parole o con altre simili:</div>
+<div>Fratelli, riconosciamo i nostri peccati<br>e chiediamo il perdono del Signore<br>per esser degni di partecipare a questo santo rito.</div>
+<div class=red>Si fa una breve pausa di silenzio.</div>
+<div class=red>Poi tutti insieme fanno la confessione:</div>
+<div>Confesso a Dio onnipotente e a voi, fratelli,<br>che ho molto peccato<br>in pensieri, parole, opere e omissioni,</div>
+<div class=red>e, battendosi il petto, dicono:</div>
+<div>per mia colpa, mia colpa, mia grandissima colpa.</div>
+<div class=red>E proseguono:</div>
+<div>E supplico la beata sempre vergine Maria,<br>gli angeli, i santi e voi, fratelli,<br>di pregare per me il Signore Dio nostro.</div>
+<div class=red>Il sacerdote conclude:</div>
+<div>Dio onnipotente abbia misericordia di noi,<br>perdoni i nostri peccati<br>e ci conduca alla vita eterna.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Indulgenza plenaria</div>
+<div class=red>Il sacramento della Penitenza o l'atto penitenziale si può concludere con l'indulgenza plenaria in articulo mortis. Il sacerdote la concede con questa formula:</div>
+<div>In virtù della facoltà datami dalla Sede Apostolica,<br>io ti concedo l'indulgenza plenaria<br>e la remissione di tutti i peccati,<br>nel nome del Padre e del Figlio<span class='cruzroja'>&#10016;</span>  e dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div>Per i santi misteri della nostra redenzione,<br>Dio onnipotente ti condoni ogni pena<br>della vita presente e futura,<br>ti apra le porte del paradiso<br>e ti conduca alla gioia eterna.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>PROFESSIONE DI FEDE E PREGHIERA LITANICA</div>
+<div class=red>Quindi, se le condizioni dell'infermo lo permettono, si fa la professione di fede del Battesimo.</div>
+<div class=red>Il sacerdote si rivolge all'infermo con queste parole:</div>
+<div>Credi in Dio, Padre onnipotente,<br>creatore del cielo e della terra?<br><span class=red>R/. </span>Credo.</div>
+<div>Credi in Gesù Cristo,<br>suo unico Figlio, nostro Signore,<br>che nacque da Maria Vergine,<br>mori e fu sepolto,<br>è risuscitato dai morti<br>e siede alla destra del Padre?<br><span class=red>R/. </span>Credo.</div>
+<div>Credi nello Spirito Santo,<br>la santa Chiesa cattolica,<br>la comunione dei santi,<br>la remissione dei peccati,<br>la risurrezione della carne e la vita eterna?<br><span class=red>R/. </span>Credo.</div>
+<div class=red>Le invocazioni che seguono si possono anche formulare diversamente, per meglio esprimere la preghiera del malato e dei presenti.</div>
+<div>Il nostro fratello <span class='red'>N.</span> sta per ricevere il conforto dei sacramenti della fede; in unione con i familiari e con tutta la santa Chiesa, preghiamo il Signore dicendo:<br>Ascoltaci, Signore.</div>
+<div class=red>Perché il Padre veda in lui il volto sofferente del suo Figlio, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div>Perché nel suo amore lo aiuti e lo salvi, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div>Perché gli doni la sua forza e la sua pace, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div class=red>CONFERMAZIONE</div>
+<div class=red>Se nel rito continuo si conferisce il sacramento della Confermazione, il sacerdote si regola come viene indicato più oltre, nei nn. 205-206. Poi, omessa l'imposizione delle mani, di cui al n. 178, conferisce l'Unzione, come descritto qui sotto.</div>
+<div class=red>SACRA UNZIONE</div>
+<div class=red>Imposizione delle mani</div>
+<div class=red>Il sacerdote impone le mani sul capo dell'infermo, senza nulla dire.</div>
+<div class=red>Rendimento di grazie sull'Olio già benedetto</div>
+<div class=red>Quindi il sacerdote dice la seguente preghiera di rendimento di grazie
+sull'Olio già benedetto.</div>
+<div>Benedetto sei tu, o Dio, Padre onnipotente,<br>che per noi e per la nostra salvezza<br>hai mandato nel mondo il tuo Figlio.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Benedetto sei tu, o Dio, Figlio Unigenito,<br>che ti sei fatto uomo per guarire le nostre infermità.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Benedetto sei tu, o Dio, Spirito Santo Paràclito,<br>che con la tua forza inesauribile<br>sostieni la nostra debolezza.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Signore, il nostro fratello <span class='red'>N.</span>,<br>che riceve nella fede l'unzione di questo santo Olio,<br>vi trovi sollievo nei suoi dolori<br>e conforto nelle sue sofferenze.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Se si deve benedire l'olio, il sacerdote pronunzia questa formula di benedizione:</div>
+<div>Benedici, <span class='cruzroja'>&#10016;</span>  Signore, quest'olio<br>e benedici il nostro fratello infermo,<br>che ne riceve l'unzione e il conforto.</div>
+<div class=red>Unzione</div>
+<div class=red>Il sacerdote prende l'Olio santo e unge l'infermo sulla fronte e sulle mani, dicendo una sola volta:</div>
+<div>Per questa santa Unzione<br>e la sua piissima misericordia<br>ti aiuti il Signore con la grazia dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+
+<div>E, liberandoti dai peccati, ti salvi<br>e nella sua bontà ti sollevi.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Quindi il sacerdote può dire la seguente orazione:</div>
+<div>Preghiamo.<br>O Dio, nostro Padre, consolatore degli afflitti,<br>esaudisci la preghiera di questo nostro fratello infermo<br>che si affida alla tua misericordia:<br>fa' che la grazia di questa santa Unzione<br>lo conforti nella sua sofferenza<br>e che il Viatico del Corpo e Sangue del tuo Figlio<br>lo sostenga nel passaggio alla vita eterna.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Il sacerdote invita i presenti a recitare la preghiera del Signore, introducendola con queste parole o con altre simili:</div>
+<div>E ora, tutti insieme, rivolgiamo al Padre la preghiera,
+che Gesù Cristo nostro Signore ci ha insegnato.</div>
+<div class=red>E tutti insieme dicono:</div>
+<div>Padre nostro, che sei nei cieli,<br>sia santificato il tuo nome,<br>venga il tuo regno,<br>sia fatta la tua volontà,<br>come in cielo cosi in terra.<br>Dacci oggi il nostro. pane quotidiano,<br>e rimetti a noi i nostri debiti<br>come noi li rimettiamo ai nostri debitori,<br>e non ci indurre in tentazione,<br>ma liberaci dal male.</div>
+<div class=red>Il sacerdote fa l' ostensione del Santissimo Sacramento dicendo:</div>
+<div>Beati gli invitati alla cena del Signore.<br>Ecco l'Agnello di Dio, che toglie i peccati del mondo.</div>
+<div class=red>L'infermo, se può, e gli altri che desiderano comunicarsi, dicono:</div>
+<div>O Signore, non sono degno di partecipare alla tua mensa: ma di' soltanto una parola e io sarò salvato.</div>
+<div class=red>Il sacerdote si accosta all'infermo e gli presenta il Sacramento, dicendo:</div>
+<div>Il Corpo di Cristo.                  </div>
+<div class=red>Oppure:</div>
+<div>  Il Sangue di Cristo.</div>
+<div class=red>L'infermo risponde: Amen.</div>
+<div class=red>E subito il sacerdote aggiunge:</div>
+<div>
+
+Egli ti custodisca e ti conduca alla vita eterna.</div>
+<div class=red>L'infermo risponde: Amen.</div>
+<div class=red>E riceve la Comunione.</div>
+<div class=red>I presenti che desiderano comunicarsi ricevono il Sacramento nel modo solito.</div>
+<div class=red>Terminata la distribuzione della Comunione, il sacerdote fa le necessarie abluzioni.</div>
+<div class=red>Secondo l'opportunità, si può fare una pausa di sacro silenzio.</div>
+<div class=red>Il sacerdote dice poi l'orazione conclusiva:</div>
+<div>Preghiamo.<br>Guarda, o Padre, a questo nostro fratello<br>che si affida alla tua promessa<br>nella fede in Cristo, via, verità e vita,<br>e fa' che, fortificato dal Corpo <span class=red>[</span>Sangue<span class=red>]</span> del tuo Figlio,<br>venga incontro a te nella pace del tuo regno.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div>O Dio,<br>salvezza eterna di chi crede in te,<br>fa' che il nostro fratello <span class='red'>N.</span><br>sostenuto da questo sacramento,<br>viatico per la vita eterna,<br>giunga senza timore<br>nella luce della tua casa.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div>Signore, Padre santo,<br>la comunione al Corpo <span class=red>[</span>Sangue<span class=red>]</span> del tuo Figlio<br>protegga e conforti questo nostro fratello,<br>gli rechi sollievo nel corpo e nello spirito<br>e sia per lui pegno sicuro di vita eterna.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>RITI DI CONCLUSIONE</div>
+<div class=red>Quindi il sacerdote benedice l'infermo e i presenti o tracciando su di essi il segno della croce con la pisside, se ancora vi è il Sacramento, o usando una delle seguenti formule o altre simili:</div>
+<div>Vi benedica Dio onnipotente,
+Padre e Figlio  X  e Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div>Il Signore Gesù Cristo sia accanto a te per proteggerti.<br><span class=red>R/. </span>Amen.</div>
+<div>Sia dinanzi a te per guidarti,
+sia dietro a te per difenderti.<br><span class=red>R/. </span>Amen.</div>
+<div>Rivolga a te il suo sguardo,
+ti assista e ti benedica.<br><span class=red>R/. </span>Amen.</div>
+<div>E su voi tutti qui presenti,
+scenda la benedizione di Dio onnipotente,
+Padre e Figlio <span class='cruzroja'>&#10016;</span>  e Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup11_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup11_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup11_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='unc_sin_viat' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>RITO DELL'UNZIONE SENZA IL VIATICO</h2></div>
+
+<div class=red>Se, date le circostanze, ci si dovesse limitare a conferire all'infermo in pericolo prossimo di morte l'Unzione soltanto, senza il Viatico, si compia il seguente rito: </div>
+
+<div class=red>RITI INIZIALI</div>
+<div class=red>Il sacerdote, entrando dal malato, rivolge a lui e a tutti i presenti un fraterno saluto. Lo può fare con queste parole o con altre simili:</div>
+<div>Pace a questa casa e a quanti vi abitano.</div>
+<div class=red>Oppure:</div>
+<div>La pace del Signore sia con voi.</div>
+
+<div class=red>Quindi, secondo l'opportunità, asperge con l'acqua benedetta l'infermo e la stanza, dicendo la formula seguente:</div>
+<div>Ravviva in noi, Signore,<br>nel segno di quest'acqua benedetta,<br>il ricordo del Battesimo<br>e la nostra adesione a Cristo Signore,<br>crocifisso e risorto per la nostra salvezza.</div>
+<div class=red>Se necessario, il sacerdote prepari fraternamente l'infermo alla celebrazione dei sacramenti, suggerendo, secondo l'opportunità, qualche breve testo del Vangelo, che richiami la penitenza e l'amor di Dio. Può anche fare questa monizione, o un' altra simile, meglio adatta alla condizione dell'infermo.</div>
+
+<div>Fratelli carissimi, Cristo Gesù, nostro Signore, ci dice, per mezzo dell'apostolo Giacomo: «Chi è malato, chiami a sé i presbiteri della Chiesa e preghino su di lui, dopo averlo unto con olio, nel nome del Signore. E la preghiera fatta con fede salverà il malato: il Signore lo rialzerà e se ha commesso peccati, gli saranno perdonati ».
+Raccomandiamo dunque il nostro fratello infermo alla bontà e alla potenza di Cristo, perché gli dia sollievo e salvezza.</div>
+
+<div class=red>PENITENZA</div>
+<div class=red>Confessione sacramentale</div>
+<div class=red>Se necessario, il sacerdote riceva la confessione sacramentale dell'infermo; in caso di necessità, e nell'impossibilità di un'altra soluzione, la confes­sione può essere generica.</div>
+<div class=red>Atto penitenziale</div>
+<div class=red>Quando l'infermo non fa la confessione sacramentale o quando vi sono altri che desiderano comunicarsi, il sacerdote invita l'infermo e i presenti a fare l'atto penitenziale con queste parole o con altre simili:</div>
+<div>Fratelli, riconosciamo i nostri peccati<br>e chiediamo il perdono del Signore<br>per esser degni di partecipare a questo santo rito.</div>
+<div class=red>Si fa una breve pausa di silenzio.</div>
+<div class=red>Poi tutti insieme fanno la confessione:</div>
+<div>Confesso a Dio onnipotente e a voi, fratelli,<br>che ho molto peccato<br>in pensieri, parole, opere e omissioni,</div>
+<div class=red>e, battendosi il petto, dicono:</div>
+<div>per mia colpa, mia colpa, mia grandissima colpa.</div>
+<div class=red>E proseguono:</div>
+<div>E supplico la beata sempre vergine Maria,<br>gli angeli, i santi e voi, fratelli,<br>di pregare per me il Signore Dio nostro.</div>
+<div class=red>Il sacerdote conclude:</div>
+<div>Dio onnipotente abbia misericordia di noi,<br>perdoni i nostri peccati<br>e ci conduca alla vita eterna.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Indulgenza plenaria</div>
+<div class=red>Il sacramento della Penitenza o l'atto penitenziale si può concludere con l'indulgenza plenaria in articulo mortis. Il sacerdote la concede con questa formula:</div>
+<div>In virtù della facoltà datami dalla Sede Apostolica,<br>io ti concedo l'indulgenza plenaria<br>e la remissione di tutti i peccati,<br>nel nome del Padre e del Figlio<span class='cruzroja'>&#10016;</span>  e dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div>Per i santi misteri della nostra redenzione,<br>Dio onnipotente ti condoni ogni pena<br>della vita presente e futura,<br>ti apra le porte del paradiso<br>e ti conduca alla gioia eterna.<br><span class=red>R/. </span>Amen.</div>
+
+
+
+
+<div class=red>PROFESSIONE DI FEDE E PREGHIERA LITANICA</div>
+<div class=red>Quindi, se le condizioni dell'infermo lo permettono, si fa la professione di fede del Battesimo.</div>
+<div class=red>Il sacerdote si rivolge all'infermo con queste parole:</div>
+<div>Credi in Dio, Padre onnipotente,<br>creatore del cielo e della terra?<br><span class=red>R/. </span>Credo.</div>
+<div>Credi in Gesù Cristo,<br>suo unico Figlio, nostro Signore,<br>che nacque da Maria Vergine,<br>mori e fu sepolto,<br>è risuscitato dai morti<br>e siede alla destra del Padre?<br><span class=red>R/. </span>Credo.</div>
+<div>Credi nello Spirito Santo,<br>la santa Chiesa cattolica,<br>la comunione dei santi,<br>la remissione dei peccati,<br>la risurrezione della carne e la vita eterna?<br><span class=red>R/. </span>Credo.</div>
+<div class=red>Le invocazioni che seguono si possono anche formulare diversamente, per meglio esprimere la preghiera del malato e dei presenti.</div>
+<div>Il nostro fratello <span class='red'>N.</span> sta per ricevere il conforto dei sacramenti della fede; in unione con i familiari e con tutta la santa Chiesa, preghiamo il Signore dicendo:<br>Ascoltaci, Signore.</div>
+<div class=red>Perché il Padre veda in lui il volto sofferente del suo Figlio, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div>Perché nel suo amore lo aiuti e lo salvi, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div>Perché gli doni la sua forza e la sua pace, preghiamo.<br><span class=red>R/. </span>Ascoltaci, Signore.</div>
+<div class=red>CONFERMAZIONE</div>
+<div class=red>Se nel rito continuo si conferisce il sacramento della Confermazione, il sacerdote si regola come viene indicato più oltre, nei nn. 205-206. Poi, omessa l'imposizione delle mani, di cui al n. 178, conferisce l'Unzione, come descritto qui sotto.</div>
+<div class=red>SACRA UNZIONE</div>
+<div class=red>Imposizione delle mani</div>
+<div class=red>Il sacerdote impone le mani sul capo dell'infermo, senza nulla dire.</div>
+<div class=red>Rendimento di grazie sull'Olio già benedetto</div>
+<div class=red>Quindi il sacerdote dice la seguente preghiera di rendimento di grazie
+sull'Olio già benedetto.</div>
+<div>Benedetto sei tu, o Dio, Padre onnipotente,<br>che per noi e per la nostra salvezza<br>hai mandato nel mondo il tuo Figlio.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Benedetto sei tu, o Dio, Figlio Unigenito,<br>che ti sei fatto uomo per guarire le nostre infermità.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Benedetto sei tu, o Dio, Spirito Santo Paràclito,<br>che con la tua forza inesauribile<br>sostieni la nostra debolezza.<br><span class=red>R/. </span>Gloria a te, Signore!</div>
+<div>Signore, il nostro fratello <span class='red'>N.</span>,<br>che riceve nella fede l'unzione di questo santo Olio,<br>vi trovi sollievo nei suoi dolori<br>e conforto nelle sue sofferenze.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Se si deve benedire l'olio, il sacerdote pronunzia questa formula di benedizione:</div>
+<div>Benedici, <span class='cruzroja'>&#10016;</span>  Signore, quest'olio<br>e benedici il nostro fratello infermo,<br>che ne riceve l'unzione e il conforto.</div>
+<div class=red>Unzione</div>
+<div class=red>Il sacerdote prende l'Olio santo e unge l'infermo sulla fronte e sulle mani, dicendo una sola volta:</div>
+<div>Per questa santa Unzione<br>e la sua piissima misericordia<br>ti aiuti il Signore con la grazia dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+
+<div>E, liberandoti dai peccati, ti salvi<br>e nella sua bontà ti sollevi.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Il sacerdote invita i presenti a recitare la preghiera del Signore, introducendola con queste parole o con altre simili:</div>
+<div>E ora, tutti insieme, rivolgiamo al Padre la preghiera,
+che Gesù Cristo nostro Signore ci ha insegnato.</div>
+<div class=red>E tutti insieme dicono:</div>
+<div>Padre nostro, che sei nei cieli,<br>sia santificato il tuo nome,<br>venga il tuo regno,<br>sia fatta la tua volontà,<br>come in cielo cosi in terra.<br>Dacci oggi il nostro. pane quotidiano,<br>e rimetti a noi i nostri debiti<br>come noi li rimettiamo ai nostri debitori,<br>e non ci indurre in tentazione,<br>ma liberaci dal male.</div>
+
+
+
+<div class=red>Quindi il sacerdote prosegue dicendo una delle seguenti orazioni:</div>
+<div class=red>Per una persona anziana:</div>
+<div>Guarda con bontà, Signore, questo nostro fratello<br>che ha ricevuto con fede la santa Unzione,<br>sostegno alla debolezza della sua tarda età;<br>confortalo nel corpo e nell'anima<br>con la pienezza del tuo Santo Spirito,<br>perché sia sempre saldo nella fede, sereno nella speranza<br>e lieto di dare a tutti testimonianza del tuo amore.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+
+<div class=red>Oppure:</div>
+<div class=red>Per un infermo in grave pericolo:</div>
+<div>Signore Gesù, redentore del mondo,<br>che hai preso su di te i nostri dolori<br>e hai portato nella tua passione<br>le nostre sofferenze,<br>ascolta la preghiera che ti rivolgiamo<br>per il nostro fratello infermo:<br>donagli fiducia e ravviva la sua speranza<br>perché sia sollevato nel corpo e nello spirito.<br>Tu che vivi e regni nei secoli dei secoli.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Oppure:</div>
+<div class=red>Per un agonizzante:</div>
+<div>Padre clementissimo,<br>che conosci il cuore degli uomini e accogli i figli<br>che tornano a te,<br>abbi pietà del nostro fratello <span class='red'>N.</span><br>nella sua agonia;<br>fa' che la santa Unzione<br>con la preghiera della nostra fede<br>lo sostenga e lo conforti<br>perché nella gioia del tuo perdono<br>si abbandoni fiducioso<br>tra le braccia della tua misericordia.<br>Per Cristo Gesù, tuo Figlio e nostro Signore,<br>che ha vinto la morte<br>e ci ha aperto il passaggio alla vita eterna,<br>e vive e regna con te per tutti i secoli dei secoli.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Poi il sacerdote benedice l'infermo e i presenti:</div>
+<div>Vi benedica Dio onnipotente,
+Padre e Figlio <span class='cruzroja'>&#10016;</span>  e Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+
+
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup12_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup12_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup12_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='bend_apost' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>Indulgenza plenaria</h2></div>
+<div class=red>Il sacramento della Penitenza o l'atto penitenziale si può concludere con l'indulgenza plenaria in articulo mortis. Il sacerdote la concede con questa formula:</div>
+<div>In virtù della facoltà datami dalla Sede Apostolica,<br>io ti concedo l'indulgenza plenaria<br>e la remissione di tutti i peccati,<br>nel nome del Padre e del Figlio  <span class='cruzroja'>&#10016;</span> e dello Spirito Santo.<br><span class=red>R/. </span>Amen.</div>
+<div class=red>Si no hay sacerdote, la Iglesia concede esa misma indulgencia plenaria con tal que esa persona haya rezado habitualmente algunas oraciones a lo largo de su vida. En este caso, la Iglesia suple las tres condiciones habituales para ganar la indulgencia plenaria.</div>
+
+</div>
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup13_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup13_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup13_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+<div data-role='page' id='recom_ital' >
+<div data-role='header' data-position='fixed' ><a data-rel='back'  class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext" >Index</a>
+<h1>Missale Romanum</h1>
+
+<div data-role='navbar'>
+<ul>
+<li><a  href='javascript: if (!estoymac) { navigator.app.exitApp(); } else window.location="../../index.html";' >Index</a></li>
+<li><a href='#' class="ui-btn-active" >Sacerdotale</a></li>
+<li><a href='javascript:window.location="ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+
+</div>
+
+<div data-role='content'>
+
+
+<div><h2>RACCOMANDAZIONE DEI MORIBONDI</h2></div>
+
+<div class=red>L'amore verso il prossimo deve spingere i cristiani a star vicino ai loro fratelli moribondi e ad esprimere la loro fraternità implorando con essi e per essi la misericordia di Dio e il conforto della fiducia in Cristo Gesù.</div>
+
+<div class=red>Si propongono qui orazioni, litanie, giaculatorie, salmi, letture bibliche diverse. Esse hanno lo scopo di aiutare il moribondo, ancora in possesso delle sue facoltà, ad accettare, sull'esempio di Cristo morente in croce, l'innata ansietà della morte e a superarla nella speranza della risurrezione e della vita, con la forza divina di Cristo, che morendo ha distrutto la nostra morte.</div>
+<div class=red>Coloro che assistono il moribondo, anche se questi avesse già perduto la conoscenza, possono trarre un grande conforto da queste preghiere, che si richiamano al senso pasquale della morte cristiana; ed è bene riaffermare anche con un gesto visibile questo senso pasquale, tracciando sulla fronte del moribondo il segno della croce, quel segno stesso che fu per la prima volta tracciato su di lui nel giorno del suo Battesimo.</div>
+
+<div class=red>Delle preghiere e delle letture qui indicate è pienamente libera la scelta; se ne possono anzi aggiungere delle altre, purché adatte alle condizioni spirituali e fisiche del moribondo e alle altre circostanze di luogo e di persona. Si recitino lentamente, a voce sommessa, intercalando momenti di silenzio o suggerendo a intervalli le brevi giaculatorie proposte, eventualmente riprese e ripetute dal moribondo stesso.</div>
+
+<div class=red>Appena il morente sarà spirato, tutti si inginocchiano, e il sacerdote o il diacono o uno dei presenti recita l'orazione indicata.</div>
+
+<div class=red>I sacerdoti e i diaconi procurino, per quanto possibile, di trovarsi perso­nalmente accanto ai moribondi e di recitare con i familiari le preghiere della raccomandazione e quelle dell'ultimo respiro: con la loro presenza essi esprimono con maggior evidenza che il cristiano muore nella comunione della Chiesa. Qualora non potessero, per altri gravi compiti pastorali, essere personalmente presenti, raccomandino a laici ben preparati che nell'assistere i moribondi recitino con loro queste o altre preghiere, servendosi di opportuni sussidi.</div>
+
+
+<div class=red>FORMULE BREVI, PAROLE DI GESÙ, GIACULATORIE</div>
+
+
+<div><span class=red>&ndash;</span> Chi ci separerà dall'amore di Cristo? <span class=red>Rm 8, 35</span><br><span class=red>&ndash;</span> Sia che viviamo, sia che moriamo,
+  siamo del Signore. <span class=red>Rm 14, 8</span><br><span class=red>&ndash;</span> Riceveremo una dimora eterna nei cieli. <span class=red>2 Cor 5, 1</span><br><span class=red>&ndash;</span> Saremo sempre con il Signore. <span class=red>1 Ts 4,17</span><br><span class=red>&ndash;</span> Vedremo Dio così come egli è. <span class=red>1 Gv 3, 2</span><br><span class=red>&ndash;</span> Siamo passati dalla morte alla vita,
+  perché amiamo i fratelli. <span class=red>1 Gv 3, 14</span><br><span class=red>&ndash;</span> A te, Signore, innalzo l'anima mia. <span class=red>Sal 24,1</span><br><span class=red>&ndash;</span> Il Signore è la mia luce e la mia salvezza. <span class=red>Sal 26,1</span><br><span class=red>&ndash;</span> Sono certo di contemplare la bontà del Signore
+  nella terra dei viventi. <span class=red>Sal 26,13</span><br><span class=red>&ndash;</span> L'anima mia ha sete del Dio vivente. <span class=red>Sal 41,3</span><br><span class=red>&ndash;</span> Se dovessi camminare in una valle oscura,
+  non temerei alcun male, perché tu sei con me. <span class=red>Sal 22, 4</span><br><span class=red>&ndash;</span> «Venite, benedetti del Padre mio,
+  ricevete in eredità il regno preparato per voi». <span class=red>Mt 25, 34</span><br><span class=red>&ndash;</span> «In verità ti dico, oggi sarai con me nel paradiso ». <span class=red>Lc 23, 43</span><br><span class=red>&ndash;</span> «Nella casa del Padre mio vi sono molti posti». <span class=red>Gv 14, 2</span><br><span class=red>&ndash;</span> «Io vado a prepararvi un posto,
+  e vi prenderò con me». <span class=red>Gv 14, 2-3</span><br><span class=red>&ndash;</span> «Voglio che siano con me dove sono io». <span class=red>Gv 17,24</span><br><span class=red>&ndash;</span> Chiunque crede nel Figlio ha la vita eterna. <span class=red>Gv 6, 40</span><br><span class=red>&ndash;</span> Mi affido alle tue mani, Signore. <span class=red>Sal 30, 6a</span><br><span class=red>&ndash;</span> Signore Gesù, accogli il mio spirito. <span class=red>At 7, 59</span><br><span class=red>&ndash;</span> Santa Maria, prega per me.<br><span class=red>&ndash;</span> San Giuseppe, prega per me.<br><span class=red>&ndash;</span> Gesù, Giuseppe, Maria, assistetemi nell'ultima agonia.</div>
+
+
+
+<div class=red>LETTURA DELLA PAROLA DI DIO</div>
+
+<div class=red>i può fare una scelta tra le letture bibliche indicate più oltre nel Lezionario o tra le seguenti:</div>
+
+
+<div class=red>Is 35,3-4.6c-7.10</div>
+
+<div><p>Irrobustite le mani fiacche,<br>rendete salde le ginocchia vacillanti.<br>Dite agli smarriti di cuore:<br>«Coraggio! Non temete;<br>ecco il vostro Dio,<br>giunge la vendetta,<br>la ricompensa divina.<br>Egli viene a salvarvi».</p><p>Allora scaturiranno acque nel deserto,<br>scorreranno torrenti nella steppa.<br>La terra bruciata diventerà una palude,<br>il luogo riarso si muterà in sorgenti d'acqua.<br>I luoghi dove si sdraiavano gli sciacalli<br>diventeranno canneti e giuncaie.</p><p>Su di essa ritorneranno i riscattati dal Signore<br>e verranno in Sion con giubilo;<br>felicità perenne splenderà sul loro capo;<br>gioia e felicità li seguiranno<br>e fuggiranno tristezza e pianto.</p></div>
+
+
+<div class=red>Gb 19, 1.23-27</div>
+
+<div>Rispondendo Giobbe disse:<br>«Oh, se le mie parole si scrivessero,<br>se si fissassero in un libro,<br>fossero impresse con stilo di ferro sul piombo,<br>s'incidessero per sempre sulla roccia!<br>Io lo so che il mio Redentore è vivo<br>e che, ultimo, si ergerà sulla polvere!<br>Dopo che questa mia pelle sarà distrutta,<br>senza la mia carne, vedrò Dio.<br>Io lo vedrò, io stesso,<br>e i miei occhi lo contempleranno non da straniero».</div>
+
+
+<div class=red>Sal 22</div>
+
+<div><span class=red>R/. </span>Il Signore è il mio pastore: non manco di nulla.</div>
+
+<div>Su pascoli erbosi il Signore mi fa riposare,<br>ad acque tranquille mi conduce.<br>Mi rinfranca, mi guida per il giusto cammino,<br>per amore del suo nome.<br><span class=red>R/. </span>Il Signore è il mio pastore: non manco di nulla.</div>
+
+<div>Se dovessi camminare in una valle oscura,<br>non temerei alcun male, perché tu sei con me.<br>Il tuo bastone e il tuo vincàstro mi danno sicurezza.<br><span class=red>R/. </span>Il Signore è il mio pastore: non manco di nulla.</div>
+
+<div>Davanti a me tu prepari una mensa<br>sotto gli occhi dei miei nemici;<br>cospargi di olio il mio capo. Il mio calice trabocca.<br><span class=red>R/. </span>Il Signore è il mio pastore: non manco di nulla.</div>
+
+<div>Felicità e grazia mi saranno compagne
+tutti i giorni della mia vita,
+e abiterò nella casa del Signore per lunghissimi anni.<br><span class=red>R/. </span>Il Signore è il mio pastore: non manco di nulla.</div>
+
+
+<div class=red>Sal 24</div>
+
+<div><span class=red>R/. </span>A te, Signore, innalzo l'anima mia.</div>
+
+<div>Fammi conoscere, Signore, le tue vie,<br>insegnami i tuoi sentieri.<br>Guidami nella tua verità e istruiscimi,<br>perché sei tu il Dio della mia salvezza.<br><span class=red>R/. </span>A te, Signore, innalzo l'anima mia.</div>
+
+<div>Ricordati, Signore, del tuo amore,<br>della tua fedeltà che è da sempre.<br>N on ricordare i peccati della mia giovinezza:<br>ricordati di me nella tua misericordia,<br>per la tua bontà, Signore.<br><span class=red>R/. </span>A te, Signore, innalzo l'anima mia.</div>
+
+<div>Buono e retto è il Signore, la via giusta addita ai peccatori;<br>guida gli umili secondo giustizia,<br>insegna ai poveri le sue vie.<br><span class=red>R/. </span>A te, Signore, innalzo l'anima mia.</div>
+
+<div>Tutti i sentieri del Signore sono verità e grazia<br>per chi osserva il suo patto e i suoi precetti.<br>Per il tuo nome, Signore,<br>perdona il mio peccato anche se grande.<br><span class=red>R/. </span>A te, Signore, innalzo l'anima mia.</div>
+
+
+<div class=red>Sal 90</div>
+
+<div><span class=red>R/. </span>Proteggimi, Signore: è in te la mia speranza.</div>
+
+<div>Tu che abiti al riparo dell' Altissimo<br>e dimori all'ombra dell'Onnipotente,<br>di' al Signore: «Mio rifugio e mia fortezza,<br>mio Dio, in cui confido».<br><span class=red>R/. </span>Proteggimi, Signore: è in te la mia speranza.</div>
+
+<div>Egli ti libererà dal laccio del cacciatore,<br>dalla peste che distrugge.<br>Ti coprirà con le sue penne<br>sotto le sue ali troverai rifugio.<br><span class=red>R/. </span>Proteggimi, Signore: è in te la mia speranza.</div>
+
+<div>Lo salverò, perché a me si è affidato;<br>lo esalterò, perché ha conosciuto il mio nome.<br>Mi invocherà e gli darò risposta;<br>presso di lui sarò nella sventura,<br>lo salverò e lo renderò glorioso.<br><span class=red>R/. </span>Proteggimi, Signore: è in te la mia speranza.</div>
+
+
+<div class=red>Sal 113</div>
+
+<div><span class=red>R/. </span>Il Dio vivo è con noi.</div>
+
+<div>Quando Israele uscì dall'Egitto,<br>la casa di Giacobbe da un popolo barbaro,<br>Giuda divenne il suo santuario,<br>Israele il suo dominio.<br><span class=red>R/. </span>Il Dio vivo è con noi.</div>
+
+<div>Il mare vide e si ritrasse,<br>il Giordano si volse indietro,<br>i monti saltellarono come arieti,<br>le colline come agnelli di un gregge.<br><span class=red>R/. </span>Il Dio vivo è con noi.</div>
+
+<div>Che hai tu, mare, per fuggire,<br>e tu, Giordano, perché torni indietro?<br>Perché voi monti saltellate come arieti<br>e voi colline come agnelli di un gregge?<br><span class=red>R/. </span>Il Dio vivo è con noi.</div>
+
+<div>Trema, o terra, davanti al Signore,<br>davanti al Dio di Giacobbe,<br>che muta la rupe in un lago,<br>la roccia in sorgenti d'acqua.<br><span class=red>R/. </span>Il Dio vivo è con noi.</div>
+
+
+<div class=red>Sal 114</div>
+
+<div><span class=red>R/. </span>Ti esalto, o Signore, perché mi hai salvato.</div>
+
+<div>Amo il Signore perché ascolta<br>il grido della mia preghiera.<br>Verso di me ha teso l'orecchio<br>nel giorno in cui lo invocavo.<br><span class=red>R/. </span>Ti esalto, o Signore, perché mi hai salvato.</div>
+
+<div>Mi stringevano funi di morte,<br>ero preso nei lacci degli ìnferi.<br>Mi opprimevano tristezza e angoscia<br>e ho invocato il nome del Signore:<br>«Ti prego, Signore, salvami.<br><span class=red>R/. </span>Ti esalto, o Signore, perché mi hai salvato.</div>
+
+<div>Buono e giusto è il Signore,<br>il nostro Dio è misericordioso.<br>Il Signore protegge gli umili:<br>ero misero ed egli mi ha salvato.<br><span class=red>R/. </span>Ti esalto, o Signore, perché mi hai salvato.</div>
+
+
+<div class=red>Sal 120</div>
+
+<div><span class=red>R/. </span>Il mio aiuto viene dal Signore.</div>
+
+<div>Alzo gli occhi verso i monti:<br>da dove mi verrà l'aiuto?<br>Il mio aiuto viene dal Signore,<br>che ha fatto cielo e terra.<br><span class=red>R/. </span>Il mio aiuto viene dal Signore.</div>
+
+<div>Non lascerà vacillare il tuo piede,<br>non si addormenterà il tuo custode.<br>Non si addormenterà, non prenderà sonno,<br>il custode d'Israele.<br><span class=red>R/. </span>Il mio aiuto viene dal Signore.</div>
+
+<div>Il Signore è il tuo custode,<br>il Signore è come ombra che ti copre,<br>e sta alla tua destra.<br><span class=red>R/. </span>Il mio aiuto viene dal Signore.</div>
+
+
+<div class=red>Sal 122</div>
+
+<div><span class=red>R/. </span>Tu sei con noi, Signore, nell'ora della prova.</div>
+
+<div>A te levo i miei occhi,<br>a te che abiti nei cieli.<br>Ecco, come gli occhi dei servi<br>alla mano dei loro padroni.<br><span class=red>R/. </span>Tu sei con noi, Signore, nell'ora della prova.</div>
+
+<div>Come gli occhi della schiava<br>alla mano della sua padrona,<br>così i nostri occhi sono rivolti al Signore nostro Dio,<br>finché abbia pietà di noi.<br><span class=red>R/. </span>Tu sei con noi, Signore, nell'ora della prova.</div>
+
+
+<div class=red>1 Cor 15, 1-8</div>
+
+<div><p>Vi rendo noto, fratelli, il vangelo che vi ho annunziato e che voi avete ricevuto, nel quale restate saldi, e dal quale anche ricevete la salvezza, se lo mantenete in quella forma in cui ve l'ho annunziato. Altrimenti, avreste creduto invano!</p><p>Vi ho trasmesso dunque, anzitutto, quello che anch'io ho ricevuto: che cioè Cristo morì per i nostri peccati secondo le Scritture, fu sepolto ed è risuscitato il terzo giorno secondo le Scritture.</p></div>
+
+
+<div class=red>1 Gv 4, 16</div>
+
+<div><p>Noi abbiamo riconosciuto e creduto all'amore
+che Dio ha per noi.</p><p>Dio è amore; chi sta nell'amore dimora in Dio
+e Dio in lui.</p></div>
+
+
+<div class=red>Ap 21, 1-7</div>
+
+<div><p>Io, Giovanni, vidi un nuovo cielo e una nuova terra, perché il cielo e la terra di prima erano scomparsi e il mare non c'era più. Vidi anche la città santa, la nuova Gerusalemme, scendere dal cielo, da Dio, pronta come una sposa adorna per il suo sposo. Udii allora una voce potente che usciva dal trono:</p><p>«Ecco la dimora di Dio con gli uomini!<br>Egli dimorerà tra di loro ed essi saranno suo popolo ed egli sarà il "Dio-con-loro".<br>E tergerà ogni lacrima dai loro occhi;<br>non ci sarà più la morte, né lutto, né lamento, né affanno,<br>perché le cose di prima sono passate».</p><p>E Colui che sedeva sul trono disse:<br>«Ecco, io faccio nuove tutte le cose.<br>lo sono l'Alfa e l'Omèga, il Principio e la Fine.<br>A colui che ha sete<br>darò gratuitamente acqua della fonte della vita.<br>Chi sarà vittorioso erediterà questi beni;<br>io sarò il suo Dio ed egli sarà mio figlio».</p></div>
+
+
+<div class=red>Mt 25, 1-13</div>
+
+<div><p>In quel tempo, Gesù disse ai suoi discepoli questa para­bola: «Il regno dei cieli è simile a dieci vergini che, prese le loro lampade, uscirono incontro allo sposo. Cinque di esse erano stolte e cinque sagge; le stolte presero le lampade, ma non presero con sé olio; le sagge invece, insieme alle lampade, presero anche dell'olio in piccoli vasi.</p><p>Poiché lo sposo tardava, si assopirono tutte e dormirono. A mezzanotte si levò un grido: Ecco lo sposo, andategli incontro! Allora tutte quelle vergini si destarono e prepararono le loro lampade.</p><p>E le stolte dissero alle sagge: Dateci del vostro olio, perché le nostre lampade si spengono. Ma le sagge risposero: No, che non abbia a mancare per noi e per voi; andate piuttosto dai venditori e compratevene.</p><p>Ora, mentre quelle andavano per comprare l'olio, arrivò lo sposo e le vergini che erano pronte entrarono con lui alle nozze, e la porta fu chiusa.</p><p>Più tardi arrivarono anche le altre vergini e incominciarono a dire: Signore, signore, aprici! Ma egli rispose: In verità vi dico: non vi conosco.</p><p>Vegliate dunque, perché non sapete né il giorno né l'ora».</p></div>
+
+
+<div class=red>Mc 15,33-37</div>
+
+<div><p>Venuto mezzogiorno, si fece buio su tutta la terra, fino alle tre del pomeriggio. Alle tre Gesù gridò con voce forte:</p><p>Eloì, Eloì, lamà sabactàni ?, che significa: Dio mio, Dio mio, perché mi hai abbandonato?
+Alcuni dei presenti, udito ciò, dicevano: «Ecco, chiama Elìa!». Uno corse a inzuppare di aceto una spugna e, postala su una canna, gli dava da bere, dicendo: «Aspettate, vediamo se viene Elìa a toglierlo dalla croce». Ma Gesù dando un forte grido, spirò.</p></div>
+
+
+<div class=red>Mc 16, 1-8</div>
+
+<div><p>Passato il sabato, Maria di Màgdala, Maria di Giacomo e Salòme comprarono oli aromatici per andare a imbalsamare Gesù. Di buon mattino, il primo giorno dopo il sabato, vennero al sepolcro al levar del sole.</p><p>Esse dicevano tra loro: «Chi ci rotolerà via il masso dall'ingresso del sepolcro?». Ma, guardando, videro che il masso era già stato rotolato via,. benché fosse molto grande.</p><p>Entrando nel sepolcro, videro un giovane, seduto sulla destra, vestito d'una veste bianca, ed ebbero paura. Ma egli disse loro: «Non abbiate paura! Voi cercate Gesù Nazareno, il crocifisso. È risorto, non è qui. Ecco il luogo dove l'avevano deposto. Ora andate, dite ai suoi discepoli e a Pietro che egli vi precede in Galilea. Là lo vedrete, come vi ha detto».</p><p>Ed esse, uscite, fuggirono via dal sepolcro perché erano piene di timore e di spavento. E non dissero niente a nessuno, perché avevano paura.</p></div>
+
+
+<div class=red>Lc 22,39-46</div>
+
+<div><p>Gesù, dopo aver cenato con i suoi discepoli uscì e se ne andò, come al solito, al monte degli Ulivi; anche i discepoli lo seguirono. Giunto sul luogo, disse loro: «Pregate, per non entrare in tentazione». Poi si allontanò da loro quasi un tiro di sasso e inginocchiatosi, pregava: «Padre, se vuoi, allontana da me questo calice! Tuttavia non sia fatta la mia, ma la tua volontà». Gli apparve allora un angelo dal cielo a confortarlo. In preda all'angoscia, pregava più intensamente; e il suo sudore diventò come gocce di sangue che cadevano a terra. Poi, rialzatosi dalla preghiera, andò dai discepoli e li trovò che dormivano per la tristezza. E disse loro: «Perché dormite? Alzatevi e pregate, per non entrare in tentazione».</p></div>
+
+
+<div class=red>Lc 23, 42-43</div>
+
+<div><p>Uno dei malfattori appesi alla croce disse: «Gesù, ricordati di me quando entrerai nel tuo regno».</p><p>Gesù gli rispose: «In verità ti dico, oggi sarai con me nel paradiso».</p></div>
+
+
+<div class=red>Lc 24, 1-8</div>
+
+<div><p>Il primo giorno dopo il sabato, di buon mattino, le donne si recarono alla tomba, portando con sé gli aromi che avevano preparato. Trovarono la pietra rotolata via dal sepolcro; ma, entrate, non trovarono il corpo del Signore Gesù.</p><p>Mentre erano ancora incerte, ecco due uomini apparire vicino a loro in vesti sfolgoranti. Essendosi le donne impaurite e avendo chinato il volto a terra, essi dissero loro: «Perché cercate tra i morti colui che è vivo? Non è qui, è risuscitato. Ricordatevi come vi parlò quando era ancora in Galilea, dicendo che bisognava che il Figlio dell'uomo fosse consegnato in mano ai peccatori, che fosse crocifisso e risuscitasse il terzo giorno».</p><p>Ed esse si ricordarono delle sue parole.</p></div>
+
+
+<div class=red>Gv 6, 37-40</div>
+
+<div><p>In quel tempo, Gesù disse alle folle: «Tutto ciò che il Padre mi dà, verrà a me; colui che viene a me, non lo respingerò, perché sono disceso dal cielo non per fare la mia volontà, ma la volontà di colui che mi ha mandato. E questa è la volontà di colui che mi ha mandato, che io non perda nulla di quanto egli mi ha dato, ma lo risusciti nell'ultimo giorno.</p><p>Questa infatti è la volontà del Padre mio, che chiunque vede il Figlio e crede in lui abbia la vita eterna; io lo risusciterò nell'ultimo giorno».</p></div>
+
+
+<div class=red>Gv 14, 1-6.23.27</div>
+
+<div><p>«Non sia turbato il vostro cuore. Abbiate fede in Dio e abbiate fede anche in me. Nella casa del Padre mio vi sono molti posti. Se no, ve l'avrei detto. lo vado a prepararvi un posto; quando sarò andato e vi avrò preparato un posto, ritornerò e vi prenderò con me, perché siate anche voi dove
+sono io. E del luogo dove io vado, voi conoscete la via».</p><p>Gli disse Tommaso: «Signore, non sappiamo dove vai e come possiamo conoscere la via?». Gli disse Gesù: «Io sono la via, la verità e la vita. Nessuno viene al Padre se non per mezzo di me.</p><p>Se uno mi ama, osserverà la mia parola e il Padre mio lo amerà e noi verremo a lui e prenderemo dimora presso di lui.</p><p>Vi lascio la pace, vi do la mia pace. Non come la dà il mondo, io la do a voi. Non sia turbato il vostro cuore e non abbia timore».</p></div>
+
+
+<div class=red>LITANIE DEI SANTI</div>
+
+<div class=red>Se il moribondo può partecipare alla preghiera anche se prolungata, si può eventualmente continuare pregando per lui con quelli che lo assistono, recitando le litanie dei santi (o anche scegliendone alcune invocazioni), con la risposta «Prega per lui», senza dimenticarsi di menzionare in modo particolare il santo o i santi patroni del moribondo o della sua famiglia.</div>
+<div class=red>Si possono anche recitare le formule comuni di preghiera del cristiano.</div>
+
+<div>Signore, pietà <span class='red'>(</span>Kyrie, eléison<span class='red'>)</span><br><span class=red>R/. </span>Signore, pietà <span class='red'>(</span>Kyrie, eléison<span class='red'>)</span></div>
+
+<div>Cristo, pietà <span class='red'>(</span>Christe, eléison<span class='red'>)</span><br><span class=red>R/. </span>Cristo, pietà <span class='red'>(</span>Christe, eléison<span class='red'>)</span></div>
+
+<div>Signore,  pietà <span class='red'>(</span>Kyrie, eléison<span class='red'>)</span><br><span class=red>R/. </span>Signore,  pietà <span class='red'>(</span>Kyrie, eléison<span class='red'>)</span></div>
+
+
+
+<div>Santa Maria, Madre di Dio<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Michele <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi angeli di Dio<span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+<div>Coro universale dei Giusti <span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+<div>San Giovanni Battista <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Giuseppe <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi Pietro e Paolo <span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+<div>Sant'Andrea <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Giovanni <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi apostoli ed evangelisti <span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+<div>Santa Maria Maddalena <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi discepoli del Signore<span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+<div>Santo Stefano <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+
+<div>San Lorenzo <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santa Lucia <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santa Maria Goretti<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi Martiri di Cristo<span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+
+<div>San Silvestro<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Gregorio<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Sant' Agostino<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Benedetto <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Francesco<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+
+<div>San Camillo de' Lellis<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Giovanni di Dio <span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>San Vincenzo de' Paoli<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santa Caterina da Siena<span style='float: right;'><span class=red>R/. </span>prega per lui.</span></div>
+<div>Santi e Sante di Dio <span style='float: right;'><span class=red>R/. </span>pregate per lui.</span></div>
+
+<div>Nella tua misericordia <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Nella tua misericordia <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Nella tua misericordia <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+
+<div>Da ogni male <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Da ogni peccato <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Dalla morte eterna <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Per la tua incarnazione<span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Per la tua morte e risurrezione <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+<div>Per il dono dello Spirito Santo <span style='float: right;'><span class=red>R/. </span>salvalo, Signore.</span></div>
+
+<div>Noi peccatori ti preghiamo <span style='float: right;'><span class=red>R/. </span>ascoltaci, Signore.</span></div>
+<div>Perché tu perdoni i suoi peccati <span style='float: right;'><span class=red>R/. </span>ascoltaci, Signore.</span></div>
+
+<div>Gesù, Figlio del Dio vivente, ascolta la nostra supplica<br><span class=red>R/. </span>Gesù, Figlio del Dio vivente, ascolta la nostra supplica.</div>
+
+
+
+
+
+
+
+
+<div class=red>ORAZIONI</div>
+
+<div class=red>Quando sembra ormai imminente il momento della morte, uno dei presenti può recitare, secondo le disposizioni spirituali del moribondo, qualcuna delle orazioni seguenti:</div>
+
+<div><p>Parti, anima cristiana, da questo mondo,<br>nel nome di Dio Padre onnipotente che ti ha creato,<br>nel nome di Gesù Cristo, Figlio del Dio vivo,<br>che è morto per te sulla croce,<br>nel nome dello Spirito Santo, che ti è stato dato in dono;<br>la tua dimora sia oggi nella pace della santa Gerusalemme,<br>con la Vergine Maria, Madre di Dio,<br>con san Giuseppe,<br>con tutti gli angeli e i santi.</p>
+<p>Ti raccomando, fratello carissimo, a Dio onnipotente:<br>ti affido a lui come a sua creatura,<br>perché tu possa tornare al tuo creatore,<br>che ti ha formato dalla polvere della terra.</p>
+<p>Quando lascerai questa vita,<br>ti venga incontro la Vergine Maria<br>con gli angeli e i santi.</p>
+<p>Venga a liberarti Cristo Signore,<br>che per te ha dato la sua vita;<br>venga a liberarti Cristo Signore,<br>che per te è morto sulla croce;<br>ti accolga in paradiso Cristo Signore,<br>Figlio del Dio vivo.</p>
+<p>Egli, divino Pastore,<br>ti riconosca tra le pecorelle del suo gregge,<br>ti assolva tutti i tuoi peccati<br>e ti riceva tra gli eletti nel suo regno.</p>
+<p>Mite e festoso ti appaia il volto di Cristo<br>e possa tu contemplarlo<br>per tutti i secoli in eterno.<br><span class=red>R/. </span>Amen.</p></div>
+
+<div><p>Accogli, Signore, il tuo servo <span class='red'>N.</span><br>nel luogo di salvezza<br>che egli spera dalla tua misericordia.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>da ogni pena e da ogni tribolazione.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Noè dal diluvio.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Abramo dalla regione dei Caldei.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Giobbe dalle sue afflizioni.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Mosè dalla mano del Faraone.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Daniele dalla fossa dei leoni.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti i tre fanciulli dalla fornace ardente<br>e dalle mani di un re iniquo.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Susanna dai suoi calunniatori.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti Davide dalle mani del re Saul<br>e dalle mani di Golia.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>come liberasti dal carcere<br>gli apostoli Pietro e Paolo.<br><span class=red>R/. </span>Amen.</p>
+<p>Libera il tuo servo, Signore,<br>per Gesù Cristo, nostro Salvatore,<br>che è morto per noi sulla croce.<br>e ci ha fatto dono della vita eterna.<br><span class=red>R/. </span>Amen.</p></div>
+
+<div>Ti raccomandiamo, o Padre, questo nostro fratello <span class='red'>N.</span>:<br>se nella sua vita ha peccato,<br>egli ha conservato la sua fede in te,<br>Padre, Figlio e Spirito Santo,<br>creatore e Signore di tutte le cose.<br>Gesù Salvatore del mondo,<br>che nel tuo amore per lui sei disceso sulla terra,<br>accòglilo nella gioia del tuo regno.</div>
+
+<div class=red>Si può anche dire la seguente antifona:</div>
+
+<div>Salve, Regina, Madre di misericordia;<br>vita, dolcezza e speranza nostra, salve.<br>A te ricorriamo, noi esuli figli di Eva:<br>a te sospiriamo, gementi e piangenti<br>in questa valle di lacrime.<br>Orsù, dunque, avvocata nostra,<br>rivolgi a noi quegli occhi tuoi misericordiosi.<br>E mostraci dopo questo esilio Gesù,<br>il frutto benedetto del tuo seno.<br>O clemente, o pia, o dolce Vergine Maria.</div>
+
+<div class=red>Appena il morente avrà esalato l'ultimo respiro, si dice:</div>
+
+<div>Venite, santi di Dio,<br>accorrete, angeli del Signore.<br><span class=red>R/. </span>Accogliete la sua anima<br>e presentatela al trono dell' Altissimo.</div>
+
+<div><span class=red>V/. </span>Ti accolga Cristo, che ti ha chiamato,<br>e gli angeli ti conducano con Abramo in paradiso.<br><span class=red>R/. </span>Accogliete la sua anima<br>e presentatela al trono dell' Altissimo.</div>
+
+<div><span class=red>V/. </span>L'eterno riposo donagli, o Signore,<br>e splenda a lui la luce perpetua.<br><span class=red>R/. </span>Accogliete la sua anima<br>e presentatela al trono dell' Altissimo.</div>
+
+<div>Preghiamo.<br>Ti raccomandiamo, Signore,<br>l'anima fedele del nostro fratello <span class='red'>N.</span>,<br>perché, lasciato questo mondo, viva in te,<br>e in tutto ciò che ha peccato per la fragilità<br>della condizione umana,<br>ottenga dalla tua clemenza<br>il perdono e la pace.<br>Per Cristo nostro Signore.<br><span class=red>R/. </span>Amen.</div>
+
+
+
+</div>
+
+
+
+<div data-role='footer' data-position='fixed' style='text-align: center;'  >
+				<div data-role=popup id=popup14_3 data-theme=a style='position: fixed; bottom: 2px; right: 0;'>
+				<div style="padding:10px 20px;">
+				  <div data-role=controlgroup style="min-width:210px;" data-theme=a >
+					<a class=titulo001  data-role=button href='javascript: cambia_pref("tipoletra", nuevaletra ); cambiafuente();'><span style=' font-family: Times New Roman; '>ABC</span> &nbsp;&#9664;&#xFE0E; &#9654;&#xFE0E;&nbsp; <span style=' font-family: Arial; '>ABC</span></a>
+					<a class=titulo002 data-role=button href='javascript: cambia_pref("tamanotexto", masgrande ); cambiatamanoletra(masgrande);'></a>
+					<a class=titulo003 data-role=button href='javascript: cambia_pref("tamanotexto", maspeq ); cambiatamanoletra(maspeq); '></a>
+					<a data-role=button href='javascript: cambia_vista2("popup14_3"); ' data-icon=delete  >Vade retro</a>
+				</div>
+				</div>
+		</div>
+<div data-role=controlgroup data-type=horizontal data-theme=b >
+<a href='#popup14_3' data-rel=popup  data-role=button  >&nbsp;&nbsp;&nbsp;<img src="../../asterisk2.png" style="height: 1.3em; ">&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+</div>
+</div>
+
+<!-- Todo lo siguiente debe estar al final de todos los archivos -->
+
+</body>
+<script>
+
+		if (!estoymac) {
+$('.solo_android').css('display','block');
+$('.solo_mac').css('display','none');
+} else {
+$('.solo_android').css('display','none');
+$('.solo_mac').css('display','block');
+}
+
+
+$('.titulo002').html(mipreferencia['tamanotexto']+"&nbsp;&#9654;&#xFE0E;&nbsp;<span style='  font-size: 120%;  '>"+masgrande+"</span>");
+$('.titulo003').html(mipreferencia['tamanotexto']+"&nbsp;&#9654;&#xFE0E;&nbsp;<span style='  font-size: 80%;  '>"+maspeq+"</span>");
+
+
+
+if ( typeof embutidos != 'undefined' && embutidos.length>0) {
+
+
+	var trocito=embutidos.split("XXX");
+	var tamano = trocito.length,
+    elemento = null;
+for (var i = 0; i < tamano; i++) {
+  miparrafo = trocito[i];
+  		mivariable=miparrafo.split('YYY')
+  		miId=mivariable[0]
+		mivalor=mivariable[1]
+
+		document.getElementById(miId).style.display = mivalor
+
+}
+
+	}
+
+
+$(document).bind('pageinit', function () {
+$.mobile.defaultPageTransition   = 'none'
+$.mobile.defaultDialogTransition = 'none'
+$.mobile.buttonMarkup.hoverDelay = 0
+
+
+if (mipreferencia['presentaciontexto']==2) $(" .lengua1 , .lengua2  ").each(function(){
+	$(this).click(function() {
+		cambialengua(this);
+		return false;
+	});
+	});
+
+
+    $.mobile.defaultHomeScroll = 0;
+});
+
+
+var ajuste= dime_pref("ajuste",10);
+window.addEventListener("load",  function () { setTimeout(loaded, ajuste*10); }, false);
+//document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, ajuste*100); }, false);
+</script>
+</html>
