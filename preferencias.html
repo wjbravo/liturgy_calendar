@@ -1,0 +1,291 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+<title>TEMPORA</title>
+<link rel="stylesheet" href="misal.css" type="text/css">
+<style>
+body {
+background-image: url('fondo_libro.png');
+padding: 20px 0 0 3px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+padding: 0px 0 0 3px;
+-webkit-user-select:none;
+-webkit-text-size-adjust:none;
+ }
+#cabecera {
+    background-image: url('fondo_libro.png'); }
+ #contenedor {
+	position:absolute; z-index:1;
+	top: 2em; bottom: 0; left:0;
+	width:100%;
+	overflow:auto;
+}
+
+#scroller {
+	position:absolute; z-index:1;
+	width:100%;
+	padding:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-transition-duration:0;
+	-webkit-transform:translate3d(0,0,0);
+}
+.boton {
+          color: #660000;
+          line-height:150%;
+          height:100%;
+          padding-right:10px;
+          padding-left:10px;
+          display:inline-block;
+          width:fill-wrap;
+          text-decoration:none;}
+
+div {margin-top: 1%; }
+span.boton  { background: url("boton.png") top right no-repeat;  color: white; }
+
+div {margin-top: 2%}
+h2 {text-align:center; border: 1px solid;  width: 90%; padding: 10px; color: #660000; font-size: 120%;font-weight: bold;  }
+
+
+span.pestana { display: inline-block; background-color: white; color: red; padding: 5px; }
+
+.final_pagina {margin-top: 20%; margin-bottom: 60%;}
+h1 {border: 2px solid;  width: 90%; padding: 10px; color: #660000; font-size: 130%;font-weight: normal; text-align: center;
+margin-left: auto;
+margin-right: auto;}
+h2 {border: 1px solid;  width: 90%; padding: 10px; color: #660000; font-size: 120%;font-weight: normal; margin-left: auto; text-align: center;
+margin-right: auto;}
+h3 {color:#660000; text-align: center;}
+
+h4 {color:#660000;margin-top: 10px;margin-bottom: 2px; margin-bottom: 1em; }
+p { color: #660000; margin-left: 20%; text-indent: -10%;}
+
+div.red { text-align: center;}
+</style>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="iscroll-lite.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+
+<script>
+
+
+function cambia_pref(pref,nuevovalor) {
+mipreferencia[pref] = nuevovalor
+preferencias = "?fondo="+mipreferencia["fondo_defecto"]
+preferencias +=  "&tamanotexto="+mipreferencia["tamanotexto_defecto"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica_defecto"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral_defecto"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma_defecto"]
+preferencias +=  "&presentaciontexto="+mipreferencia["presentaciontexto_defecto"]
+preferencias +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas_defecto"]
+preferencias +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas_defecto"]
+preferencias +=  "&presentacionbotones="+mipreferencia["presentacionbotones_defecto"]
+window.localStorage.setItem('preferencias', preferencias);
+
+pon_pref("cambiartamano",1);
+}
+
+
+
+function pon_pref(key,value) {
+
+window.localStorage.setItem(key, value);
+
+cambia_pref(key, value);
+ //alert('Guardo: '+value + ' ...  --> ... ' + key)
+ }
+
+ function dime_pref (key, defecto) {
+  var resultado = window.localStorage.getItem(key)
+
+  if (resultado == null)  resultado = defecto
+   //alert('Saco: '+ key+ '... -> ... '+resultado)
+  return resultado
+}
+
+
+
+function extrae_preferencias() {
+	var url=preferencias
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function cambia_vista(yomismo, miId) {
+mielemento= document.getElementById(miId)
+if (mielemento.style.display=='block') {
+mielemento.style.display='none'
+} else mielemento.style.display='block'
+yomismo.style.display='none';
+}
+
+
+var preferencias = ""
+
+var mipreferencia = new Array()
+
+
+mipreferencia["fondo_defecto"] = dime_pref('fondo_defecto', 1 )
+mipreferencia["tamanotexto_defecto"] = dime_pref('tamanotexto_defecto', 12 )
+mipreferencia["tamanorubrica_defecto"] = dime_pref('tamanorubrica_defecto', 80 )
+mipreferencia["misal_pral_defecto"] = dime_pref('misal_pral_defecto', 0 )
+mipreferencia["segundoidioma_defecto"] = dime_pref('segundoidioma_defecto', 1 )
+mipreferencia["presentaciontexto_defecto"] = dime_pref('presentaciontexto_defecto', 2 )
+mipreferencia["presentacionrespuestas_defecto"] = dime_pref('presentacionrespuestas_defecto', 5 )
+mipreferencia["presentacionpestanas_defecto"] = dime_pref('presentacionpestanas_defecto', 0 )
+mipreferencia["presentacionbotones_defecto"] = dime_pref('presentacionbotones_defecto', 0 )
+
+preferencias = "?fondo="+mipreferencia["fondo_defecto"]
+preferencias +=  "&tamanotexto="+mipreferencia["tamanotexto_defecto"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica_defecto"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral_defecto"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma_defecto"]
+preferencias +=  "&presentaciontexto="+mipreferencia["presentaciontexto_defecto"]
+preferencias +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas_defecto"]
+preferencias +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas_defecto"]
+preferencias +=  "&presentacionbotones="+mipreferencia["presentacionbotones_defecto"]
+window.localStorage.setItem('preferencias', preferencias);
+
+
+
+  if  (mipreferencia['fondo_defecto']==0) {
+mitexto='  body , #cabecera {background-color: white; background-image: none; font-size: '+ mipreferencia['tamanotexto']+'pt }    ';
+} else  if  (mipreferencia['fondo_defecto']==1) {
+mitexto='  body   { font-size: '+ mipreferencia['tamanotexto']+'pt; }   ';
+}
+document.write ('<style> '+ mitexto + ' </style>');
+</script>
+</head>
+<body>
+<div id=cabecera style=' margin-top: 0; padding-top:.3em;  height: 2em;  width: 100%; padding-left: 0em; padding-right: 0em; z-index: 10;' >
+<div style='float: left; width: auto;'><span class=boton ontouchend='window.location="index.html"' >Initium</span></div><div style='float: right; width: auto; margin-right: 1em;'><span class=boton ontouchend='window.location="misal/feria_actual.html"+preferencias'>Calendarium</span>&nbsp;&nbsp;<span class=boton ontouchend='window.location="misal/ordinario/ordinario.html"+preferencias'>Missale</span></div>
+</div>
+
+<div id='contenedor2' style='margin-top: 3em' >
+<div id='scroller2'>
+
+<!-- Todo lo anterior debe estar al comienzo de todos los archivos -->
+
+<form name=formulario  >
+
+<div style='mrgin-top: 2em; margin-bottom: 6em;'><h1>Dilectus<br><span class='red'>(preferencias)</span></h1></div>
+<div><h2>Idiomas<span style='float:right;'><a class=boton ontouchend="cambia_vista(this,'idioma'); ">&#9654;</a></span></h2></div>
+<div id='idioma' style='display: none;'>
+
+<div class=red >Idioma por defecto<br>(el que toma cuando se accede desde el calendario y ayuda): <br><div style='text-align: center;'><select id=misal_pral onchange="pon_pref('misal_pral_defecto',this.value);">
+<option value=0 >Latín</option>
+<option value=1 >Español</option>
+</select></div>
+</div>
+<div class=red >
+Segundo idioma<br>(al que se traduce): <br><div style='text-align: center;'><select name=segundoidioma onchange="pon_pref('segundoidioma_defecto',this.value);">
+<option value=0 >Latin</option>
+<option value=1  >Español</option>
+<option value=2  >English (3%)</option>
+<option value=3  >Deutsch (1%)</option>
+<option value=4  >Italiano (2%)</option>
+</select></div>
+</div>
+<div class=red >
+Tipo de presentación: <br><div style='text-align: center;'><select name=presentaciontexto onchange="pon_pref('presentaciontexto_defecto',this.value);">
+<option value=0 >Sin traducción</option>
+<option value=1 >2 columnas</option>
+<option value=2 >cambio tocando texto</option>
+</select></div>
+</div>
+<div class=red >
+Respuestas en lecturas:<br><div style='text-align: center;'><select name=presentacionrespuestas onchange="pon_pref('presentacionrespuestas_defecto',this.value);">
+<option value=1 >Idioma misal</option>
+<option value=2 >2º idioma</option>
+<option value=3 >Ambas (filas)</option>
+<option value=4 >Ambas (columnas)</option>
+<option value=5 >cambio tocando texto</option>
+</select></div><br>
+</div>
+
+</div>
+
+<div><h2>Presentación<span style='float:right;'><a class=boton ontouchend="cambia_vista(this,'presen'); ">&#9654;</a></span></h2></div>
+<div id='presen' style='display: none;'>
+
+<div>
+
+<div class=red >
+Color de fondo:<br><div style='text-align: center;'><select name=fondo onchange="pon_pref('fondo_defecto',this.value);">
+<option value=0>Blanco</option>
+<option value=1 >Sepia</option>
+</select></div>
+</div>
+<div class=red >
+Tamaño fuente:<br><div style='text-align: center;'><select name=tamanotexto onchange="pon_pref('tamanotexto_defecto',this.value);">>
+<option value=20>22</option>
+<option value=20>20</option>
+<option value=18>18</option>
+<option value=16>16</option>
+<option value=14>14</option>
+<option value=12 >12</option>
+<option value=10>10</option>
+</select></div>
+</div>
+<div class=red >
+Tamaño fuente rúbricas:<br><div style='text-align: center;'><select name=tamanorubrica onchange="pon_pref('tamanorubrica_defecto',this.value);">
+<option value=100>Grande</option>
+<option value=80 selected >Normal</option>
+<option value=60>Pequeño</option>
+</select></div>
+</div>
+<div class=red >
+Pestañas:<br><div style='text-align: center;'><select name=presentacionpestanas onchange="pon_pref('presentacionpestanas_defecto',this.value);">
+<option value=0>Siempre vistas</option>
+<option value=1>Emergentes</option>
+</select></div>
+</div>
+<div class=red >
+Botones:<br><div style='text-align: center;'><select name=presentacionbotones onchange="pon_pref('presentacionbotones_defecto',this.value);">
+<option value=0>Siempre vistos</option>
+<option value=1>Emergentes</option>
+
+</select></div>
+</div>
+
+
+</div>
+</div>
+</form>
+
+
+<!-- Todo lo siguiente debe estar al final de todos los archivos -->
+
+</div>
+</div>
+<div style=' margin-top: 3em; padding-top:.3em;  height: 2em;  width: 100%; padding-left: 0em; padding-right: 0em; z-index: 10;' >
+<div style='float: left; width: auto;'><span class=boton ontouchend='window.location="index.html"' >Initium</span></div><div style='float: right; width: auto; margin-right: 1em;'><span class=boton ontouchend='window.location="misal/feria_actual.html"+preferencias'>Calendarium</span>&nbsp;&nbsp;<span class=boton ontouchend='window.location="misal/ordinario/ordinario.html"+preferencias'>Missale</span></div>
+</div>
+
+<script>
+
+document.formulario.fondo.value = mipreferencia["fondo_defecto"]
+document.formulario.tamanotexto.value = mipreferencia["tamanotexto_defecto"]
+document.formulario.tamanorubrica.value = mipreferencia["tamanorubrica_defecto"]
+document.formulario.misal_pral.value = mipreferencia["misal_pral_defecto"]
+document.formulario.segundoidioma.value = mipreferencia["segundoidioma_defecto"]
+document.formulario.presentaciontexto.value = mipreferencia["presentaciontexto_defecto"]
+document.formulario.presentacionrespuestas.value = mipreferencia["presentacionrespuestas_defecto"]
+document.formulario.presentacionpestanas.value = mipreferencia["presentacionpestanas_defecto"]
+document.formulario.presentacionbotones.value = mipreferencia["presentacionbotones_defecto"]
+
+
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+</script>
+
+
+
+</body>
+</html>

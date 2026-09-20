@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+<title>TEMPORA</title>
+<style>
+body {
+background-image: url('background.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+ }
+
+
+
+div { width: 100%; color: maroon; font-size: 140%; font-weight: bold; text-align: center;}
+div span { font-weight: bold; }
+
+
+</style>
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="jquery.js"></script>
+
+<script>
+function pon_pref(key,value) {
+window.localStorage.setItem(key, value);
+ //alert('Guardo: '+value + ' ...  --> ... ' + key)
+ }
+
+ function dime_pref (key, defecto) {
+  var resultado = window.localStorage.getItem(key)
+
+  if (resultado == null)  resultado = defecto
+   //alert('Saco: '+ key+ '... -> ... '+resultado)
+  return resultado
+}
+
+
+
+var preferencias = ""
+
+var mipreferencia = new Array()
+
+
+mipreferencia["fondo_defecto"] = dime_pref('fondo_defecto', 1 )
+mipreferencia["tamanotexto_defecto"] = dime_pref('tamanotexto_defecto', 12 )
+mipreferencia["tamanorubrica_defecto"] = dime_pref('tamanorubrica_defecto', 80 )
+mipreferencia["misal_pral_defecto"] = dime_pref('misal_pral_defecto', 0 )
+mipreferencia["segundoidioma_defecto"] = dime_pref('segundoidioma_defecto', 1 )
+mipreferencia["presentaciontexto_defecto"] = dime_pref('presentaciontexto_defecto', 2 )
+mipreferencia["presentacionrespuestas_defecto"] = dime_pref('presentacionrespuestas_defecto', 5 )
+mipreferencia["presentacionpestanas_defecto"] = dime_pref('presentacionpestanas_defecto', 0 )
+mipreferencia["presentacionbotones_defecto"] = dime_pref('presentacionbotones_defecto', 0 )
+
+preferencias = "?fondo="+mipreferencia["fondo_defecto"]
+preferencias +=  "&tamanotexto="+mipreferencia["tamanotexto_defecto"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica_defecto"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral_defecto"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma_defecto"]
+preferencias +=  "&presentaciontexto="+mipreferencia["presentaciontexto_defecto"]
+preferencias +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas_defecto"]
+preferencias +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas_defecto"]
+preferencias +=  "&presentacionbotones="+mipreferencia["presentacionbotones_defecto"]
+window.localStorage.setItem('preferencias', preferencias);
+
+    preferencias2 = "?fondo="+mipreferencia["fondo_defecto"]
+    preferencias2 +=  "&tamanotexto="+mipreferencia["tamanotexto_defecto"]
+    preferencias2 += "&tamanorubrica="+mipreferencia["tamanorubrica_defecto"]
+    preferencias2 += "&misal_pral="+mipreferencia["segundoidioma_defecto"]
+    preferencias2 += "&segundoidioma="+mipreferencia["misal_pral_defecto"]
+    preferencias2 +=  "&presentaciontexto="+mipreferencia["presentaciontexto_defecto"]
+    preferencias2 +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas_defecto"]
+    preferencias2 +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas_defecto"]
+    preferencias2 +=  "&presentacionbotones="+mipreferencia["presentacionbotones_defecto"]
+
+    pon_pref('estoymac',1)
+
+﻿var miurl = window.location.pathname
+    miurl = miurl.substring(0, miurl.lastIndexOf("/") + 1)
+    ant_url = window.localStorage.getItem('url_antigua');
+
+
+if (miurl != ant_url ) {
+
+﻿window.localStorage.setItem('url_antigua', miurl);
+
+﻿       pon_pref('lht_ultimo',500 );
+        pon_pref('lht_tope',500 );
+        pon_pref('lht_puntero',500 );
+        pon_pref('lht500',miurl + 'misal/indice_tiempos.html?');
+
+﻿       pon_pref('lhs_ultimo',500 );
+        pon_pref('lhs_tope',500 );
+        pon_pref('lhs_puntero',500 );
+        pon_pref('lhs500',miurl + 'misal/indice_santos.html?');
+
+﻿       pon_pref('lhc_ultimo',500 );
+        pon_pref('lhc_tope',500 );
+        pon_pref('lhc_puntero',500 );
+        pon_pref('lhc500',miurl + 'misal/indice_comunes.html?');
+
+﻿       pon_pref('lhle_ultimo',500 );
+        pon_pref('lhle_tope',500 );
+        pon_pref('lhle_puntero',500 );
+        pon_pref('lhle500',miurl + 'misal/indice_lecturas.html?');
+
+﻿       pon_pref('lhpf_ultimo',500 );
+        pon_pref('lhpf_tope',500 );
+        pon_pref('lhpf_puntero',500 );
+        pon_pref('lhpf500',miurl + 'misal/indice_prefacios.html?');
+
+﻿       pon_pref('lhpe_ultimo',500 );
+        pon_pref('lhpe_tope',500 );
+        pon_pref('lhpe_puntero',500 );
+        pon_pref('lhpe500',miurl + 'misal/indice_pleg_euc.html?');
+
+antes = window.location.pathname
+antes = antes.substring(0, antes.lastIndexOf("/www/") + 1)
+
+despues = dime_pref('mr_alia1','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_alia1', antes + despues )
+}
+despues = dime_pref('mr_alia2','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_alia2', antes + despues )
+}
+despues = dime_pref('mr_alia3','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_alia3', antes + despues )
+}
+despues = dime_pref('mr_alia4','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_alia4', antes + despues )
+}
+despues = dime_pref('mr_alia5','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_alia5', antes + despues )
+}
+
+despues = dime_pref('mr_primera','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_primera', antes + despues )
+}
+despues = dime_pref('mr_salmo','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_salmo', antes + despues )
+}
+despues = dime_pref('mr_segunda','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_segunda', antes + despues )
+}
+despues = dime_pref('mr_aleluya','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_aleluya', antes + despues )
+}
+despues = dime_pref('mr_evangelio','noExiste')
+if (despues.lastIndexOf("/www/") > 0) {
+despues = despues.substring(despues.lastIndexOf("/www/") + 1)
+pon_pref ('mr_evangelio', antes + despues )
+}
+
+}
+
+</script>
+</head>
+
+<body >
+
+<div id=cabecera style='position: absolute; top: 0; margin-top:.3em;  bottom: 0;  right: 0: z-index: 10;' >
+
+<table style='height: 100%; width: 100%;'>
+<tr><td><div style='font-size: 100%' ontouchend='window.location="misal/ordinario/ordinario.html"+preferencias2'>Missale II</div></td></tr>
+<tr><td ><div style='font-size: 160%' ontouchend='window.location="misal/ordinario/ordinario.html"+preferencias'>Missale</div></td></tr>
+<tr><td><div style='font-size: 100%' ontouchend='setTimeout(function() {window.location="misal/feria_actual.html"+preferencias;},500);'>Calendarium</div></td></tr>
+<tr><td><div  style='font-size: 100%' ontouchend='window.location="ayuda.html"+preferencias'>Auxilium</div></td></tr>
+<tr><td><div style='font-size: 80%'  ontouchend='window.location="preferencias.html"'>Dilectus</div></td></tr>
+</table>
+
+
+</div>
+
+
+
+</body>
+</html>
