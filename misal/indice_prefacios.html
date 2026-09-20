@@ -1,0 +1,748 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+<title>TEMPORA</title>
+<link rel="stylesheet" href="misal.css" type="text/css">
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+<script src="../iscroll-lite.js"></script> 
+<script type="text/javascript" charset="utf-8" src="../jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="mis_funciones_misal.js"></script>
+<script>var mipestana='pf'</script>
+</head>
+<body  onload="alCargar(mipestana);" >
+<script type="text/javascript">pinta_tabs('../',mipestana);</script>
+<style>
+div.red { font-size: 100%; }
+</style>
+<div id='contenedor' >
+<div id='scroller'>
+<!-- Todo lo anterior debe estar al comienzo de todos los archivos -->
+<div style="margin-top:30px; margin-bottom: 2%; text-align: center; width: 100%"><b><font size="4" color="red"><span class=misal_engl>INDEX</span><span class=misal_cast>ÍNDICE</span><span class=misal_latin>INDEX</span><span class=misal_ital>INDICE</span></font></b></div>
+
+<div id='misal_latin' class='misal_latin'>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>INDEX PRÆFATIONUM</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref1'); ">&#9654;&#xFE0E;</a> De Tempore</div>
+<div id='indice_lpref1' style='display: none;' >
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref2'); ">&#9654;&#xFE0E;</a> De Adventu</div>
+<div id='indice_lpref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Qui, primo advéntu in humilitáte carnis...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... Quem prædixérunt cunctórum præcónia...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref3'); ">&#9654;&#xFE0E;</a> De Nativitate Domini</div>
+<div id='indice_lpref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... Quia per incarnáti Verbi mystérium...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Qui, in huius venerándi festivitáte...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... Per quem hódie commércium nostræ reparatiónis...</a><br></div><br><div class='indicepref'>DE EPIPHANIA DOMINI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... Quia ipsum in Christo salútis nostræ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref4'); ">&#9654;&#xFE0E;</a> De Quadragesima</div>
+<div id='indice_lpref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >... Quia fidélibus tuis dignánter concédis...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Qui fíliis tuis ad reparándam méntium...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >... Qui nos per abstinéntiam tibi grátias...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >... Qui corporáli ieiúnio vítia cómprimis,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref5'); ">&#9654;&#xFE0E;</a> De Passione Domini</div>
+<div id='indice_lpref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... Quia per Fílii tui salutíferam passiónem...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Cuius salutíferæ passiónis et gloriósæ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref6'); ">&#9654;&#xFE0E;</a> Paschalis</div>
+<div id='indice_lpref6' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... Ipse enim verus est Agnus qui ábstulit...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Per quem in ætérnam vitam fílii lucis...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Qui se pro nobis offérre non désinit,...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... Quia, vetustáte destrúcta, renovántur...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Qui, oblatióne córporis sui, antíqua...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref7'); ">&#9654;&#xFE0E;</a> De Ascensione Domini</div>
+<div id='indice_lpref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Quia Dóminus Iesus, Rex glóriæ, peccáti...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >... Qui post resurrectiónem suam ómnibus...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref8'); ">&#9654;&#xFE0E;</a> De dominicis «per annum»</div>
+<div id='indice_lpref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... Cuius hoc miríficum fuit opus per...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... Qui, humánis miserátus erróribus,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... Ad cuius imménsam glóriam pertinére...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... Ipse enim nascéndo vetustátem hóminum...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... Qui ómnia mundi eleménta fecísti,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... In quo vívimus, movémur et sumus,...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... Quia sic mundum misericórditer dilexísti,...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... Quia fílios, quos longe peccáti crimen...</a><br></div>
+</div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref9'); ">&#9654;&#xFE0E;</a> De Ss.ma Eucharistia</div>
+<div id='indice_lpref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... Qui, verus æternúsque Sacérdos, formam...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... Qui cum Apóstolis suis in novíssima...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref91'); ">&#9654;&#xFE0E;</a> De Spiritu Sancto</div>
+<div id='indice_lpref91' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Qui, ascéndens super omnes cælos...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... Qui síngulis quibúsque tempóribus aptánda...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref10'); ">&#9654;&#xFE0E;</a> In festis sanctorum</div>
+<div id='indice_lpref10' style='display: none;' >
+<div class='indicepref red'>De Beata Maria Virgine</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... Et te in beátæ Maríæ semper Vírginis...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... Vere namque in omnes terræ fines magna...</a><br></div><br><div class='indicepref red'>De apostolis</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Qui gregem tuum, Pastor ætérne, non...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Quóniam Ecclésiam tuam in apostólicis...</a><br></div><br><div class='indicepref red'>De sanctis</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Qui in Sanctórum concílio celebráris,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Tu enim Sanctórum tuórum confessióne...</a><br></div><br><div class='indicepref red'>De sanctis martyribus</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... Quóniam beáti mártyris N. pro confessióne...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >... Quóniam tu magnificáris in tuórum...</a><br></div><br><div class='indicepref red'>De sanctis pastoribus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Quia sic tríbuis Ecclésiam tuam sancti...</a><br></div><br><div class='indicepref red'>De sanctis virginibus et religiosis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >... In Sanctis enim, qui Christo se dedicavérunt...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref11'); ">&#9654;&#xFE0E;</a> Communis</div>
+<div id='indice_lpref11' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... In quo ómnia instauráre tibi complácuit,...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >... Qui bonitáte hóminem condidísti, ac...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Qui per Fílium dilectiónis tuæ, sicut...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Quia, cum nostra laude non égeas,...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >... Cuius mortem in caritáte celebrámus,...</a><br></div>
+<div class='indicepref'> VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Qui voluntátem tuam adímplens et pópulum...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_lpref12'); ">&#9654;&#xFE0E;</a> De defunctis</div>
+<div id='indice_lpref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... In quo nobis spes beátæ resurrectiónis...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Ipse enim mortem unus accépit, ne...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Qui est salus mundi, vita hóminum,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >... Cuius império náscimur, cuius arbítrio...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >... Quia, etsi nostri est mériti quod...</a><br></div></div>
+
+</div>
+<div id='misal_cast' class='misal_cast' >
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>ÍNDICE DE PREFACIOS</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref1'); ">&#9654;&#xFE0E;</a> Del Tiempo</div>
+<div id='indice_cpref1' style='display: none;' >
+
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref2'); ">&#9654;&#xFE0E;</a> Adviento</div>
+<div id='indice_cpref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Quien al venir por vez primera...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... A quien todos los profetas anunciaron,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf003")' class='enlacepref' >... Tú nos has ocultado el día y la hora...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf004")' class='enlacepref' >... Te alabamos, te bendecimos y te glorificamos...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref3'); ">&#9654;&#xFE0E;</a> Navidad</div>
+<div id='indice_cpref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... Porque, gracias al misterio del Verbo hecho carne,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Porque en el misterio santo que hoy celebramos,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... Por él, hoy resplandece el maravilloso intercambio...</a><br></div>
+<div class='indicepref'>De la Epifanía del Señor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... Porque hoy has revelado en Cristo,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref4'); ">&#9654;&#xFE0E;</a> Cuaresma</div>
+<div id='indice_cpref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >...Por él concedes a tus fieles...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Porque has establecido generosamente...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >...Tú has querido que te diésemos gracias...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >...Tú, que, por el ayuno corporal...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf013")' class='enlacepref' >... Tú abres a la Iglesia...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref5'); ">&#9654;&#xFE0E;</a> Pasión del señor</div>
+<div id='indice_cpref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... Porque en la pasión salvadora de tu Hijo...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Porque se acercan los días santos...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref6'); ">&#9654;&#xFE0E;</a> Pascua</div>
+<div id='indice_cpref6' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... Porque Él es el verdadero Cordero...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Por Él los hijos de la luz...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Porque Él no cesa de ofrecerse por nosotros,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... Porque, demolida nuestra antigua miseria,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Porque Él, con la inmolación de su cuerpo en la cruz,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref7'); ">&#9654;&#xFE0E;</a> Ascensión del Señor</div>
+<div id='indice_cpref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Porque Jesús, el Señor,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >...El cual, después de su resurrección...</a><br></div>
+<div class='indicepref'>Para después de la Ascensión del Señor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf023")' class='enlacepref' >... El cual, habiendo entrado una vez para siempre...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref8'); ">&#9654;&#xFE0E;</a> Dominicales del tiempo ordinario</div>
+<div id='indice_cpref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... Quien, por su misterio pascual,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... El cual, compadecido del extravío de los hombres,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... Porque reconocemos como obra de tu poder admirable...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... Porque Él, con su nacimiento,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... Porque creaste el universo entero,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... En ti vivimos, nos movemos y existimos;...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... Porque tu amor al mundo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... Porque has querido reunir de nuevo,...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf032")' class='enlacepref' >... Porque nos concedes en cada momento lo que más conviene...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf033")' class='enlacepref' >... Hoy, tu familia,...</a><br></div>
+</div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref9'); ">&#9654;&#xFE0E;</a> Santísima Eucaristía</div>
+<div id='indice_cpref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... El cual, verdadero y único sacerdote,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... El cual, en la última cena con sus apóstoles,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf038")' class='enlacepref' >... Porque has querido que tu Hijo...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref91'); ">&#9654;&#xFE0E;</a> Espíritu Santo</div>
+<div id='indice_cpref91' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Porque él, después de subir al cielo,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... Porque nos concedes en cada momento lo que más conviene...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref10'); ">&#9654;&#xFE0E;</a> Fiestas de los santos</div>
+<div id='indice_cpref10' style='display: none;' >
+<div class='indicepref red'>Santa María Virgen</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... Y alabar, bendecir y proclamar tu gloria...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... En verdad hiciste obras grandes...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf045")' class='enlacepref' >... Ella, al aceptar tu Palabra con limpio corazón,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf046")' class='enlacepref' >... Te alabamos y te bendecimos...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf047")' class='enlacepref' >... Porque en esta etapa final de la historia...</a><br></div>
+<div class='indicepref red'>Ángeles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf048")' class='enlacepref' >... Y proclamar tus alabanzas...</a><br></div>
+<div class='indicepref red'>San José&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf049")' class='enlacepref' >... Y alabar, bendecir y proclamar tu gloria...</a><br></div>
+<div class='indicepref red'>Apóstoles</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Porque tú, Pastor eterno,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Porque has querido que tu Iglesia...</a><br></div>
+<div class='indicepref red'>Santos</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Porque eres glorificado en la asamblea...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Porque mediante el testimonio admirable de tus santos...</a><br></div>
+<div class='indicepref red'>Santos Mártires</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... Porque la sangre del glorioso mártir...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >...Porque tú eres ensalzado en la alabanza de tus santos...</a><br></div>
+<div class='indicepref red'>Santos Pastores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Porque nos concedes la alegría...</a><br></div>
+<div class='indicepref red'>Santas Vírgenes y Religiosos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >...Porque celebramos tu providencia admirable...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref11'); ">&#9654;&#xFE0E;</a> Comunes</div>
+<div id='indice_cpref11' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... A quien hiciste fundamento de todo...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >...que por amor creaste al hombre,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Porque has querido ser,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Pues aunque no necesitas nuestra alabanza,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >...Porque con amor celebramos su muerte,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Por él, que es tu Verbo, hiciste todas las cosas;...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf064")' class='enlacepref' >... Porque tú llamaste a Abrahán...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf065")' class='enlacepref' >... Porque él, en su vida terrena, pasó haciendo el bien...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf066")' class='enlacepref' >... Tú eres el Dios vivo y verdadero;...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref12'); ">&#9654;&#xFE0E;</a> Difuntos</div>
+<div id='indice_cpref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... En él brilla la esperanza...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Porque él aceptó la muerte, uno por todos,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Porque él es la salvación del mundo,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >...Bajo tu poder hemos nacido,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >...Porque el ser llamados de nuevo a la vida...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref13'); ">&#9654;&#xFE0E;</a> Misas rituales</div>
+<div id='indice_cpref13' style='display: none;' >
+<div class='indicepref red'>Bautismo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf034")' class='enlacepref' >... Te alabamos,...</a><br></div>
+<div class='indicepref red'>Confirmación&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf035")' class='enlacepref' >... Tú, en el Bautismo, das nueva vida a los creyentes...</a><br></div>
+<div class='indicepref red '>Ordenaciones</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf039")' class='enlacepref' >... Que constituiste a tu Unigénito...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf040")' class='enlacepref' >... Que constituiste a tu único Hijo...</a><br></div>
+<div class='indicepref red'>Penitencia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf041")' class='enlacepref' >... Al hombre, náufrago a causa del pecado,...</a><br></div>
+<div class='indicepref red'>Unción de los enfermos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf042")' class='enlacepref' >... Porque has querido que tu único Hijo,...</a><br></div>
+</div>
+
+
+</div>
+<div id='misal_engl' class='misal_engl'>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>INDEX OF PREFACES</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref1'); ">&#9654;&#xFE0E;</a> De Tempore</div>
+<div id='indice_epref1' style='display: none;' >
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref2'); ">&#9654;&#xFE0E;</a> Advent</div>
+<div id='indice_epref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... For he assumed at his first coming...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... For all the oracles of the prophets...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref3'); ">&#9654;&#xFE0E;</a> OF THE NATIVITY OF THE LORD</div>
+<div id='indice_epref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... For in the mystery of the Word...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... For on the feast of this awe-filled mystery...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... For through him the holy exchange...</a><br></div><br><div class='indicepref'>THE EPIPHANY OF THE LORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... For today you have revealed...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref4'); ">&#9654;&#xFE0E;</a> LENT</div>
+<div id='indice_epref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >... For by your gracious gift each year...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... For you have given your children...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >... For you will that our self-denial...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >... For through bodily fasting...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref5'); ">&#9654;&#xFE0E;</a> THE PASSION OF THE LORD</div>
+<div id='indice_epref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... For through the saving Passion of your Son...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... For the days of his saving Passion...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref6'); ">&#9654;&#xFE0E;</a> EASTER</div>
+<div id='indice_epref6' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... For he is the true Lamb...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Through him the children of light...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... He never ceases to offer himself...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... For, with the old order destroyed,...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... By the oblation of his Body,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref7'); ">&#9654;&#xFE0E;</a> THE ASCENSION OF THE LORD</div>
+<div id='indice_epref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... For the Lord Jesus, the King of glory,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >... For after his Resurrection...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref8'); ">&#9654;&#xFE0E;</a> SUNDAYS IN ORDINARY TIME</div>
+<div id='indice_epref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... For through his Paschal Mystery,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... For out of compassion for the...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... For we know it belongs to your boundless...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... For by his birth he brought renewal...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... For you laid the foundations of the world...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... For in you we live and move and have...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... For you so loved the world...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... For, when your children were scattered...</a><br></div>
+</div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref9'); ">&#9654;&#xFE0E;</a> The Most Holy Eucharist</div>
+<div id='indice_epref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... For he is the true and eternal Priest,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... For at the Last Supper...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref91'); ">&#9654;&#xFE0E;</a> Of the Holy Spirit</div>
+<div id='indice_epref91' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Ascending above all the heavens...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... For you bestow gifts...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref10'); ">&#9654;&#xFE0E;</a> SAINTS</div>
+<div id='indice_epref10' style='display: none;' >
+<div class='indicepref red'>BLESSED VIRGIN MARY</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... For by the overshadowing of the Holy Spirit...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... For truly even to earth's ends...</a><br></div><br><div class='indicepref red'>APOSTLES</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... For you, eternal Shepherd,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... For you have built your Church...</a><br></div><br><div class='indicepref red'>SAINTS</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... For you are praised in the company...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... For in the marvellous confession of...</a><br></div><br><div class='indicepref red'>HOLY MARTYRS</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... For the blood of your blessed...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >... For you are glorified when your Saints...</a><br></div><br><div class='indicepref red'>HOLY PASTORS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... For, as on the festival of Saint...</a><br></div><br><div class='indicepref red'>HOLY VIRGINS AND RELIGIOUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >... For in the Saints who consecrated themselves...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref11'); ">&#9654;&#xFE0E;</a> COMMON</div>
+<div id='indice_epref11' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... In him you have been pleased,...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >... For in goodness you created man...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... For just as through your beloved Son...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... For, although you have no need...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >... His Death we celebrate in love...</a><br></div>
+<div class='indicepref'> VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Fulfilling your will and gaining for you...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_epref12'); ">&#9654;&#xFE0E;</a> FOR THE DEAD</div>
+<div id='indice_epref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... In him the hope of blessed resurrection...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... For as one alone he accepted death,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... For he is the salvation of the world,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >... For it is at your summons that we come...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >... For even though by our own fault we perish,...</a><br></div>
+</div>
+
+</div>
+<div id='misal_ital' class='misal_ital'>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>INDICE DI PREFAZI</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref1'); ">&#9654;&#xFE0E;</a> De Tempore</div>
+<div id='indice_ipref1' style='display: none;' >
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref2'); ">&#9654;&#xFE0E;</a> AVVENTO</div>
+<div id='indice_ipref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Al suo primo avvento...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... Egli fu annunziato da tutti i profeti...</a><br></div>
+<div class='indicepref'>I/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf003")' class='enlacepref' >... Tu ci hai nascosto il giorno e l’ora...</a><br></div>
+<div class='indicepref'>II/A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf004")' class='enlacepref' >... Noi ti lodiamo, ti benediciamo,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref3'); ">&#9654;&#xFE0E;</a> NATALE</div>
+<div id='indice_ipref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... Nel mistero del Verbo incarnato...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Nel mistero adorabile del Natale,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... In lui oggi risplende in piena luce...</a><br></div>
+<div class='indicepref'>Dell’Epifania&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... [Oggi] in Cristo luce del mondo...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref4'); ">&#9654;&#xFE0E;</a> QUARESIMA</div>
+<div id='indice_ipref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >... Ogni anno tu doni ai tuoi fedeli...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Tu hai stabilito per i tuoi figli...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >... Tu vuoi che ti glorifichiamo...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >... Con il digiuno quaresimale...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf013")' class='enlacepref' >... Tu riapri alla Chiesa la strada...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref5'); ">&#9654;&#xFE0E;</a> DELLA PASSIONE DEL SIGNORE</div>
+<div id='indice_ipref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... Nella passione redentrice...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Contempliamo ormai vicini i giorni...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref6'); ">&#9654;&#xFE0E;</a> PASQUA</div>
+<div id='indice_ipref6' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... E’ lui il vero Agnello...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Per mezzo di lui rinascono a vita nuova...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Egli continua a offrirsi per noi...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... In lui, vincitore del peccato...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Offrendo il suo corpo sulla croce,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref7'); ">&#9654;&#xFE0E;</a> DELL’ASCENSIONE DEL SIGNORE</div>
+<div id='indice_ipref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Il Signore Gesù, re della gloria,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >... Dopo la risurrezione...</a><br></div>
+<div class='indicepref'>DOPO L’ASCENSIONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf023")' class='enlacepref' >... Entrato una volta per sempre...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref8'); ">&#9654;&#xFE0E;</a> DELLE DOMENICHE DEL TEMPO ORDINARIO</div>
+<div id='indice_ipref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... Mirabile è l’opera da lui compiuta...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... Nella sua misericordia per noi peccatori...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... Abbiamo riconosciuto il segno...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... Egli, nascendo da Maria Vergine,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... Tu hai creato il mondo nella varietà...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... Ogni giorno del nostro pellegrinaggio...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... Nella tua misericordia hai tanto amato...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... Con il sangue del tuo Figlio...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf032")' class='enlacepref' >... In ogni tempo tu doni energie...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf033")' class='enlacepref' >... >Oggi la tua famiglia,...</a><br></div>
+</div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref9'); ">&#9654;&#xFE0E;</a> DELLA SS. EUCARISTIA</div>
+<div id='indice_ipref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... Sacerdote vero ed eterno,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... Nell’ultima cena con i suoi Apostoli,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf038")' class='enlacepref' >... Tu hai voluto che il tuo Figlio,...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref10'); ">&#9654;&#xFE0E;</a> DEI SANTI</div>
+<div id='indice_ipref10' style='display: none;' >
+<div class='indicepref red'>DELLA BEATA VERGINE MARIA</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... Per opera dello Spirito Santo,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... Grandi cose tu hai fatto, Signore,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf045")' class='enlacepref' >... All’annunzio dell’angelo,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf046")' class='enlacepref' >... Umile ancella accolse la tua parola...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf047")' class='enlacepref' >... Tu hai rivelato nella pienezza dei tempi...</a><br></div>
+<div class='indicepref red'>DEGLI ANGELI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf048")' class='enlacepref' >... Noi proclamiamo la tua gloria...</a><br></div>
+<div class='indicepref red'>DI SAN GIUSEPPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf049")' class='enlacepref' >... Egli, uomo giusto, da te fu prescelto...</a><br></div>
+<div class='indicepref red'>DEGLI APOSTOLI</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Pastore eterno, tu non abbandoni...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Tu hai stabilito la tua Chiesa...</a><br></div>
+<div class='indicepref red'>DEI SANTI</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Nella festosa assemblea dei santi...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Nella testimonianza di fede dei tuoi santi...</a><br></div>
+<div class='indicepref red'>DEI MARTIRI</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... A imitazione del Cristo tuo Figlio...</a><br></div>
+<!--<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >...Porque tú eres ensalzado en la alabanza de tus santos...</a><br></div>-->
+<div class='indicepref red'>DEI SANTI PASTORI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Tu doni alla tua Chiesa...</a><br></div>
+<div class='indicepref red'>DELLE SANTE VERGINI E DEI SANTI RELIGIOSI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >... Nei tuoi santi, che per il regno...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref11'); ">&#9654;&#xFE0E;</a> COMUNE</div>
+<div id='indice_ipref11' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... In lui hai voluto rinnovare l’universo...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >... Nella tua bontà hai creato l’uomo...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Per mezzo del Cristo, tuo dilettissimo Figlio,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Tu non hai bisogno della nostra lode,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >... Uniti nell’amore celebriamo...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Egli è la tua Parola vivente,...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf064")' class='enlacepref' >... Tu hai chiamato e fatto uscire Abramo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf065")' class='enlacepref' >... Nella sua vita mortale...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf066")' class='enlacepref' >... Tu sei l’unico Dio vivo e vero:...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref12'); ">&#9654;&#xFE0E;</a> DEI DEFUNTI</div>
+<div id='indice_ipref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... In Cristo tuo Figlio, nostro salvatore...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Egli prendendo su di sé la nostra morte...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Egli è la salvezza del mondo,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >... Sei tu, Signore, che ci dài la vita...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >... La morte è comune eredità di tutti...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ipref13'); ">&#9654;&#xFE0E;</a> Messe rituale</div>
+<div id='indice_ipref13' style='display: none;' >
+<div class='indicepref red'>DEL BATTESIMO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf034")' class='enlacepref' >... Dal cuore squarciato del tuo Figlio...</a><br></div>
+<div class='indicepref red'>DELLA CONFERMAZIONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf035")' class='enlacepref' >... Sei tu che nel Battesimo rigeneri i credenti...</a><br></div>
+<div class='indicepref red '>DELL’ORDINE</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf039")' class='enlacepref' >... In Cristo tuo Figlio, eterno sacerdote,...</a><br></div><!--
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf040")' class='enlacepref' >... En tu Hijo Jesucristo, sacerdote eterno,...</a><br></div> -->
+<div class='indicepref red'>DELLA PENITENZA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf041")' class='enlacepref' >... All’uomo, naufrago a causa del peccato,...</a><br></div>
+<div class='indicepref red'>DEGLI INFERMI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf042")' class='enlacepref' >... Tu hai voluto che il tuo unico Figlio,...</a><br></div>
+</div>
+
+
+</div>
+<div id='misal_germ' class='misal_germ'>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>VERZEICHNIS DER PRÄFATIONEN</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref1'); ">&#9654;&#xFE0E;</a> De Tempore</div>
+<div id='indice_gpref1' style='display: none;' >
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref2'); ">&#9654;&#xFE0E;</a> Advent</div>
+<div id='indice_gpref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Denn in seinem ersten Kommen...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... Von ihm redet die Botschaft aller Propheten,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf003")' class='enlacepref' >... Ihn hast du der verlorenen Menschheit...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf004")' class='enlacepref' >... Denn was durch Adams Sünde verlorenging,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref3'); ">&#9654;&#xFE0E;</a> Weihnachten</div>
+<div id='indice_gpref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... Denn Fleisch geworden ist das Wort,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Denn groß ist das Geheimnis seiner Geburt,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... Durch ihn schaffst du den Menschen neu...</a><br></div>
+<div class='indicepref'>Erscheinung des Herrn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... Denn heute enthüllst du das Geheimnis...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref4'); ">&#9654;&#xFE0E;</a> Fastenzeit</div>
+<div id='indice_gpref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >... Denn jedes Jahr schenkst du deinen Gläubigen...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Denn jetzt ist die Zeit der Gnade,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >... und dich in dieser Zeit der Buße durch Entsagung zu ehren...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >... Durch das Fasten des Leibes...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf013")' class='enlacepref' >... ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref5'); ">&#9654;&#xFE0E;</a> vom Leiden Christi</div>
+<div id='indice_gpref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... Denn das Leiden deines Sohnes...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Denn wiederum kommen die Tage,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref6'); ">&#9654;&#xFE0E;</a> Osterzeit</div>
+<div id='indice_gpref6' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... aufs Höchste zu feiern, da unser Osterlamm...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Durch ihn erstehen die Kinder des Lichtes...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Er bringt sich dir allzeit für uns dar...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... Das Alte ist vergangen,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Als er seinen Leib am Kreuz dahingab,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref7'); ">&#9654;&#xFE0E;</a> Christi Himmelfahrt</div>
+<div id='indice_gpref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Denn er ist (heute) als Sieger über Sünde und Tod...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >... Denn nach seiner Auferstehung...</a><br></div>
+<div class='indicepref'>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf023")' class='enlacepref' >... ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref8'); ">&#9654;&#xFE0E;</a> Sonntage im Jahreskreis</div>
+<div id='indice_gpref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... Denn er hat Großes an uns getan:...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... Denn aus Erbarmen mit uns sündigen Menschen...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... Denn wir erkennen deine Herrlichkeit...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... Denn durch seine Geburt...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... Denn du hast die Welt mit all ihren Kräften...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... Denn in dir leben wir,...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... So sehr hast du die Welt geliebt,...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... Die Sünde hatte die Menschen von dir getrennt,...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf032")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf033")' class='enlacepref' >... ...</a><br></div>
+</div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref9'); ">&#9654;&#xFE0E;</a> von der Hl. Eucharistie</div>
+<div id='indice_gpref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... Als der wahre und ewige Hohepriester...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... Denn er hat beim Letzten Abendmahl...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf038")' class='enlacepref' >... ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref91'); ">&#9654;&#xFE0E;</a> vom Heiligen Geist</div>
+<div id='indice_gpref91' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Denn er hat das Werk der Erlösung vollbracht,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... Denn deine Vorsehung waltet über jeder Zeit;...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref10'); ">&#9654;&#xFE0E;</a> Heiligenfeste</div>
+<div id='indice_gpref10' style='display: none;' >
+<div class='indicepref red'>Allerseligste Jungfrau Maria</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... und dich am Fest (Gedenktag) der seligen Jungfrau Maria zu preisen....</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... für die Erwählung der seligen Jungfrau Maria zu danken...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf045")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf046")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf047")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red'>von den hl. Engeln&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf048")' class='enlacepref' >... und in der Herrlichkeit der Engel deine Macht und Größe zu preisen...</a><br></div>
+<div class='indicepref red'>vom hl. Josef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf049")' class='enlacepref' >... und am Fest (bei der Verehrung) des heiligen Josef die Wege deiner Weisheit zu rühmen....</a><br></div>
+<div class='indicepref red'>von den Aposteln</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Denn du bist der ewige Hirt,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Durch ihn hast du die Kirche...</a><br></div>
+<div class='indicepref red'>von den Heiligen</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Die Schar der Heiligen verkündet deine Größe,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Denn in den Heiligen schenkst du der Kirche...</a><br></div>
+<div class='indicepref red'>von den Märtyrern</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... Im Martyrium des (der) hl. N. ...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red'>von den Hirten der Kirche&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Sein Leben aus dem Glauben ist uns ein Vorbild,...</a><br></div>
+<div class='indicepref red'>von den hl. Jungfrauen und Ordensleuten&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >... Inmitten der Kirche berufst du Menschen,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref11'); ">&#9654;&#xFE0E;</a> Wochentagspräfationen</div>
+<div id='indice_gpref11' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... Ihn hast du zum Haupt der neuen Schöpfung gemacht,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >... für deine Liebe, die du uns niemals entzogen hast...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Denn du bist der Schöpfer der Welt,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Du bedarfst nicht unseres Lobes,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >... In dankbarer Liebe gedenken wir seines Todes,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Er ist dein Wort, durch ihn hast du alles erschaffen....</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf064")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf065")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf066")' class='enlacepref' >... ...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref12'); ">&#9654;&#xFE0E;</a> von den Verstorbenen</div>
+<div id='indice_gpref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... In ihm erstrahlt uns die Hoffnung,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Denn er ist der Eine, der den Tod auf sich nahm...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Denn er ist das Heil der Welt,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >...Denn in deinen Händen ruht unser Leben:...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >... Durch die Sünde kam der Tod in die Welt,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_gpref13'); ">&#9654;&#xFE0E;</a> in Messen zu bestimmten Feiern</div>
+<div id='indice_gpref13' style='display: none;' >
+<div class='indicepref red'>Bei der Taufspendung&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf034")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red'>Bei der Firmspendung&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf035")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red '>Bei der Spendung der Weihen</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf039")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf040")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red'>???Penitencia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf041")' class='enlacepref' >... ...</a><br></div>
+<div class='indicepref red'>???Bei der Wegzehrung&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf042")' class='enlacepref' >... ...</a><br></div>
+</div>
+</div>
+<div id='misal_port' class='misal_port'>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>INDEX PRÆFATIONUM</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref1'); ">&#9654;&#xFE0E;</a> De Tempore</div>
+<div id='indice_ppref1' style='display: none;' >
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref2'); ">&#9654;&#xFE0E;</a> Do Advento</div>
+<div id='indice_ppref2' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Revestido da nossa fragilidade...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... Predito por todos os profetas,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref3'); ">&#9654;&#xFE0E;</a> Do Natal do Senhor</div>
+<div id='indice_ppref3' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... No mistério da encarnação de vosso Filho...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Ele, no mistério do Natal...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... Por ele, realiza-se hoje...</a><br></div>
+<br><div class='indicepref'>Da Epifania do Senhor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... Revelastes, hoje, o mistério...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref4'); ">&#9654;&#xFE0E;</a> Da Quaresma</div>
+<div id='indice_ppref4' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >... Vós concedeis aos cristãos...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Para renovar, na santidade,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >... Vós acolheis nossa penitência...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >... Pela penitência da Quaresma...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref5'); ">&#9654;&#xFE0E;</a> Da Paixão Do Senhor</div>
+<div id='indice_ppref5' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... O universo inteiro...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Já se aproximam os dias...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref6'); ">&#9654;&#xFE0E;</a> Da Páscoa</div>
+<div id='indice_ppref6' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... Ele é o verdadeiro Cordeiro...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Por ele, os filhos da luz...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Ele continua a oferecer-se pela humanidade...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... Vencendo a corrupção do pecado...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Pela oblação de seu corpo...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref7'); ">&#9654;&#xFE0E;</a> Da Ascensão do Senhor</div>
+<div id='indice_ppref7' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Vencendo o pecado e a morte...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >... Ele, após a Ressurreição,...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref8'); ">&#9654;&#xFE0E;</a> Dos Domingos do Tempo Comum</div>
+<div id='indice_ppref8' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf024" class='enlacepref' >... que, pelo mistério da sua Páscoa...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf025" class='enlacepref' >... Compadecendo-se da fraqueza humana...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf026" class='enlacepref' >... Nós reconhecemos ser digno...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf027" class='enlacepref' >... Nascendo na condição humana,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf028" class='enlacepref' >... Vós criastes o universo...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf029" class='enlacepref' >... Em vós vivemos, nos movemos e somos...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf030" class='enlacepref' >... De tal modo amastes o mundo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prefacios/prefacios.html#pf031" class='enlacepref' >... Quisestes reunir de novo,...</a><br></div>
+</div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref9'); ">&#9654;&#xFE0E;</a> Da Santíssima Eucaristia</div>
+<div id='indice_ppref9' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... Ele, verdadeiro e eterno sacerdote...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... Reunido com os Apóstolos na última Ceia...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref91'); ">&#9654;&#xFE0E;</a> De Spiritu Sancto</div>
+<div id='indice_ppref91' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Qui, ascéndens super omnes cælos...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... Qui síngulis quibúsque tempóribus aptánda...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref10'); ">&#9654;&#xFE0E;</a> In festis sanctorum</div>
+<div id='indice_ppref10' style='display: none;' >
+<div class='indicepref red'>Da Virgem Maria</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... e, na festa (...) de Maria, sempre Virgem,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... proclamando as vossas maravilhas...</a><br></div>
+<br><div class='indicepref red'>Dos Apóstolos</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Pastor eterno, vós não abandonais o rebanho...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Vós constituístes a vossa Igreja...</a><br></div>
+<br><div class='indicepref red'>De sanctis</div>
+<br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Na assembleia dos Santos...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Pelo testemunho admirável de vossos Santos...</a><br></div>
+<br><div class='indicepref red'>De sanctis martyribus</div>
+<br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... Pelo mártir S. N....</a><br></div>
+<br><div class='indicepref red'>De sanctis pastoribus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Vós nos concedeis a alegria...</a><br></div>
+<br><div class='indicepref red'>De sanctis virginibus et religiosis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >... e celebrar a vossa admirável providência nos Santos e Santas...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref11'); ">&#9654;&#xFE0E;</a> Comum</div>
+<div id='indice_ppref11' style='display: none;' >
+<div class='indicepref'> I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... Quisestes que ele fosse...</a><br></div>
+<div class='indicepref'> II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >... Em vosso amor de Pai...</a><br></div>
+<div class='indicepref'> III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Por vosso amado Filho...</a><br></div>
+<div class='indicepref'> IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Ainda que nossos louvores não vos...</a><br></div>
+<div class='indicepref'> V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >... Unidos na caridade,...</a><br></div>
+<div class='indicepref'> VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Ele é o nosso Salvador e Redentor...</a><br></div>
+</div>
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ppref12'); ">&#9654;&#xFE0E;</a> Dos fieis defuntos</div>
+<div id='indice_ppref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... Nele brilhou para nós...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Um por todos, ele aceitou morrer na cruz...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Ele é a salvação do mundo...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >... Por vossa ordem, nós nascemos...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >... Por nossa culpa, somos condenados a morrer...</a><br></div></div>
+
+</div>
+
+<!-- Todo lo siguiente debe estar al final de todos los archivos -->
+</div>
+
+</div>
+<div style='display: none;'>
+<div id=extracto_domingos>
+<div class=x_prefacio>
+	<div class='latin'>
+<span class=red ontouchend='cambialengua(this)'>Præfationes de dominicis «per annum»</span>
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf024" class='enlacepref' >... Cuius hoc miríficum fuit opus per...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf025" class='enlacepref' >... Qui, humánis miserátus erróribus,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf026" class='enlacepref' >... Ad cuius imménsam glóriam pertinére...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf027" class='enlacepref' >... Ipse enim nascéndo vetustátem hóminum...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf028" class='enlacepref' >... Qui ómnia mundi eleménta fecísti,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf029" class='enlacepref' >... In quo vívimus, movémur et sumus,...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf030" class='enlacepref' >... Quia sic mundum misericórditer dilexísti,...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf031" class='enlacepref' >... Quia fílios, quos longe peccáti crimen...</a><br></div>
+</div>
+	<div class='engl'><span class=red ontouchend='cambialengua(this)'>Prefaces for Sundays in Ordinary Time</span>
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf024" class='enlacepref' >... For through his Paschal Mystery,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf025" class='enlacepref' >... For out of compassion for the...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf026" class='enlacepref' >... For we know it belongs to your boundless...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf027" class='enlacepref' >... For by his birth he brought renewal...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf028" class='enlacepref' >... For you laid the foundations of the world...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf029" class='enlacepref' >... For in you we live and move and have...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf030" class='enlacepref' >... For you so loved the world...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf031" class='enlacepref' >... For, when your children were scattered...</a><br></div>
+	</div>
+	<div class='cast'><span class=red ontouchend='cambialengua(this)'>Prefacios dominicales del tiempo ordinario</span>
+	<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf024" class='enlacepref' >... Quien, por su misterio pascual,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf025" class='enlacepref' >... El cual, compadecido del extravío de los hombres,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf026" class='enlacepref' >... Porque reconocemos como obra de tu poder admirable...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf027" class='enlacepref' >... Porque Él,  con su nacimiento,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf028" class='enlacepref' >... Porque creaste el universo entero,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf029" class='enlacepref' >... En ti vivimos, nos movemos y existimos;...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf030" class='enlacepref' >... Porque tu amor al mundo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf031" class='enlacepref' >... Porque has querido reunir de nuevo,...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf032" class='enlacepref' >... Porque nos concedes en cada momento lo que más conviene...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf033" class='enlacepref' >... Hoy, tu familia,...</a><br></div>
+	</div>
+	<div class='ital'><span class=red ontouchend='cambialengua(this)'>Prefazii delle domeniche del tempo ordinario</span>
+	<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf024" class='enlacepref' >... Mirabile è l’opera da lui compiuta...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf025" class='enlacepref' >... Nella sua misericordia per noi peccatori...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf026" class='enlacepref' >... Abbiamo riconosciuto il segno...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf027" class='enlacepref' >... Egli, nascendo da Maria Vergine,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf028" class='enlacepref' >... Tu hai creato il mondo nella varietà...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf029" class='enlacepref' >... Ogni giorno del nostro pellegrinaggio...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf030" class='enlacepref' >... Nella tua misericordia hai tanto amato...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf031" class='enlacepref' >... Con il sangue del tuo Figlio...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf032" class='enlacepref' >... In ogni tempo tu doni energie...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf033" class='enlacepref' >... >Oggi la tua famiglia,...</a><br></div>
+	</div>
+	<div class='port'><span class=red ontouchend='cambialengua(this)'>Prefácios dos Domingos do Tempo Comum</span>
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf024" class='enlacepref' >... que, pelo mistério da sua Páscoa...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf025" class='enlacepref' >... Compadecendo-se da fraqueza humana...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf026" class='enlacepref' >... Nós reconhecemos ser digno...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf027" class='enlacepref' >... Nascendo na condição humana,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf028" class='enlacepref' >... Vós criastes o universo...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf029" class='enlacepref' >... Em vós vivemos, nos movemos e somos...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf030" class='enlacepref' >... De tal modo amastes o mundo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../prefacios/prefacios.html#pf031" class='enlacepref' >... Quisestes reunir de novo,...</a><br></div>
+</div>
+	<div class='germ'><span class=red ontouchend='cambialengua(this)'>Sonntagspräfationen im Jahreskreis</span>
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf024")' class='enlacepref' >... Denn er hat Großes an uns getan:...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf025")' class='enlacepref' >... Denn aus Erbarmen mit uns sündigen Menschen...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf026")' class='enlacepref' >... Denn wir erkennen deine Herrlichkeit...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf027")' class='enlacepref' >... Denn durch seine Geburt...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf028")' class='enlacepref' >... Denn du hast die Welt mit all ihren Kräften...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf029")' class='enlacepref' >... Denn in dir leben wir,...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf030")' class='enlacepref' >... So sehr hast du die Welt geliebt,...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("../prefacios/prefacios.html#pf031")' class='enlacepref' >... Die Sünde hatte die Menschen von dir getrennt,...</a><br></div>
+
+</div>
+</div>
+</div>
+</div>
+<script>pinta_botones('../',mipestana);</script>
+</body>
+</html>

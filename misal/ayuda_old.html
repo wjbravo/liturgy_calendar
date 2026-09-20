@@ -1,0 +1,335 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+<title>TEMPORA</title>
+<link rel="stylesheet" href="misal.css" type="text/css">
+<style>
+body {
+background-image: url('../fondo_libro.png');
+padding: 20px 0 0 3px;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+padding: 20px 0 0 3px;
+-webkit-user-select:none;
+-webkit-text-size-adjust:none;
+ }
+
+ #contenedor {
+	position:absolute; z-index:1;
+	top: 2em; bottom: 0; left:0;
+	width:100%;
+	overflow:auto;
+}
+
+#scroller {
+	position:absolute; z-index:1;
+	width:100%;
+	padding:0;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-transition-duration:0;
+	-webkit-transform:translate3d(0,0,0);
+}
+.boton {
+ color: #660000;
+ line-height:150%;
+ height:100%;
+ padding-right:10px;
+ padding-left:10px;
+ display:inline-block;
+ width:fill-wrap;
+ text-decoration:none;}
+
+div {margin-top: 1%; }
+span.boton { background: url("../boton.png") top right no-repeat; color: white; }
+
+div {margin-top: 2%}
+h2 {text-align:center; border: 1px solid; width: 90%; padding: 10px; color: #660000; font-size: 120%;font-weight: bold; }
+
+
+span.pestana { display: inline-block; background-color: white; color: red; padding: 5px; }
+
+.final_pagina {margin-top: 20%; margin-bottom: 60%;}
+</style>
+
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+<script src="../iscroll-lite.js"></script>
+<script type="text/javascript" charset="utf-8" src="../jquery.js"></script>
+
+<script>
+
+function onDeviceReady() {
+ // Register the event listener
+ console.log("PhoneGap preparado!");
+ document.addEventListener("backbutton", backKeyDown, true);
+navigator.splashscreen.hide()
+
+document.addEventListener("volumeupbutton", retrasa_pantalla, false);
+
+document.addEventListener("volumedownbutton", avanza_pantalla, false);
+}
+
+function    retrasa_pantalla() {
+ myScroll.scrollTo(0, -eval(document.getElementById('contenedor').offsetHeight-10), 0, true);
+}
+
+function    avanza_pantalla() {
+ myScroll.scrollTo(0, eval(document.getElementById('contenedor').offsetHeight-10), 0, true);
+}
+
+
+
+function backKeyDown() {
+ console.log("Back Button Pressed!");
+ navigator.app.exitApp();
+ }
+function loaded() {
+	myScroll = new iScroll('contenedor' , { fixedScrollbar: false ,
+	hScroll: false ,
+	bounce: false ,
+	hideScrollbar: true ,
+	fadeScrollbar: true
+	});
+	}
+
+function pon_pref(key,value) {
+window.localStorage.setItem(key, value);
+ //alert('Guardo: '+value + ' ... --> ... ' + key)
+ }
+
+ function dime_pref (key, defecto) {
+ var resultado = window.localStorage.getItem(key)
+
+ if (resultado == null) resultado = defecto
+ //alert('Saco: '+ key+ '... -> ... '+resultado)
+ return resultado
+}
+
+function getUrlVars() {
+	var url=window.location.href.replace(window.location.hash,'')
+ var vars = {};
+ var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+ vars[key] = value;
+ });
+ return vars;
+}
+
+function extrae_preferencias() {
+	var url=preferencias
+ var vars = {};
+ var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+ vars[key] = value;
+ });
+ return vars;
+}
+
+
+var myScroll;
+
+var preferencias = ""
+
+var mipreferencia = new Array()
+mipreferencia=getUrlVars()
+
+if (typeof mipreferencia['fondo'] === 'undefined' ) {
+preferencias = window.localStorage.getItem('preferencias')
+mipreferencia=extrae_preferencias()
+
+} else {
+
+preferencias = "?fondo="+mipreferencia["fondo"]
+preferencias += "&tamanotexto="+mipreferencia["tamanotexto"]
+preferencias += "&avance="+mipreferencia["avance"]
+preferencias +=  "&tipoletra="+mipreferencia["tipoletra"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma"]
+preferencias += "&tamanomenus="+mipreferencia["tamanomenus"]
+preferencias += "&presentaciontexto="+mipreferencia["presentaciontexto"]
+preferencias += "&presentacionrespuestas="+mipreferencia["presentacionrespuestas"]
+preferencias += "&presentacionpestanas="+mipreferencia["presentacionpestanas"]
+preferencias += "&oracionestodos="+mipreferencia["oracionestodos"]
+preferencias += "&presentacionbotones="+mipreferencia["presentacionbotones"]
+preferencias += "&botoneszurdos="+mipreferencia["botoneszurdos"]
+preferencias += "&ordinarionormal="+mipreferencia["ordinarionormal"]
+window.localStorage.setItem('preferencias', preferencias);
+
+}
+
+
+ if (mipreferencia['fondo']==0) {
+mitexto=' body , #cabecera {background-color: white; background-image: none; font-size: '+ mipreferencia['tamanotexto']+'pt } ';
+} else if (mipreferencia['fondo']==1) {
+mitexto=' body { font-size: '+ mipreferencia['tamanotexto']+'pt; } ';
+}
+
+</script>
+</head>
+<body onload="document.addEventListener('deviceready', onDeviceReady, false);" >
+<div class=tipo1 style='position: absolute; top: 0; margin-top:.3em; height: 2em; width: 90%; margin-left: auto; margin-right: auto; z-index: 10;' >
+<div style='float: left; width: auto;'><span class=boton ontouchend='window.location="feria_actual_old.html"+preferencias'>Calendarium</span></div><div style='float: right; width: auto;'><span class=boton ontouchend='window.location="ordinario/ordinario.html"+preferencias'>Missale</span></div>
+</div>
+<div class=tipo2 style='position: absolute; top: 0; margin-top:.3em; height: 2em; width: 90%; margin-left: auto; margin-right: auto; z-index: 10;' >
+<div style='float: left; width: auto;'></div><div style='float: left; margin-left: auto; margin-right: auto; width: 20%'><span class=boton ontouchend='window.location="index.html"' >Index</span></div><div style='float: right; width: auto;'><span class=boton ontouchend='window.location="feria_actual_old.html"+preferencias'>Calendarium</span>&nbsp;&nbsp;<span class=boton ontouchend='window.location="ordinario/ordinario.html"+preferencias'>Missale</span></div>
+</div>
+
+<div id='contenedor' >
+<div id='scroller'>
+
+<!-- Todo lo anterior debe estar al comienzo de todos los archivos -->
+
+<div>
+<h2>Posibles Idiomas</h2>
+</div>
+<div>
+<span class=red>ACLARACIÓN IMPORTANTE: Esta aplicación nace únicamente con la finalidad de ayudar al seguimiento de la Misa en latín, incluyendo una de las posibles traducciones al español y/o inglés. Somos conscientes de que estas traducciones pueden no coincidir exactamente con la que se escucharía en la Santa Misa celebrada en esa lengua, pues eso requeriría, en primer lugar, disponer de todas las versiones actualizadas aprobadas por cada Conferencia Episcopal y, en segundo lugar, un ingente trabajo continuo que no estamos en condiciones de asumir.<br>Dejamos, por tanto, al buen criterio de los usuarios la comprensión de esas posibles diferencias, especialmente cuando no se utilice el latín como idioma principal.<br><br>Nota: aunque entre los idiomas de traducciones puedan aparecer varios, no se incluirán entre los posibles idiomas por defecto, hasta que no estén completos.</span><br><br><span class=red>Latín<br>Español<br>Inglés</span></div>
+
+
+
+
+<div>
+<h2>Pantalla de inicio</h2>
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Devotionarium & Sacerdotale</span>: Se recogen algunas oraciones de preparación y acción de gracias para la Misa (Devotionarium), así como un pequeño prontuario para sacerdotes para diversas situaciones, en cuatro idiomas (latín, español, inglés e italiano).
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Missale</span>: Escoge como Misal de base el del idioma por defecto escogido en las preferencias.
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Calendarium</span>: Muestra un calendario perpetuo, con referencias al calendario litúrgico universal. Al escoger una fecha, se presentan las posibles celebraciones para ese día. Al cambiar de mes, o de año, siempre se debe pulsar después un día concreto. Si se pulsa el botón <span class=boton>Missa</span>, prepara las pestañas del Tiempo, Lecturas y Santo señaladas. Cuando hay varias posibilidades, se debe escoger una del correspondiente menu desplegable.
+</div>
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Dilectus</span>: Muestra, y permite cambiar, las preferencias de la aplicación.
+</div>
+<div>
+<h2>Preferencias</h2>
+</div>
+<div>
+Se puede elegir entre distintos tamaños de fuente, de rúbricas, el modo de presentar las pestañas y botones, y, lo más importante, el modo de presentar la traducción al segundo idioma.<br><b>IMPORTANTE</b><br>Conviene tener cuidado al elegir el formato de dos columnas: en pantallas muy pequeñas, o con tamaño de fuente muy grande, puede ocurrir que algunos párrafos aparezcan en algún lugar en el que no debieran.<br>Sobre todo puede ocurrir esto cuando haya mucha diferencia en la longitud de los textos equivalentes en uno y otro idioma.
+</div>
+
+
+<div>
+<h2>Barra de pestañas</h2>
+</div>
+<div>
+Su configuración puede ser:<br>1. Emergente: desaparece al cargar una nueva página, y aparece al tocar en la zona superior de la pantalla (donde estaría habitualmente)<br>2. Siempre presente.<br>3. Emergente mediante botón lateral: permanece oculta y sólo se ve el botón <img src='../derecha2.png' style="width: 1em; height: 1em;"> a la izquierda de la pantalla, que la hace aparecer/ocultarse.
+</div>
+<div>
+En cada una de las pestañas se guarda la posición en la que se encuentra, de forma que al pulsar la pestaña correspondiente, se vuelve a la posición anterior.<br>También se puede ir a una posición anterior<img src='../bot_previous.png' style="width: 1em; height: 1em;">, o posterior<img src='../bot_next.png' style="width: 1em; height: 1em;">, dentro de esa pestaña.
+Sólo se borra el historial de cada pestaña al pulsar la opción índice dentro del menú del botón diamante<img src='../bot_ksokoban.png' style="width: 1.0em; height: 1.0em;">.
+</div>
+<div>
+<span class=pestana>Ord</span> Contiene el ordinario de la Misa. Habitualmente se encuentra con cada parte plegada, para poder ir con rápidez en cada momento de la Misa.
+</div>
+<div>
+<span class=pestana>Tmp</span> Contiene los textos de las Misas propias de cada tiempo litúrgico.
+</div>
+<div>
+<span class=pestana>Snt</span> Contiene los textos de las Misas de las celebraciones de los Santos. Desde cada uno de ellos se puede acceder a los textos comunes a los que hagan referencia, ya sus lecturas propias.
+</div>
+<div>
+<span class=pestana>Com</span> Contiene los textos de las Misas Comunes, Votivas, para diversas necesidades, y Difuntos.
+</div>
+<div>
+<span class=pestana>Lct</span> Es el leccionario. Desde el menú principal se accede a todas las lecturas, salvo las de los Santos, que se acceden desde la misa de cada uno.
+</div>
+<div>
+<span class=pestana>Pf</span> Contiene todos los prefacios.
+</div>
+<div>
+<span class=pestana>PE</span> Contiene todas las Plegarias Eucarísticas.
+</div>
+
+<div>
+<h2>Barra de botones</h2>
+</div>
+<div>
+Su configuración puede ser:<br>1. Emergente: desaparece al cargar una nueva página o desplazar el texto, y aparece al tocar en la zona inferior de la pantalla (donde estaría habitualmente)<br>2. Siempre presente.<br>3. Emergente mediante botón lateral: Permanece oculta y aparece mediante el botón <img src='../izquierda2.png' style="width: 1em; height: 1em;"> a la derecha de la pantalla.
+</div>
+<div>
+<img src='../bot_top.png' style="width: 1.6em; height: 1.6em;"> Desplaza la pantalla hacia arriba.
+</div>
+<div>
+<img src='../bot_bottom.png' style="width: 1.6em; height: 1.6em;"> Desplaza la pantalla hacia abajo.
+</div>
+<div>
+<img src='../bot_ksokoban.png' style="width: 1.6em; height: 1.6em;"> Presenta un submenú:
+</div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>&#9632;</span> Borra el historial de la pestaña, y presenta el menú raíz correspondiente (generalmente, el índice).</div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>&#9664;&#xFE0E; &#9654;&#xFE0E;</span> Aparece sólo cuando el idioma principal es distinto del alternativo, y los intercambia.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'><span style=' font-family: Times New Roman; '>ABC</span> &#9664;&#xFE0E; &#9654;&#xFE0E; <span style=' font-family: Arial; '>ABC</span></span> Cambia el tipo de letra. </div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>nn &#9654;&#xFE0E; NN</span> Aumenta el tamaño de la letra. Los valores se corresponden con las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>NN &#9654;&#xFE0E; nn</span> Disminuye el tamaño de la letra. Los valores se corresponden con las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+
+<div>
+<img src='../bot_previous.png' style="width: 1.6em; height: 1.6em;"> Navega hacia la página anterior <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div>
+<img src='../bot_next.png' style="width: 1.6em; height: 1.6em;"> Navega hacia la página siguiente <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div>
+<img src='../botonrojo.png' style="width: 1.6em; height: 1.6em;"> Graba la posición actual de la pantalla en una de las memorias que se presentan. Sólo cuando se encuentra en las pestaña del Leccionario, aparecen memorias con nombres de las lecturas.
+</div>
+<div>
+<img src='../rombo.png' style="width: 1.6em; height: 1.6em;"> Navega hacia la posición de memoria escogida.
+</div>
+
+<div>
+<h2>Botones en el texto</h2>
+</div>
+
+
+<div>
+<span class=boton>&#9654;&#xFE0E;</span> Generalmente, expande un submenú.
+</div>
+
+<div>
+<span class=boton>...</span> Muestra/oculta un determinado texto. Generalmente, una rúbrica o una oración opcional.
+</div>
+
+<div>
+<span class=boton>+</span> Expande un determinado texto. Generalmente, una oración opcional.
+</div>
+
+<div>
+<span class=boton>&mdash;</span> Contrae un determinado texto. Generalmente, una oración opcional, expandida anteriormente.
+</div>
+
+
+<div>
+<h2>Otros consejos</h2>
+</div>
+
+<div>
+1. Se aconseja escoger el Misal correspondiente (latín, español o inglés) al que vaya a utilizar el sacerdote en la celebración, porque puede ocurrir que algunas oraciones sólo estén en esa versión del Misal.
+</div>
+<div>
+2. Por último, se aconseja, y agradece infinitamente, hacer un memento en la Santa Misa por los autores de la aplicación.
+</div>
+
+
+<div class=final_pagina>
+
+<hr class='red'>
+<hr class='red'>
+</div>
+
+
+
+<!-- Todo lo siguiente debe estar al final de todos los archivos -->
+
+</div>
+</div>
+<script>document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);</script>
+
+
+
+</body>
+</html>

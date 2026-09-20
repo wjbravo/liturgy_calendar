@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<script type="text/javascript" charset="utf-8" src="../jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="../cordova_plugins.js"></script>
+<script>
+function getUrlVars() {
+	var url=window.location.href.replace(window.location.hash,'')
+    var vars = {};
+    var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+function dime_pref (key, defecto) {
+  var resultado = window.localStorage.getItem(key)
+
+  if (resultado == null)  resultado = defecto
+   //console.log('Saco: '+ key+ '... -> ... '+resultado)
+  return resultado
+}
+
+function pon_pref(key,value) {
+window.localStorage.setItem(key, value);
+//console.log('Guardo: '+value + ' ...  --> ... ' + key)
+ }
+window.onerror = function(message, url, lineNumber) {
+ console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+//		alert("Error: "+message+" in "+url+" at line "+lineNumber)
+ }
+/*
+
+
+
+*/
+
+
+/*				
+			$('#mibuffer2').html('')
+				$('#mibuffer2').load(misanto, function() {
+				partespos.forEach (function(parte8) {
+			if ($('#mibuffer2 .x_'+parte8).first().length) { valor=$('#mibuffer2 .x_'+parte8).first().html;  } else valor='nada'
+			pon_pref('x_snt_'+parte8,valor); 
+			})
+				buscasnt.resolve()
+			}) //load snt			
+			
+				$('#mibuffer3').html('')
+				$('#mibuffer3').load(milectura, function() {
+			var partespos3= ['prim_lect','salmo','seg_lect','aleluya','evangelio']
+				partespos3.forEach (function(parte8) {
+				if ($('#mibuffer3 .x_'+parte8).first().length) { valor=$('#mibuffer3 .x_'+parte8).first().html;  } else valor='nada'
+				pon_pref('x_tmp_lct_'+parte8,valor); 
+				})
+				buscalct.resolve()
+			}) //load lectura
+			*/
+	
+</script>
+</head>
+<body>
+hola
+<div id=prueba1></div>
+<div id=mibuffer1 style='display: none;' ></div>
+<div id=mibuffer2  style='display: none;' ></div>
+<div id=mibuffer3  style='display: none;'></div>
+
+</body>
+<script>
+var preferencias = ""
+
+var mipreferencia = new Array()
+mipreferencia=getUrlVars() 
+
+if (typeof mipreferencia['fondo'] === 'undefined' )    {
+preferencias = window.localStorage.getItem('preferencias') 
+mipreferencia=extrae_preferencias()
+
+} else {
+
+preferencias = "?fondo="+mipreferencia["fondo"]
+preferencias +=  "&tamanotexto="+mipreferencia["tamanotexto"]
+preferencias +=  "&avance="+mipreferencia["avance"]
+preferencias +=  "&tipoletra="+mipreferencia["tipoletra"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma"]
+preferencias += "&tamanomenus="+mipreferencia["tamanomenus"]
+preferencias +=  "&presentaciontexto="+mipreferencia["presentaciontexto"]
+preferencias +=  "&presentacionrespuestas="+mipreferencia["presentacionrespuestas"]
+preferencias +=  "&presentacionpestanas="+mipreferencia["presentacionpestanas"]
+preferencias +=  "&presentacionbotones="+mipreferencia["presentacionbotones"]
+preferencias += "&oracionestodos="+mipreferencia["oracionestodos"]
+preferencias +=  "&botoneszurdos="+mipreferencia["botoneszurdos"]
+window.localStorage.setItem('preferencias', preferencias);
+
+}
+// 
+var	buscatmp = $.Deferred();
+var buscasnt = $.Deferred();
+var buscalct = $.Deferred();
+	$.when(  buscatmp , buscasnt , buscalct ).then(function () {
+				window.location="ordinario/ordinario.html"+ preferencias ;
+//alert('fin')
+	}) 
+
+var	mimisa= dime_pref('lht501', 'nada')
+var	misanto= dime_pref('lhs501', 'nada')
+var	milectura= dime_pref('lhle501', 'nada')
+var index;		
+	mimisa=mimisa.substr(mimisa.lastIndexOf('/misal/')+7).replace('#',' #')
+	misanto=misanto.substr(misanto.lastIndexOf('/misal/')+7).replace('#',' #')
+	milectura=milectura.substr(milectura.lastIndexOf('/misal/')+7).replace('#',' #')
+	$('#prueba1').html(mimisa+'<br>'+misanto+'<br>'+milectura)
+
+	var partespos= ['tmp','snt','com','pf','pe']
+	for (index = 0; index < partespos.length; ++index) {
+	 pon_pref('x_'+partespos[index]+'_prefacio','nada'); 
+	}				
+	pon_pref('x_pe_pleg','nada');
+
+ var partespos= ['titulo','ant_ent','gloria','colecta','credo','antes_or_fieles','or_ofrend','ant_com','post_com','or_pueblo','prefacio','pleg']
+
+	for (index = 0; index < partespos.length; ++index) {
+	 pon_pref('x_com_'+partespos[index],'nada'); 
+	}
+
+			$('#mibuffer1').load(mimisa, function() {
+		var index1;		
+		for (index1 = 0; index1 < partespos.length; ++index1) {
+		if ($('#mibuffer1 .x_'+partespos[index1]).length) { 
+			var midiv=$('#mibuffer1 .x_'+partespos[index1]).html()
+			pon_pref('x_tmp_'+partespos[index1],midiv); 
+			} else pon_pref('x_tmp_'+partespos[index1],'nada');
+		}	
+			buscatmp.resolve()
+
+			}) //load tmp
+/*	*/
+	var partespos2= ['titulo','ant_ent','gloria','colecta','credo','antes_or_fieles','or_ofrend','ant_com','post_com','or_pueblo','prefacio','pleg']
+
+if (misanto.indexOf('indice_santos.html')==0) {
+		var index2;		
+		for (index2 = 0; index2 < partespos2.length; ++index2) pon_pref('x_snt_'+partespos2[index2],'nada');
+		buscasnt.resolve()
+} else $('#mibuffer2').load(misanto, function() {
+
+
+			buscasnt.resolve()
+			}) //load snt
+		/*	*/
+			$('#mibuffer3').load(milectura, function() {
+		var partespos3= ['prim_lect','salmo','seg_lect','aleluya','evangelio']
+		var index3;		
+		for (index3 = 0; index3 < partespos3.length; ++index3) {
+		if ($('#mibuffer3 .x_'+partespos3[index3]).length) { 
+			var midiv3=$('#mibuffer3 .x_'+partespos3[index3]).html()
+			//
+			pon_pref('x_tmp_lct_'+partespos3[index3],midiv3); 
+			} else pon_pref('x_tmp_lct_'+partespos3[index3],'nada');
+		}	
+				buscalct.resolve()
+			}) //load lectura			
+
+//		$('#prueba1').html($('#prueba1').html+'<br><br>'+mimisa+'<br>'+misanto+'<br>'+milectura)
+</script>
+</html>

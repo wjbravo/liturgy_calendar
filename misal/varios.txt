@@ -1,0 +1,905 @@
+VArios: se trata de susituir lo que aquí está en español, por su correspondiente expresión en alemán:
+
+Para el índice de santos: (he dejado los de españa como ejemplo, pero habría que poner la referencia concreta a las celebraciondes concretas en lengua alemana, y que no están en el calendario universal).
+
+
+<div class=titulo_orac>
+	<div ><h4><span ontouchend='cambia_vista("calendaleman")'>En las Diócesis de de lengua alemana</span></h4></div>
+</div>
+<div style='display: none; width: 100%; ' id="calendaleman">
+<div class='ind3 red'><br><big>Enero</big></div>
+<div class='indice'>&nbsp;&nbsp;9<a ontouchend='vete_a("santos/santos_ene.html#0109")'> San Eulogio de Córdoba</a></div>
+<div class='indice'>10<a ontouchend='vete_a("santos/santos_ene.html#0110")'> Beata Ana de los Ángeles Monteagudo</a></div>
+<div class='indice'>20<a ontouchend='vete_a("santos/santos_ene.html#0120Y")'> San Fructuoso y santos Augurio y Eulogio</a></div>
+<div class='indice'>23<a ontouchend='vete_a("santos/santos_ene.html#0123")'> San Ildefonso</a></div>
+<div class='ind3 red'><br><big>Abril</big></div>
+<div class='indice'>13<a ontouchend='vete_a("santos/santos_abr.html#0413Z")'> San Hermenegildo</a></div>
+<div class='indice'>26<a ontouchend='vete_a("santos/santos_abr.html#0426")'> San Isidoro (F)</a></div>
+<div class='ind3 red'><br><big>Mayo</big></div>
+<div class='indice'>10<a ontouchend='vete_a("santos/santos_may.html#0510")'> San Juan de Ávila (M)</a></div>
+<div class='indice'>15<a ontouchend='vete_a("santos/santos_may.html#0515")'> San Isidro (M)</a></div>
+<div class='indice'>17<a ontouchend='vete_a("santos/santos_may.html#0517")'> San Pascual Bailón</a></div>
+<div class='indice'>22<a ontouchend='vete_a("santos/santos_may.html#0522")'> Santa Joaquina Vedruna</a></div>
+<div class='indice'>30<a ontouchend='vete_a("santos/santos_may.html#0530")'> San Fernando</a></div>
+<div class='indice'>Jueves después de Pentecostés:<a ontouchend='vete_a("santos/santos_may.html#0533")'> Jesucristo, Sumo y Eterno Sacerdote (F)</a></div>
+<div class='ind3 red'><br><big>Junio</big></div>
+<div class='indice'>15<a ontouchend='vete_a("santos/santos_jun.html#0615")'> Santa María Micaela del Santísimo Sacramento</a></div>
+<div class='indice'>26<a ontouchend='vete_a("santos/santos_jun.html#0626Z")'> San Pelayo</a></div>
+<div class='ind3 red'><br><big>Agosto</big></div>
+<div class='indice'>19<a ontouchend='vete_a("santos/santos_ago.html#0819Z")'> San Ezequiel Moreno Díaz</a></div>
+<div class='indice'>26<a ontouchend='vete_a("santos/santos_ago.html#0826")'> Santa Teresa de Jesús Jornet e Ibars (M)</a></div>
+<div class='ind3 red'><br><big>Octubre</big></div>
+<div class='indice'>&nbsp;&nbsp;3<a ontouchend='vete_a("santos/santos_oct.html#1003")'> San Francisco de Borja</a></div>
+<div class='indice'>&nbsp;&nbsp;5 &nbsp;&nbsp; Témporas de acción de gracias y de petición<br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#1005")'>Cuando sólo se celebra el 5 de octubre</a><br><div class='ind4' style='font-weight: normal;'>Cuando se celebra en tres días:</div><br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#10051")'> Día de acción de gracias</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#10052")'> Otra misa para el día de acción de gracias</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#10053")'> Día penitencial</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#10054")'> Día de petición por la actividad humana</a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("santos/santos_oct.html#10055")'> Otra misa para el día de petición</a></div>
+<div class='indice'>10<a ontouchend='vete_a("santos/santos_oct.html#1010")'> Santo Tomás de Villanueva</a></div>
+<div class='indice'>11<a ontouchend='vete_a("santos/santos_oct.html#1011B")'> Santa Soledad Torres Acosta</a></div>
+<div class='indice'>12<a ontouchend='vete_a("santos/santos_oct.html#1012")'> Nuestra Señora del Pilar (F)</a></div>
+<div class='indice'>15<a ontouchend='vete_a("santos/santos_oct.html#1015")'> Santa Teresa de Jesús (F)</a></div>
+<div class='indice'>19<a ontouchend='vete_a("santos/santos_oct.html#1019Y")'> San Pedro de Alcántara</a></div>
+<div class='ind3 red'><br><big>Noviembre</big></div>
+<div class='indice'>&nbsp;&nbsp;6<a ontouchend='vete_a("santos/santos_nov.html#1106")'> Santos Pedro Poveda, Inocencio Canoura, y compañeros</a></div>
+<div class='indice'>13<a ontouchend='vete_a("santos/santos_nov.html#1113")'> San Leandro</a></div>
+<div class='ind3 red'><br><big>Diciembre</big></div>
+<div class='indice'>10<a ontouchend='vete_a("santos/santos_dic.html#1210")'> Santa Eulalia de Mérida</a></div>
+</div>
+
+-------------------------------------
+
+Prefacios: del archivo de prefacios, habría que escoger una frase que los identifique (en español suele estar en el segundo párrafo)
+
+<div id='misal_germ' class='misal_germ' >
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; text-align: center; '>ÍNDICE DE PREFACIOS</div>
+
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref1'); ">&#9654;</a> Del Tiempo</div>
+<div id='indice_cpref1' style='display: none;' >
+
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref2'); ">&#9654;</a> Adviento</div>
+<div id='indice_cpref2' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf001")' class='enlacepref' >... Quien al venir por vez primera...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf002")' class='enlacepref' >... A quien todos los profetas anunciaron,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf003")' class='enlacepref' >... Tú nos has ocultado el día y la hora...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf004")' class='enlacepref' >... Te alabamos, te bendecimos y te glorificamos...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref3'); ">&#9654;</a> Navidad</div>
+<div id='indice_cpref3' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf005")' class='enlacepref' >... Porque, gracias al misterio del Verbo hecho carne,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf006")' class='enlacepref' >... Porque en el misterio santo que hoy celebramos,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf007")' class='enlacepref' >... Por él, hoy resplandece el maravilloso intercambio...</a><br></div>
+
+<div class='indicepref'>De la Epifanía del Señor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf008")' class='enlacepref' >... Porque hoy has revelado en Cristo,...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref4'); ">&#9654;</a> Cuaresma</div>
+<div id='indice_cpref4' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf009")' class='enlacepref' >...Por él concedes a tus fieles...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf010")' class='enlacepref' >... Porque has establecido generosamente...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf011")' class='enlacepref' >...Tú has querido que te diésemos gracias...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf012")' class='enlacepref' >...Tú, que, por el ayuno corporal...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf013")' class='enlacepref' >... Tú abres a la Iglesia...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref5'); ">&#9654;</a> Pasión del señor</div>
+<div id='indice_cpref5' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf014")' class='enlacepref' >... Porque en la pasión salvadora de tu Hijo...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf015")' class='enlacepref' >... Porque se acercan los días santos...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref6'); ">&#9654;</a> Pascua</div>
+<div id='indice_cpref6' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf016")' class='enlacepref' >... Porque Él es el verdadero Cordero...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf017")' class='enlacepref' >... Por Él los hijos de la luz...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf018")' class='enlacepref' >... Porque Él no cesa de ofrecerse por nosotros,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf019")' class='enlacepref' >... Porque, demolida nuestra antigua miseria,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf020")' class='enlacepref' >... Porque Él, con la inmolación de su cuerpo en la cruz,...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;   '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref7'); ">&#9654;</a> Ascensión del Señor</div>
+<div id='indice_cpref7' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf021")' class='enlacepref' >... Porque Jesús, el Señor,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf022")' class='enlacepref' >...El cual, después de su resurrección...</a><br></div>
+
+<div class='indicepref'>Para después de la Ascensión del Señor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf023")' class='enlacepref' >... El cual, habiendo entrado una vez para siempre...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 1%; margin-left: 1.1em;  '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref8'); ">&#9654;</a> Dominicales del tiempo ordinario</div>
+<div id='indice_cpref8' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf024")' class='enlacepref' >... Quien, por su misterio pascual,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf025")' class='enlacepref' >... El cual, compadecido del extravío de los hombres,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf026")' class='enlacepref' >... Porque reconocemos como obra de tu poder admirable...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf027")' class='enlacepref' >... Porque Él, con su nacimiento,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf028")' class='enlacepref' >... Porque creaste el universo entero,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf029")' class='enlacepref' >... En ti vivimos, nos movemos y existimos;...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf030")' class='enlacepref' >... Porque tu amor al mundo...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf031")' class='enlacepref' >... Porque has querido reunir de nuevo,...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf032")' class='enlacepref' >... Porque nos concedes en cada momento lo que más conviene...</a><br></div>
+<div class='indicepref'>X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf033")' class='enlacepref' >... Hoy, tu familia,...</a><br></div>
+</div>
+
+</div>
+
+
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref9'); ">&#9654;</a> Santísima Eucaristía</div>
+<div id='indice_cpref9' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf036")' class='enlacepref' >... El cual, verdadero y único sacerdote,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf037")' class='enlacepref' >... El cual, en la última cena con sus apóstoles,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf038")' class='enlacepref' >... Porque has querido que tu Hijo...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref91'); ">&#9654;</a> Espíritu Santo</div>
+<div id='indice_cpref91' style='display: none;' >
+
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf081")' class='enlacepref' >... Porque él, después de subir al cielo,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf082")' class='enlacepref' >... Porque nos concedes en cada momento lo que más conviene...</a><br></div>
+
+</div>
+
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref10'); ">&#9654;</a> Fiestas de los santos</div>
+<div id='indice_cpref10' style='display: none;' >
+<div class='indicepref red'>Santa María Virgen</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf043")' class='enlacepref' >... Y alabar, bendecir y proclamar tu gloria...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf044")' class='enlacepref' >... En verdad hiciste obras grandes...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf045")' class='enlacepref' >... Ella, al aceptar tu Palabra con limpio corazón,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf046")' class='enlacepref' >... Te alabamos y te bendecimos...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf047")' class='enlacepref' >... Porque en esta etapa final de la historia...</a><br></div>
+
+<div class='indicepref red'>Ángeles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf048")' class='enlacepref' >... Y proclamar tus alabanzas...</a><br></div>
+
+<div class='indicepref red'>San José&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf049")' class='enlacepref' >... Y alabar, bendecir y proclamar tu gloria...</a><br></div>
+<div class='indicepref red'>Apóstoles</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf050")' class='enlacepref' >... Porque tú, Pastor eterno,...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf051")' class='enlacepref' >... Porque has querido que tu Iglesia...</a><br></div>
+<div class='indicepref red'>Santos</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf052")' class='enlacepref' >... Porque eres glorificado en la asamblea...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf053")' class='enlacepref' >... Porque mediante el testimonio admirable de tus santos...</a><br></div>
+<div class='indicepref red'>Santos Mártires</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf054")' class='enlacepref' >... Porque la sangre del glorioso mártir...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf055")' class='enlacepref' >...Porque tú eres ensalzado en la alabanza de tus santos...</a><br></div>
+
+<div class='indicepref red'>Santos Pastores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf056")' class='enlacepref' >... Porque nos concedes la alegría...</a><br></div>
+
+<div class='indicepref red'>Santas Vírgenes y Religiosos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf057")' class='enlacepref' >...Porque celebramos tu providencia admirable...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref11'); ">&#9654;</a> Comunes</div>
+<div id='indice_cpref11' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf058")' class='enlacepref' >... A quien hiciste fundamento de todo...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf059")' class='enlacepref' >...que por amor creaste al hombre,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf060")' class='enlacepref' >... Porque has querido ser,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf061")' class='enlacepref' >... Pues aunque no necesitas nuestra alabanza,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf062")' class='enlacepref' >...Porque con amor celebramos su muerte,...</a><br></div>
+<div class='indicepref'>VI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf063")' class='enlacepref' >... Por él, que es tu Verbo, hiciste todas las cosas;...</a><br></div>
+<div class='indicepref'>VII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf064")' class='enlacepref' >... Porque tú llamaste a Abrahán...</a><br></div>
+<div class='indicepref'>VIII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf065")' class='enlacepref' >... Porque él, en su vida terrena, pasó haciendo el bien...</a><br></div>
+<div class='indicepref'>IX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf066")' class='enlacepref' >... Tú eres el Dios vivo y verdadero;...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref12'); ">&#9654;</a> Difuntos</div>
+<div id='indice_cpref12' style='display: none;' >
+<div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf067")' class='enlacepref' >... En él brilla la esperanza...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf068")' class='enlacepref' >... Porque él aceptó la muerte, uno por todos,...</a><br></div>
+<div class='indicepref'>III&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf069")' class='enlacepref' >... Porque él es la salvación del mundo,...</a><br></div>
+<div class='indicepref'>IV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf070")' class='enlacepref' >...Bajo tu poder hemos nacido,...</a><br></div>
+<div class='indicepref'>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf071")' class='enlacepref' >...Porque el ser llamados de nuevo a la vida...</a><br></div>
+</div>
+
+<div class='ind1 red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cpref13'); ">&#9654;</a> Misas rituales</div>
+<div id='indice_cpref13' style='display: none;' >
+<div class='indicepref red'>Bautismo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf034")' class='enlacepref' >... Te alabamos,...</a><br></div>
+<div class='indicepref red'>Confirmación&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf035")' class='enlacepref' >... Tú, en el Bautismo, das nueva vida a los creyentes...</a><br></div>
+<div class='indicepref red '>Ordenaciones</div><br><div class='indicepref'>I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf039")' class='enlacepref' >... Que constituiste a tu Unigénito...</a><br></div>
+<div class='indicepref'>II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf040")' class='enlacepref' >... Que constituiste a tu único Hijo...</a><br></div>
+<div class='indicepref red'>Penitencia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf041")' class='enlacepref' >... Al hombre, náufrago a causa del pecado,...</a><br></div>
+<div class='indicepref red'>Unción de los enfermos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ontouchend='vete_a("prefacios/prefacios.html#pf042")' class='enlacepref' >... Porque has querido que tu único Hijo,...</a><br></div>
+</div>
+
+</div>
+
+--------------------------------------------------------------------------------------
+
+Indice de comunes
+
+
+<span class=misal_germ>ÍNDICE</span>
+
+<div id=misal_germ class=misal_germ>
+
+<div class='ind3 red' style='margin-top: 2%; font-weight: bold; '><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccom'); ">&#9654;</span> MISAS COMUNES</div>
+<div id='indice_ccom' style='display: none;'>
+<div class=solodos>
+<span class=boton ontouchend='cambia_vista("texto4");'>...</span>
+</div>
+
+<div id=texto4 style='display: none; margin: 2%;'>
+<div>l. <span class='red'>Por razon de comodidad, en cada uno de los Comunes, se proponen varias misas con todos sus elementos: antífonas y oraciones.</span></div> 
+<div><span class='red'>El sacerdote puede, si lo juzga oportuno, cambiar entre sí las antífonias y oraciones de un mismo Común, eligiendo los textos que crea más aptos desde el punto de vista pastoral.</span></div> 
+<div><span class='red'>Más aún, en las misas que son «memoria», 1a oración sobre las ofrendas y la oración después de la comunión pueden tomarse también de las ferias del respectivo tiempo litúrgico, además de las propuestas en los mismos Comunes.</span></div> 
+<div>2.  <span class='red'>En el Común de mártires y en el Común de santos y santas, todas las oraciones que se proponen para los varones pueden utilizarse también para las mujeres, cambiando el género.</span></div> 
+<div>3. <span class='red'>En cada uno de los Comunes, los textos redactados en singular pueden emplearse para varios, cambiando el número. Del mismo modo, los textos en plural se pueden aplicar para uno solo, cambiando igualmente el número.</span></div> 
+<div>4. <span class='red'>Las misas que se proponen para determinados tiempos y circunstancias, utilícense en los mismos tiempos y circunstancias.</span></div> 
+<div>5. <span class='red'> En el tiempo pascual al final de la antifona de entrada y de la antífona de comunión se añade un Aleluya.</span></div> 
+<div>6. <span class='red'>En las solemnidades y en las fiestas, puede decirse una de las antifonas de libre elección que se proponen más adelante (p. 875).</span></div>
+<hr style='color: red;'></div>
+
+
+
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccdde'); ">&#9654;</span> Común de la dedicación de una iglesia</div>
+<div id='indice_ccdde' style='display: none;'>
+		<div class='indice'><span>En el día de la Dedicación</span></div>
+	<div class='indice'><span class='red'>Los textos de las misas «En el día de la dedicación de una iglesia» y «Para la dedicación de un altar» se encuentran entre las misas rituales,</span></div>
+	<div class='indice'><span>En el aniversario de la Dedicación</span></div>
+	<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_ded.html#ded1")'>A</span> En la misma iglesia dedicada</div>
+	<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_ded.html#ded2")'>B</span> Fuera de la Iglesia dedicada</div>
+</div>
+
+<hr style='color: red;'>
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccbmv'); ">&#9654;</span> Común de santa María Virgen</div>
+<div id='indice_ccbmv' style='display: none;'>
+	<div class='indice'><span class='red'>Estas misas se utilizan también para la celebración de la memoria de santa María en el sábado, y para las misas votivas de la Virgen.</span></div>
+	<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv2")'>2</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv3")'>3</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv4")'>4</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv5")'>5</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv6")'>6</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv7")'>7</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmv8")'>8</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmvadv")'>II</span> Tiempo de Adviento</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmvnav")'>III</span> Tiempo de Navidad</div>
+		<div class='indice'>IV. <span>Durante el tiempo pascual</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmvpas")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_bmv.html#bmvpas2")'>2</span></div>
+	</div>
+<hr style='color: red;'>		
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccm'); ">&#9654;</span> Común de Mártires</div>
+<div id='indice_ccm' style='display: none;'>
+		<div class='indice'>I. <span>Fuera del tiempo pascual</span></div>
+		<div class='indice'><span>A. Para varios mártires</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart2")'>2</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart3")'>3</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart4")'>4</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart5")'>5</span></div>
+		<div class='indice'><span>B. Para un mártir</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart6")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart7")'>2</span></div>
+		<div class='indice'>II. <span>Durante el tiempo pascual</span></div>
+		<div class='indice'><span>A. Para varios mártires</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart8")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart9")'>2</span></div>
+		<div class='indice'><span><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart10")'>B</span>Para un mártir</span></div>
+		<div class='indice'>III. <span>Para misioneros mártires</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart11")'>A</span> Para varios misioneros mártires</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart12")'>B</span> Para un misionero mártir</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart13")'>IV. </span>Para una virgen mártir</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_mart.html#mart14")'>V. </span> Para una santa mujer mártir</div>
+</div>
+<hr style='color: red;'>		
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccp'); ">&#9654;</span> Común de Pastores</div>
+<div id='indice_ccp' style='display: none;'>
+		<div class='indice'>I. <span>Para un papa o para un obispo</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past2")'>2</span></div>
+		<div class='indice'>II. <span>Para un obispo</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past3")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past4")'>2</span></div>
+		<div class='indice'>III. <span>Pastores</span></div>
+		<div class='indice'><span><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past5")'>A</span> Para varios pastores</span></div>
+		<div class='indice'><span>B. Para un pastor</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past6")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past7")'>2</span></div>
+		<div class='indice'>IV. <span>Fundadores de Iglesias</span></div>
+		<div class='indice'><span><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past8")'>A</span> Para un fundador</span></div>
+		<div class='indice'><span><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past9")'>B</span> Para varios fundadores</span></div>
+		<div class='indice'>V. <span>Para misioneros</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past10")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past11")'>2</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_past.html#past12")'>3</span></div>
+	</div>
+
+	
+<hr style='color: red;'>		
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccde'); ">&#9654;</span> Común de Doctores de la Iglesia</div>
+<div id='indice_ccde' style='display: none;'>
+	<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_doct.html#doct1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_doct.html#doct2")'>2</span></div>
+	</div>	
+<hr style='color: red;'>	
+<div class='ind3 red'  style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccv'); ">&#9654;</span> Común de Vírgenes</div>
+<div id='indice_ccv' style='display: none;'>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_virg.html#virg0")'>I.</span>Para varias vírgenes</div>
+		<div class='indice'>II. <span>Para una virgen</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_virg.html#virg1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_virg.html#virg2")'>2</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_virg.html#virg3")'>3</span></div>
+</div>
+<hr style='color: red;'>
+<div class='ind3 red' style='margin-top: 1%;'><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_ccs'); ">&#9654;</span> Común de Santos y Santas</div>
+<div id='indice_ccs' style='display: none;'>
+	<div class='indice'><span class='red'>Las misas que siguen, si se señalan para una determinada categoría de santos, utilícense para ellos. Las misas a las que no se les asigna ningún titulo, pueden emplearse para cualquier santo.</span></div>
+		<div class='indice'>I. <span>Para toda categoría de santos</span></div>
+		<div class='indice'>A. <span>Para varios santos</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct1")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct2")'>2</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct3")'>3</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct4")'>4</span></div>
+		<div class='indice'>B. <span>Para un santo</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct5")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct6")'>2</span></div>
+		<div class='indice'>II. <span>Para monjes y religiosos</span></div>		
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct7")'>A</span> Para un abad</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct8")'>B</span> Para un monje</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct9")'>C</span> Para una monja</div>
+		<div class='indice'>D. <span>Para religiosos</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct10")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct11")'>2</span></div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct12")'>III</span> Para santos que practicaron obras de misericordia</div>
+		<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct13")'>IV</span> Para Educadores</div>
+		<div class='indice'>V. <span>Para santas mujeres</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct14")'>1</span> <span  class=boton ontouchend='vete_a("comunes_votivas/comunes_sant.html#sanct15")'>2</span></div>
+	</div>
+</div>
+
+
+<div  class='ind3 red' style='margin-top: 2%; font-weight: bold; '><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cs1'); ">&#9654;</span> MISAS VOTIVAS</div>
+
+<div id='indice_cs1' style='display: none;'>
+<div class=red>Por razones de mayor utilidad pastoral, puede utilizarse una misa votiva adecuada, por mandato o con licencia del ordinario del lugar, excepto en las solemnidades, domingos de Adviento, Cuaresma y Pascua, días de la octava de Pascua, Conmemoración de todos los fieles difuntos, Miércoles de Ceniza y días de la Semana Santa.<br>
+La misas votivas, de suyo, están prohibidas los días en que coincide una memoria obligatoria, o una feria de Adviento hasta el día 16 de diciembre, o una feria del tiempo de Navidad desde el 2 de enero, o del tiempo pascual después de la octava de Pascua. Pero si la utilidad pastoral lo pide, en la celebración con el pueblo puede utilizarse una misa votiva que responda a esa utilidad, a juicio del rector de la iglesia o del mismo sacerdote celebrante.<br>
+En las ferias durante el año, aunque coincida una memoria libre, el sacerdote celebrante puede escoger una misa votiva que favorezca la piedad de los fieles.</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0001")'>1</span> De la Santísima Trinidad</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0002")'>2</span> De la misericordia de Dios</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0003")'>3</span> De Nuestro Señor Jesucristo, Sumo y Eterno Sacerdote</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0004")'>4</span> Del misterio de la Santa Cruz</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0005")'>5</span> De la Santísima Eucaristía</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0006")'>6</span> Del Santísimo nombre de Jesús</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0007")'>7</span> De la Preciosísima Sangre de Nuestro Señor Jesucristo</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0008")'>8</span> Del Sagrado Corazón de Jesús</div>
+<div class='indice'>9. Del Espíritu Santo
+<span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0009")'>A</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0010")'>B</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0011")'>C</span></div>
+<div class='indice'>10. De la Bienaventurada Virgen María<br><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0012")'>A</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0013")'>B</span> De Santa María, Madre de la Iglesia<br><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0014")'>C</span> Del Dulce Nombre de María<br><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0015")'>*</span> De Santa María, Reina de los Apóstoles</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0016")'>11</span> De los Santos Ángeles</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0017")'>12</span> De S. Juan Bautista</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0018")'>13</span> De S. José</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0019")'>14</span> De Todos los Santos Apóstoles</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0020")'>15</span> De los Santos Apóstoles, Pedro y Pablo</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0021")'>16</span> De San Pedro, apóstol</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0022")'>17</span> De San Pablo, apóstol</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0023")'>18</span> De un Santo apóstol</div>
+<div class='indice'><span  class=boton ontouchend='vete_a("comunes_votivas/votivas.html#0024")'>19</span> De Todos los Santos</div>
+
+</div>
+
+<div class='ind3 red' style='margin-top: 2%; font-weight: bold; '><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cdif'); ">&#9654;</span> MISAS DE DIFUNTOS</div>
+<div id='indice_cdif' style='display: none;'>
+<div class=solodos>
+<span class=boton ontouchend='cambia_vista("texto5");'>...</span>
+</div>
+<div id=texto5 style='display: none; margin: 2%;'>
+<div>l. <span class='red'>Aunque, por comodidad del celebrante, se proponen aquí diversos formularios de misas, con sus antifonas y oraciones, sin embargo todos los textos pueden intercambiarse con otros, principalmente las oraciones, cambiando el género o el número, según la oportunidad de cada círcunstancia.
+En las oraciones propuestas para las exequias o el aniversario, si se utilizan en otras circunstancias, se omiten las palabras que parezcan menos aptas.</span></div> 
+<div>2. <span class='red'>En el tiempo pascual puede omitirse, si se juzga oportuno, el Aleluya al final de las antífonas.</span></div> 
+</div>
+
+
+
+
+
+<div class='indice'>I. <span>En las exequias</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif001")'>A</span> Fuera del tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif002")'>B</span> Fuera del tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif003")'>C</span> En tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif004")'>D</span> Otras oraciones para la misa exequial<br>E. <span>En las exequias de un niño bautizado </span><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif005")'>1</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif006")'>2</span> Otras oraciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif007")'>F</span> En las exequias de un niño aún no bautizado</div>
+
+
+<div class='indice'>II. <span>En el aniversario</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif008")'>A</span> Fuera del tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif009")'>B</span> Fuera del tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif010")'>C</span> En tiempo pascual<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif011")'>D</span> Otras oraciones en el aniversario<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif012")'>E</span> Otras oraciones en el aniversario</div>
+
+<div class='indice'>III. <span>En diversas conmemoraciones</span><br>A. <span>Por un difunto</span><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif013")'>1</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif014")'>2</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif015")'>3</span> Otras oraciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif016")'>4</span> Otras oraciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif017")'>5</span> Otras oraciones<br>B. <span>Por varios o por todos los difuntos</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif018")'>1</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif019")'>2</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif020")'>3</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif021")'>4</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif022")'>5</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif023")'>6</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif024")'>7</span> Otras oraciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif025")'>8</span> Otras oraciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif026")'>9</span> Otras oraciones</div>
+
+<div class='indice'>IV. <span>DIVERSAS ORACIONES POR LOS DIFUNTOS</span><br>1. <span>Por el Papa</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif027")'>A</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif028")'>B</span> 
+<span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif029")'>C</span><br>2. <span>Pro episcopo</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif030")'>A</span> Por el obispo diocesano<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif031")'>B</span> Por otro obispo<br>3. <span>Por un sacerdote</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif032")'>A</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif033")'>B</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif034")'>4</span> Por un diácono<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif035")'>5</span> Por un religioso<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif036")'>6</span> Por un difunto que ha trabajado en el servicio del evangelio<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif037")'>7</span> Por un joven difunto<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif038")'>8</span> Por un difunto que ha padecido larga enfermedad<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif039")'>9</span> Por uno que ha muerto repentinamente<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif040")'>10</span> Por los cónyuges difuntos<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif041")'>11</span> Por los padres<br><span  class=boton ontouchend='vete_a("comunes_votivas/difuntos.html#dif042")'>12</span> Por los hermanos, parientes y bienhechores difuntos</div>
+
+</div>
+
+<div class='ind3 red' style='margin-top: 2%; font-weight: bold; '><span class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_cdiv'); ">&#9654;</span> MISAS Y ORACIONES POR DIVERSAS NECESIDADES</div>
+<div id='indice_cdiv' style='display: none;'>
+<div class=solodos>
+<span class=boton ontouchend='cambia_vista("texto6");'>...</span>
+</div>
+<div id=texto6 style='display: none; margin: 2%;'>
+
+<div><p>1. <span class='red'>En esta sección se reúnen las misas y oraciones por diversas necesidades que pueden decirse en distintas ocasiones, según sea necesario o conveniente para la comunidad.</span></p><p><span class='red'>Los formularios que van en las tres primeras partes pueden decirse en la rnisa celebrada con participación del pueblo o sin él; en cambio, los que van en la cuarta parte es preferible que se digan en misas sin participación del pueblo, a no ser que razones pastorales aconsejen otra cosa.</p></span></div> 
+
+<div><p>2. <span class='red'>Las misas que tienen un formulario completo, es decir, oraciones y antífonas, tlenen también lecturas propias en el Leccionarío.</p></span></div> 
+
+<div><p>3. <span class='red'>El sacerdote puede decir siempre todas las oraciones de esta serie o solamente la oración colecta en las misas de feria del tiempo ordinario, observando 1o que se ha dicho antes en el núm. 1.</p></span></div> 
+
+<div><p>4. <span class='red'>En algunas misas, los textos Iitúrgicos que se ponen para el varón se pueden adaptar para la mujer, cambiando el género, o para varios, cambiando el número.</p></span></div> 
+
+<div><p>5. <span class='red'>Estas misas pueden decirse con vestiduras del color propio del día o del tiempo litúrgico o con vestiduras de color morado, si tienen carácter penitenciai, por ejemplo, las núms. 23, 28, 40 (cf. Ordenación general del Misa] romano, num. 310).</p></span></div> 
+
+</div>
+<div class='indice'>
+I. <span>Por la santa Iglesia</span><br>&nbsp;&nbsp;1. <span>Por la Iglesia</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div001")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div002")'>B</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div003")'>C</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div004")'>D</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div005")'>E</span> por la iglesia local<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div006")'>2</span> Por el papa<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div007")'>3</span> Por el obispo<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div008")'>4</span> Para elegir un papa o un obispo<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div009")'>5</span> Por el concilio o el sínodo<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div010")'>6</span> Por los sacerdotes<br>&nbsp;&nbsp;7. <span>Por el propio sacerdote celebrante</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div011")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div012")'>B</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div013")'>C</span> En el aniversario de la propia ordenación<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div014")'>8</span> Por los ministros de la iglesia<br>&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div015")'>9</span> Por las vocaciones a las sagradas ordenes<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div016")'>10</span> Por los laicos<br>11. <span>En los aniversarios del matrimonio</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div016a")'>A</span> En el aniversario<br>&nbsp;&nbsp;&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div016b")'>B</span> En el XXV aniversario (bodas de plata)<br>&nbsp;&nbsp;&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div016c")'>C</span> En el L aniversario (bodas de oro)<br>
+<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div017")'>12</span> Por la familia<br>13. Por los religiosos<br>&nbsp;&nbsp;&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div018")'>A</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div019")'>B</span> En el XXV o L aniversario de la profesión religiosa<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div020")'>14</span> Por las vocaciones a la vida religiosa<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div021")'>15</span> Para fomentar la concordia<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div022")'>16</span> Para la reconciliación<br>17. <span>Por la unidad de los cristianos</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div023")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div024")'>B</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div025")'>C</span><br>18. <span>Por la evangelización de los pueblos</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div026")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div027")'>B</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div028")'>19</span> Por los cristianos perseguidos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div029")'>20</span> En una reunión espiritual o pastoral
+</div>
+<div class='indice'>
+<br>II. <span>Por las necesidades públicas</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div030")'>21</span> Por la patria o por la ciudad<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div031")'>22</span> Por los gobernantes<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div032")'>23</span> Por las asambleas de los gobernantes de las naciones<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div033")'>24</span> Por el supremo gobernante de la nación<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div034")'>25</span> Al comienzo del año civil<br>26. <span>Por la santificación del trabajo humano</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div035")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div036")'>B</span><br>27. <span>En tiempo de siembra</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div037")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div038")'>B</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div039")'>28</span> Para después de la cosecha<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div040")'>29</span> Por el progreso de los pueblos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div041")'>30</span> Por la paz y la justicia<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div043")'>31</span> En tiempo de guerra o desorden<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div044")'>32</span> Por los prófugos y exiliados<br>33. <span>En tiempo de hambre, o por los que padecen hambre</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div045")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div046")'>B</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div047")'>34</span> En tiempo de terremoto<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div048")'>35</span> Para pedir lluvia<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div049")'>36</span> Para pedir el buen tiempo<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div050")'>37</span> Para alejar las tempestades</div>
+<div class='indice'>
+III. <span>En diversas necesidades</span><br>38. <span>Por el perdón de los pecados</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div051")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div052")'>B</span><br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div053")'>39</span> Para pedir la continencia<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div054")'>40</span> Para pedir la caridad<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div055")'>41</span> Por los familiares y amigos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div056")'>42</span> Por los que nos afligen<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div057")'>43</span> Por los cautivos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div058")'>44</span> Por los encarcelados<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div059")'>45</span> Por los enfermos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div060")'>46</span> Por los moribundos<br><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div061")'>47</span> Para pedir la gracia de una buena muerte<br>48. <span>En cualquier necesidad</span>	<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div062")'>A</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div063")'>B</span> <span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div064")'>C Otras oraciones</span><br>49. <span>Para dar gracias a Dios</span>	<span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div065")'>A</span><span  class=boton ontouchend='vete_a("comunes_votivas/diversas.html#div066")'>B Otras oraciones</span></div>
+</div>
+</div>
+
+
+
+----------------------------------
+
+Indice de tiempos: (aquí he intenado adelantar algo el trabajo, con lo que te pedí):
+
+
+<div id='misal_germ'  class='misal_germ' >
+
+<div style="margin-top: 2em; margin-bottom: 2em; width: 100%; text-align: center;  " class=''><b><font size="4" color="red">PROPRIUM DE TEMPORE</font></b></div>
+<ol class=nivel0>
+<li class=' red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_adv'); ">&#9654;</a> Tempus Adventus
+<ol id='indice_germ_adv' style='display: none;' class=''>
+<li><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_adv01'); ">&#9654;</a> 1. Woche
+<ol id='indice_germ_adv01' style='display: none;' >
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A010")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A011")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A012")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A013")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A014")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A015")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A016")'>Samstag</a></li>
+</ol></li>
+<li><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_adv02'); ">&#9654;</a> 2. Woche
+<ol id='indice_germ_adv02' style='display: none;' >
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A020")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A021")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A022")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A023")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A024")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A025")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A026")'>Samstag</a></li>
+</ol></li>
+<li><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_adv03'); ">&#9654;</a> 3. Woche
+<ol id='indice_germ_adv03' style='display: none;' >
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A030")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A031")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A032")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A033")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A034")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A035")'>Freitag</a></li> 
+</ol></li>                                                                                                            
+<li><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_adv04'); ">&#9654;</a> IN FERIIS ADVENTUS<br>a Die 17 ad diem 24 decembris
+<ol id='indice_germ_adv04' style='display: none;' >
+	<span class='red'>Missæ, quæ sequuntur diebus quibus sunt assignatæ adhibentur, excepta dominica, quæ suam Missam retinet.</span></br>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A040")'>Sonntag IV</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A117")'>17 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A118")'>18 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A119")'>19 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A120")'>20 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A121")'>21 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A122")'>22 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A123")'>23 decembris </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A124")'>24 decembris</a></li>
+</ol></li>
+</ol></li>
+<li class=' red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_nav'); ">&#9654;</a> Tempus Nativitatis
+<ol id='indice_germ_nav' style='display: none;' class=''>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_nav1'); ">&#9654;</a> Octava de Navidad
+<ol id='indice_germ_nav1' style='display: none;' class=''>
+25 decembris. IN NATIVITATE DOMINI<br><span class='red'>In Nativitate Domini omnes sacerdotes tres Missas celebrare vel concelebrare possunt, dummodo hæ suo tempore celebrentur.</span><br><li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A1251")'>Ad Missam in Vigilia</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A1252")'>Ad Missam in nocte</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A1253")'>Ad Missam in aurora</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A125")'>Ad Missam in Die</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A140")'>S. FAMILIÆ IESU, MARIÆ ET IOSEPH</a> <span class='red'>(DOMINICA infra octavam Nativitatis Domini, vel, ea deficiente, die 30 decembris )</span><br><li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A129")'>29 decembris. De V Die infra octavam Nativitatis Domini</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A130")'>30 decembris. De VI Die infra octavam Nativitatis Domini</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A131")'>31 decembris. De VII Die infra octavam Nativitatis Domini</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A141")'>1 ianuarii. SOLLEMNITAS SANCTÆ DEI GENETRICIS MARIÆ</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A160")'>DOMINICA II POST NATIVITATEM</a></li>
+6 ianuarii. IN EPIPHANIA DOMINI<br><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A170b")'>Ad Missam in Vigilia</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A170")'>Ad Missam in Die</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_nav2'); ">&#9654;</a> IN FERIIS TEMPORIS NATIVITATIS<br>a Die 2 ianuarii usque ad sabbatum ante festum Baptismatis Domini
+<ol id='indice_germ_nav2' style='display: none;' class=''>
+<span class='red'>Hæ Missæ adhibentur in feriis quibus sunt assignatæ, mutando collectam, prout indicatur.</span><br><li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A171")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A172")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A173")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A174")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A175")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A176")'>Samstag</a></li>
+</ol></li>  
+<li class=''><a ontouchend='vete_a("tiempos/tiempos_advnav.html#A810")'>Sonntag post diem 6 ianuarii occurrente. IN BAPTISMATE DOMINI</a></li>
+</ol>
+</li>
+<li class=' red' style='margin-top: 2%; font-weight: bold; text-align: left;'><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_perannum'); ">&#9654;</a> Tempus Per Annum
+<ol id='indice_germ_perannum' style='display: none;' class=''>
+<div class=solodos >
+<span class=boton ontouchend='cambia_vista("texto1");'>...</span>
+</div>
+<div id=texto1 style='display: none; font-weight: normal;'>
+<p>1. <span class='red'>Tempus «per annum» complectitur 34 vel 33 hebdomadas. Initium sumit feria II, quæ sequitur dominicam post diem 6 ianuarii occurrentem, et pergit usque ad initium Quadragesimæ; iterum incipit feria II post dominicam Pentecostes, et explicit sabbato ante dominicam I Adventus.</span></p>
+<p>2. <span class='red'>Ratio computandi dominicas et hebdomadas «per annum» est sequens:<br>a ) Sonntag in qua fit festum Baptismatis Domini locum tenet primæ dominicæ «per annum»; hebdomada tamen quæ sequitur computatur prima «per annum». Reliquæ dominicæ et hebdomadæ ordine progressivo numerantur usque ad initium Quadragesimæ.<br>b ) Post Pentecosten, si hebdomadæ «per annum» sunt 34, resumitur series ab ea hebdomada, quæ immediate sequitur ultimam ante Quadragesimam celebratam, attendendo tamen quod Missæ dominicæ Pentecostes et sollemnitatis Ss. mæ Trinitatis locum tenent Missarum dominicalium. Si vero hebdomadæ «per annum» sunt 33, omittitur prima hebdomada, quæ sumenda esset post Pentecosten.</span></p>
+<p>3. <span class='red'>In Missali proinde exhibentur 34 Missæ pro dominicis et feriis huius temporis, quæ adhibentur hac ratione:<br>a ) In dominicis sumitur de more Missa, quæ respondet numero dominicæ «per annum», nisi occurrat sollemnitas vel festum Domini, quæ locum teneant dominicæ.<br>b ) In feriis vero quælibet e 34 Missis dici potest, attenta utilitate pastorali fidelium.</span></p>
+<p>4. <span class='red'>In dominicis dicitur Glória in excélsis et Credo; in feriis vero omittitur et hymnus angelicus et symbolum.</span></p>
+<p>5. <span class='red'>Nisi adhibeatur Prex eucharistica, quæ præfationem propriam habet, in dominicis, dicitur de dominicis «per annum».  ; in feriis autem dicitur præfatio communis. </span></p>
+<p>6. <span class='red'>Ad communionem duplex ponitur antiphona, prior e psalmis, altera plerumque ex Evangelio. Una vel altera seligi potest, iuxta opportunitatem, illa tamen præferendo, quæ cum Evangelio Missæ forte concordet.</span></p>
+</div>
+ 
+
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_perannum1'); ">&#9654;</a> 1-10. Woche&nbsp; 
+<ol id='indice_germ_perannum1' style='display: none;'  class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT01")'>1. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT02")'>2. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT03")'>3. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT04")'>4. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT05")'>5. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT06")'>6. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT07")'>7. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT08")'>8. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT09")'>9. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT10")'>10. Woche im Jahreskreis</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_perannum2'); ">&#9654;</a> 11-20. Woche&nbsp; 
+<ol id='indice_germ_perannum2' style='display: none;'  class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT11")'>11. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT12")'>12. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT13")'>13. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT14")'>14. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT15")'>15. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT16")'>16. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT17")'>17. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT18")'>18. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT19")'>19. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT20")'>20. Woche im Jahreskreis</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_perannum3'); ">&#9654;</a> 21-30. Woche&nbsp; 
+<ol id='indice_germ_perannum3' style='display: none;'  class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT21")'>21. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT22")'>22. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT23")'>23. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT24")'>24. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT25")'>25. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT26")'>26. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT27")'>27. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT28")'>28. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT29")'>29. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT30")'>30. Woche im Jahreskreis</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_perannum4'); ">&#9654;</a> 31. Woche-Sollemnitates&nbsp; 
+<ol id='indice_germ_perannum4' style='display: none;'  class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT32")'>31. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT33")'>32. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT34")'>33. Woche im Jahreskreis</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT51")'>Sanctissimae Trinitatis</a> <span class="red">(Sonntag I post Pentecosten)</span></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT52")'>Sanctissimi Corporis et Sanguinis Christi</a> <span class="red">(Donnerstag post Ss.mam Trinitatem. Ubi sollemnitas Ss.mi Corporis et Sanguinis Christi non est de praecepto servanda, assignatur, tamquam diei proprio, dominicae post Ss.mam Trinitatem.)</span></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT53")'>Sacratissimi Cordis Iesu</a> <span class="red"> (Freitag post dominicam II post Pentecosten) </span></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_ordinario.html#OT54")'>Domini nostri Iesu Christi universorum Regis</a><span class="red"> (Sonntag ultima «per annum»)</span></li>
+</ol></li>
+</ol>
+</li>
+
+<li class=' red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad'); ">&#9654;</a> Tempus Quadragesimæ
+<ol id='indice_germ_quad' style='display: none;' class=''>
+<div class=solodos >
+<span class=boton ontouchend='cambia_vista("texto1_l");'>...</span>
+</div>
+<div id=texto1_l style='display: none;  font-weight: normal;'>
+<p>1. <span class='red'>Valde commendatur, ut tradita forma congregationis Ecclesiæ localis ad modum «stationum» romanarum, saltem in maioribus civitatibus et modo singulis locis aptiore, imprimis autem tempore Quadragesimæ, servetur et foveatur.</span></p>
+<p class='red'>Huiusmodi autem fidelium cotus congregari poterunt, præsertim diocesis Pastore præsidente, diebus dominicis aliisve infra hebdomadam opportunioribus, aut apud Sanctorum sepulcra, aut in præcipuis urbis ecclesiis vel sanctuariis, aut etiam quibusdam in locis peregrinationis, quæ in diocesi magis frequentantur.</p>
+<p class='red'>Si ante Missam, quæ in his congregationibus celebratur, iuxta locorum et rerum adiuncta, fit processio, tunc habetur collecta in ecclesia minore vel alio loco apto, extra ecclesiam, ad quam processio tendet.</p>
+<p class='red'>Post salutationem populi, sacerdos dicit orationem collectam de mysterio S. Crucis ( cf. infra )  vel pro remissione peccatorum ( cf. infra ).  vel pro Ecclesia, præsertim locali ( cf. infra )  vel unam ex orationibus super populum. Tunc ordinatur processio ad ecclesiam in qua celebrabitur Missa, dum canuntur litaniæ Sanctorum. Apto tamen loco inseri possunt invocationes S. Patroni vel Fundatoris et Sanctorum Ecclesiæ localis.</p>
+<p class='red'>Cum processio ad ecclesiam pervenerit, sacerdos altare veneratur et, pro opportunitate, incensat. Omissis postea ritibus initialibus et, pro opportunitate Kýrie, profert collectam Missæ, quæ deinde prosequitur more solito.</p>
+<p>2. <span class='red'>In iis congregationibus, loco Missæ, haberi potest etiam aliqua celebratio verbi Dei, præsertim ad modum celebrationum pænitentialium, quæ pro tempore Quadragesimæ in Rituali Romano proponuntur.</span></p>
+<p>3. <span class='red'>In feriis huius temporis opportune adhiberi potest, in fine Missæ, ante benedictionem finalem, oratio super populum, quæ pro unoquoque die ponitur.</span></p>
+<p>4. <span class='red'>Hoc tempore altare floribus ornari prohibetur ac sonus instrumentorum permittitur tantum ad cantum sustentandum. Excipiuntur tamen dominica Lætáre ( IV Quadragesimæ ) atque sollemnitates et festa.</span></p>
+</div>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad0'); ">&#9654;</a> Mittwoch in cinere ... Samstag post Cineres
+<ol id='indice_germ_quad0' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q003")'>Mittwoch in cinere</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q004")'>Donnerstag post Cineres</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q005")'>Freitag post Cineres</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q006")'>Samstag post Cineres</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad1'); ">&#9654;</a> 1. Woche
+<ol id='indice_germ_quad1' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q010")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q011")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q012")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q013")'>Mittwoch</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q014")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q015")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q016")'>Samstag</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad2'); ">&#9654;</a> 2. Woche
+<ol id='indice_germ_quad2' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q020")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q021")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q022")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q023")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q024")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q025")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q026")'>Samstag</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad3'); ">&#9654;</a> 3. Woche
+<ol id='indice_germ_quad3' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q030")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q031")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q032")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q033")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q034")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q035")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q036")'>Samstag</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad4'); ">&#9654;</a> 4. Woche
+<ol id='indice_germ_quad4' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q040")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q041")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q042")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q043")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q044")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q045")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q046")'>Samstag</a></li>
+</ol></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_quad5'); ">&#9654;</a> 5. Woche
+<ol id='indice_germ_quad5' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q050")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q051")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q052")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q053")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q054")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q055")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_cuaresma.html#Q056")'>Samstag</a></li>
+</ol></li>
+
+<li class=' red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_ss0'); ">&#9654;</a> Hebdomada Sancta
+<ol id='indice_germ_ss0' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta.html#SS00")'>DOMINICA IN PALMIS DE PASSIONE DOMINI </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta.html#SS01")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta.html#SS02")'>Dienstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta.html#SS03")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta2.html#SS04A")'>Donnerstag. Ad Missam chrismatis</a></li>
+<li style='margin-left: -1em; width: 130%;' ><p class='red'>SACRUM TRIDUUM PASCHALE</p>
+<div class=solodos >
+<span class=boton ontouchend='cambia_vista("texto_triduo");'>...</span>
+</div>
+<div id=texto_triduo style='display: none; text-indent: 0;  font-weight: normal;'>
+1. <span class='red'>Maxima redemptionis nostræ mysteria in Triduo sacro sollemniter celebrat Ecclesia, Domini sui crucifixi, sepulti et suscitati peculiaribus celebrationibus memoriam faciens</span><br><span class='red'>Sacrum etiam esto ieiunium paschale, feria VI in Passione Domini ubique celebrandum, et, iuxta opportunitatem, etiam Samstag sancto producendum, ita ut, elato animo, ad gaudia dominicæ Resurrectionis perveniatur.</span><br>2. <span class='red'>Ad celebrationem Tridui sacri rite peragendam requiritur numerus congruus ministrorum laicorum, qui sedulo instructi esse debent de iis quæ ab ipsis agenda sunt.</span><br><span class='red'>Cantus populi, ministrorum et sacerdotis celebrantis peculiare momentum habet in celebrationibus horum dierum; textus enim maxime suam propriam vim recipiunt quando in cantu peraguntur.</span><br><span class='red'>Pastores ergo ne omittant significationem et ordinem celebrationum christifidelibus meliore quo possint modo explicare, eosdemque ad participationem activam et fructuosam præparare.</span><br>3. <span class='red'>Celebrationes Tridui sacri peragantur in ecclesiis cathedralibus et parocialibus, et in iis tantum in quibus digne persolvi possunt, idest cum fidelium frequentia, cum ministrorum numero congruenti et cum facultate aliquas saltem partes cantu proferendi.</span><br><span class='red'>Expedit proinde ut parvæ communitates, consociationes et peculiares cotus cuiusque generis in his ecclesiis coadunentur, ad sacras celebrationes forma nobiliore peragendas.</span><br></div>
+</li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta3.html#SS04")'>Donnerstag IN CENA DOMINI. Ad Missam vespertinam</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta4.html#SS05")'>Freitag IN PASSIONE DOMINI</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta4.html#SS06")'>Samstag sancto </a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_semanasta5.html#SS07")'>DOMINICA PASCHÆ IN RESURRECTIONE DOMINI. Vigilia Paschalis in nocte sancta</a></li>
+</ol></li>
+</ol></li>
+<li class=' red' style='margin-top: 2%; font-weight: bold; '><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch'); ">&#9654;</a> Tempus Paschale
+<ol id='indice_germ_pasch' style='display: none;' class=''>
+<li class=''>DOMINICA PASCHÆ IN RESURRECTIONE DOMINI<br><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P010")'>Ad Missam in Die</a></li>
+<li class='' ><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch1'); ">&#9654;</a> 1. Woche
+<ol id='indice_germ_pasch1' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P011")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P012")'>Dienstag</a></li>  
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P013")'>Mittwoch</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P014")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P015")'>Freitag</a></li>  
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P016")'>Samstag</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch2'); ">&#9654;</a> 2. Woche
+<ol id='indice_germ_pasch2' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P020")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P021")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P022")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P023")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P024")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P025")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P026")'>Samstag</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch3'); ">&#9654;</a> 3. Woche
+<ol id='indice_germ_pasch3' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P030")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P031")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P032")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P033")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P034")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P035")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P036")'>Samstag</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch4'); ">&#9654;</a> 4. Woche
+<ol id='indice_germ_pasch4' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P040")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P041")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P042")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P043")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P044")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P045")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P046")'>Samstag</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch5'); ">&#9654;</a> 5. Woche
+<ol id='indice_germ_pasch5' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P050")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P051")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P052")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P053")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P054")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P055")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P056")'>Samstag</a></li>
+</ol></li>
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch6'); ">&#9654;</a> 6. Woche
+<ol id='indice_germ_pasch6' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P060")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P061")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P062")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P063")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P064")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P065")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P066")'>Samstag</a></li>
+</ol></li>
+<li class='' >IN ASCENSIONE DOMINI<br><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P064A")'>Ad Missam in Vigilia</a><br>	<a ontouchend='vete_a("tiempos/tiempos_pascua.html#P064B")'>Ad Missam in Die</a></li>
+		
+<li class=''><a class=boton ontouchend="cambia_vista_y_simbolo( this,'indice_germ_pasch7'); ">&#9654;</a> 7. Woche
+<ol id='indice_germ_pasch7' style='display: none;' class=''>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P070")'>Sonntag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P071")'>Montag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P072")'>Dienstag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P073")'>Mittwoch</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P074")'>Donnerstag</a></li>
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P075")'>Freitag</a></li> 
+<li><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P076")'>Samstag</a></li>
+</ol></li>
+<li class=''>DOMINICA PENTECOSTES<br><a ontouchend='vete_a("tiempos/tiempos_pascua.html#P080A")'>Ad Missam in Vigilia</a></br>
+		<a ontouchend='vete_a("tiempos/tiempos_pascua.html#P080")'>Ad Missam in Die</a></li>
+</ol></li>
+</ol>
+</div>
+
+------------------------------------------------------------------------------
+
+
+Archivo de ayuda: Cambiar a alemán lo que hay escrito en español
+
+	<div class='cast'>
+<div data-role='collapsible'>
+<h3>Posibles Idiomas</h3>
+
+<div>
+<span class=red>ACLARACIÓN IMPORTANTE: Esta aplicación nace únicamente con la finalidad de ayudar al seguimiento de la Misa en latín, incluyendo una de las posibles traducciones al español y/o inglés. Somos conscientes de que estas traducciones pueden no coincidir exactamente con la que se escucharía en la Santa Misa celebrada en esa lengua, pues eso requeriría, en primer lugar, disponer de todas las versiones actualizadas aprobadas por cada Conferencia Episcopal y, en segundo lugar, un ingente trabajo continuo que no estamos en condiciones de asumir.<br>Dejamos, por tanto, al buen criterio de los usuarios la comprensión de esas posibles diferencias, especialmente cuando no se utilice el latín como idioma principal.<br><br>Nota: aunque entre los idiomas de traducciones puedan aparecer varios, no se incluirán entre los posibles idiomas por defecto, hasta que no estén completos.</span><br><br><span class=red>Latín<br>Español<br>Inglés</span></div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Pantalla de inicio</h3>
+
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Silentium</span>: Establece el audio del teléfono/tablet... en modo Silencio.
+</div>
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Semper fulgens</span>: Impide que la pantalla se apague mientras la aplicación esté en primer plano.
+</div>
+<div class=solo_android > 
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Extra omnes</span>: Esconde la barra superior del sistema.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Devotionarium & Sacerdotale</span>: Se recogen algunas oraciones de preparación y acción de gracias para la Misa (Devotionarium), así como un pequeño prontuario para sacerdotes para diversas situaciones, en cuatro idiomas (latín, español, inglés e italiano).
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Missale</span>: Abre el Misal, sin alterar el contenido de las pestañas.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Calendarium</span>: Muestra un calendario perpetuo, con referencias al calendario litúrgico universal. Al escoger una fecha, se presentan las posibles celebraciones para ese día. Al cambiar de mes, o de año, siempre se debe pulsar después un día concreto. Si se pulsa el botón <span class=boton>Fiat</span>, prepara las pestañas del Tiempo, Lecturas y Santo señaladas, y abre el Misal en la pestaña del Ordinario. Cuando hay varias posibilidades, se debe escoger una del correspondiente menu desplegable. 
+</div>Si hay problemas en la presentación de esta pantalla, pruebe a cambiar la opción de preferencias "Calendario  y ayuda".
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Auxilium</span>: Esta pantalla.
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Dilectus</span>: Muestra, y permite cambiar, las preferencias de la aplicación.
+</div>
+<div>
+<h3>Preferencias</h3>
+</div>
+<div>
+Se puede elegir entre distintos tamaños de fuente, de rúbricas, el modo de presentar las pestañas y botones, el modo de presentar la traducción al segundo idioma, y el rango de desplazamiento de la pantalla al pulsar los botones arriba/abajo.<br><b>IMPORTANTE</b><br>Conviene tener cuidado al elegir el formato de dos columnas: en pantallas muy pequeñas, o con tamaño de fuente muy grande, puede ocurrir que algunos párrafos aparezcan en algún lugar en el que no debieran.<br>Sobre todo puede ocurrir esto cuando haya mucha diferencia en la longitud de los textos equivalentes en uno y otro idioma.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Barra de pestañas</h3>
+
+<div>
+Su configuración puede ser:<br><br>1. <span style='color:red;'>Emergente</span>: desaparece al cargar una nueva página, y aparece al tocar en la zona superior de la pantalla (donde estaría habitualmente)<br><br>2. <span style='color:red;'>Siempre presente</span>.<br><br>3. <span style='color:red;'>Emergente mediante botón lateral</span>: permanece oculta y sólo se ve el botón <img src='../derecha2.png' style="width: 1em; height: 1em;"> a la izquierda de la pantalla, que la hace aparecer/ocultarse.
+</div>
+<div>
+En cada una de las pestañas se guarda la posición en la que se encuentra, de forma que al pulsar la pestaña correspondiente, se vuelve a la posición anterior.<br>También se puede ir a una posición anterior<img src='../bot_previous.png' style="height: 1em;"> , o posterior<img src='../bot_next.png' style="height: 1em;">, dentro de esa pestaña.
+Sólo se borra el historial de cada pestaña al pulsar la opción índice dentro del menú del botón diamante<img src='../bot_ksokoban.png' style=" height: 1.0em;">.
+</div>
+<div>
+<span class=pestana>Ord</span> Contiene el ordinario de la Misa. Habitualmente se encuentra con cada parte plegada, para poder ir con rápidez en cada momento de la Misa.
+</div>
+<div>
+<span class=pestana>Tmp</span> Contiene los textos de las Misas propias de cada tiempo litúrgico.
+</div>
+<div>
+<span class=pestana>Snt</span> Contiene los textos de las Misas de las celebraciones de los Santos. Desde cada uno de ellos se puede acceder a los textos comunes a los que hagan referencia, ya sus lecturas propias.
+</div>
+<div>
+<span class=pestana>Com</span> Contiene los textos de las Misas Comunes, Votivas, para diversas necesidades, y Difuntos. 
+</div>
+<div>
+<span class=pestana>Lct</span> Es el leccionario. Desde el menú principal se accede a todas las lecturas, salvo las de los Santos, que se acceden desde la misa de cada uno.
+</div>
+<div>
+<span class=pestana>Pf</span> Contiene todos los prefacios.
+</div>
+<div>
+<span class=pestana>PE</span> Contiene todas las Plegarias Eucarísticas.
+</div>
+</div>
+
+<div data-role='collapsible'>
+<h3>Barra de botones</h3>
+
+<div>
+Su configuración puede ser:<br>1. Emergente: desaparece al cargar una nueva página, y aparece al tocar en la zona inferior de la pantalla (donde estaría habitualmente)<br>2. Siempre presente.<br>3. Emergente mediante botón lateral: permanece oculta y sólo se ve el botón <img src='../izquierda2.png' style="height: 1em;"> a la derecha de la pantalla, que la hace aparecer/ocultarse.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-down2.png' style=" height: 1.6em;"></span> Desplaza el texto hacia arriba.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-up2.png' style=" height: 1.6em;"></span> Desplaza el texto hacia abajo.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../asterisk2.png' style="height: 1.6em;"></span> Presenta un submenú:
+</div>
+<div class=solo_mac style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>Initium</span> Vuelve a la pantalla de inicio.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&#9632;</span> Borra el historial de la pestaña, y presenta el menú raíz correspondiente (generalmente, el índice).</div>
+<div class=solo_mac style='display: block; margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>calend</span> Para ir a la pantalla del Calendario, y cambiar de día.</div>
+<div class=solo_mac style='margin-left: 1em;'><br><br><span style='color: white; background-color: maroon; padding: 3pt;'>aux</span> Presenta esta pantalla de ayuda.</div>
+<!--
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>auto</span> Activa/desactiva la <span style='color:red;'>opción de autoscroll</span>.</div>
+-->
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'> &#9664; &#9654; </span> Intercambia los idiomas primario/secundario. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'><span style=' font-family: Times New Roman; '>ABC</span> &#9664; &#9654; <span style=' font-family: Arial; '>ABC</span></span> Cambia el tipo de letra. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>nn &#9654; NN</span> Aumenta el tamaño de la letra. Los valores se corresponden con  las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>NN &#9654; nn</span> Disminuye el tamaño de la letra. Los valores se corresponden con  las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&nbsp;&nbsp;<img style='height: 1em;' id='bot_copy' src="../copy-icon.png">&nbsp;&nbsp;</span> Activa/desactiva el <span style='color:red;'>modo de copia</span>. Cuando está activado, sólo se puede desplazar la pantalla los botones de página anterior/siguiente.</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block; height: 2em;'>
+<img src='../chevron-left2.png' style="height: 1.6em;"></span> Navega hacia la página anterior <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../chevron-right2.png' style="height: 1.6em;"></span> Navega hacia la página siguiente <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../bookmark-o2.png' style=" height: 1.6em;"></span> Graba la posición actual de la pantalla en una de las memorias que se presentan. Sólo cuando se encuentra en las pestaña del Leccionario, aparecen memorias con nombres de las lecturas.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../goto_bookmark2.png' style=" height: 1.6em;"></span> Navega hacia la posición de memoria escogida.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Botones en el texto</h3>
+
+
+
+<div><br><span class=botonBueno>&#9654;</span> Generalmente, expande un submenú.
+</div>
+
+<div><br><span class=botonBueno>...</span> Muestra/oculta un determinado texto. Generalmente, una rúbrica o una oración opcional.
+</div>
+
+<div><br><span class=botonBueno>+</span> Expande un determinado texto. Generalmente, una oración opcional.
+</div>
+
+<div><br><span class=botonBueno>&mdash;</span> Contrae un determinado texto. Generalmente, una oración opcional, expandida anteriormente.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Últimos consejos</h3>
+<div>
+1. Se aconseja escoger el Misal correspondiente (latín, español o inglés) al que vaya a utilizar el sacerdote en la celebración, porque puede ocurrir que algunas oraciones sólo estén en esa versión del Misal.
+</div>
+<div><br>2. También aconsejamos, y agradecemos, hacer un memento en la Santa Misa por los autores de la aplicación. También puede rezar la Liturgia de las Horas con la aplicación <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.liturgia.horarum' >Liturgia Horarum</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/liturgia-horarum/id794535058?mt=8' >Liturgia Horarum</a></span>.
+</div>
+<div><br>3. Por último, recomendamos y agradecemos la difusión de la aplicación <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.evangelium' >Evangelium</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/evangelium/id765086030?mt=8' >Evangelium</a></span>, como forma de difundir la Palabra de Dios y ayudar a contemplarla.<br><br>Y no dejes de calificar las aplicaciones con<br><br><img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" ><br><br>¡Muchas gracias!
+</div>
+
+</div> 
+
+
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,713 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+<meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
+<title>ayuda</title>
+<link rel="stylesheet" href="../jquery.mobile.css" type="text/css">
+<link rel="stylesheet" href="../mitema-rcr.css" type="text/css">
+
+<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="../jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../jquery.mobile-1.4.2.js"></script>
+
+<script>
+
+function onDeviceReady() {
+ // Register the event listener
+ console.log("PhoneGap preparado!");
+navigator.splashscreen.hide()
+ document.addEventListener("backbutton", backKeyDown, true);
+				$("#ajuste").bind("change", function(){
+				var ajuste=$("#ajuste").val()
+				pon_pref('ajuste',ajuste);
+				});
+
+		$(document).on('vclick', '#boton_ingles', function () {
+		if ($('.cast').css('display')=='inline') {
+		$('.cast').css('display','none');
+		$('.engl').css('display','inline');
+		} else if ($('.engl').css('display')=='inline') {
+		$('.engl').css('display','none');
+		$('.germ').css('display','inline');
+		} if ($('.germ').css('display')=='inline') {
+		$('.germ').css('display','none');
+		$('.cast').css('display','inline');
+		}
+		});
+$.mobile.defaultPageTransition   = 'none'
+$.mobile.defaultDialogTransition = 'none'
+$.mobile.buttonMarkup.hoverDelay = 0
+
+
+document.addEventListener("volumeupbutton", retrasa_pantalla, false);
+
+document.addEventListener("volumedownbutton", avanza_pantalla, false);
+}
+
+function    retrasa_pantalla() {
+	window.scrollBy(0, -eval(window.innerHeight-10))
+
+}
+
+function    avanza_pantalla() {
+	window.scrollBy(0, eval(window.innerHeight-10))
+}
+
+function backKeyDown() {
+ //console.log("Back Button Pressed!");
+ navigator.app.exitApp();
+ }
+
+function pon_pref(key,value) {
+window.localStorage.setItem(key, value);
+ //alert('Guardo: '+value + ' ... --> ... ' + key)
+ }
+
+ function dime_pref (key, defecto) {
+ var resultado = window.localStorage.getItem(key)
+
+ if (resultado == null) resultado = defecto
+ //alert('Saco: '+ key+ '... -> ... '+resultado)
+ return resultado
+}
+
+function getUrlVars() {
+	var url=window.location.href.replace(window.location.hash,'')
+ var vars = {};
+ var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+ vars[key] = value;
+ });
+ return vars;
+}
+
+function extrae_preferencias() {
+	var url=preferencias
+ var vars = {};
+ var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+ vars[key] = value;
+ });
+ return vars;
+}
+
+
+var myScroll;
+
+var preferencias = ""
+
+var mipreferencia = new Array()
+mipreferencia=getUrlVars()
+
+if (typeof mipreferencia['fondo'] === 'undefined' ) {
+preferencias = window.localStorage.getItem('preferencias')
+mipreferencia=extrae_preferencias()
+
+} else {
+
+preferencias = "?fondo="+mipreferencia["fondo"]
+preferencias += "&tamanotexto="+mipreferencia["tamanotexto"]
+preferencias += "&avance="+mipreferencia["avance"]
+preferencias +=  "&tipoletra="+mipreferencia["tipoletra"]
+preferencias += "&tamanorubrica="+mipreferencia["tamanorubrica"]
+preferencias += "&misal_pral="+mipreferencia["misal_pral"]
+preferencias += "&tamanomenus="+mipreferencia["tamanomenus"]
+preferencias += "&segundoidioma="+mipreferencia["segundoidioma"]
+preferencias += "&presentaciontexto="+mipreferencia["presentaciontexto"]
+preferencias += "&presentacionrespuestas="+mipreferencia["presentacionrespuestas"]
+preferencias += "&presentacionpestanas="+mipreferencia["presentacionpestanas"]
+preferencias += "&oracionestodos="+mipreferencia["oracionestodos"]
+preferencias += "&presentacionbotones="+mipreferencia["presentacionbotones"]
+preferencias += "&botoneszurdos="+mipreferencia["botoneszurdos"]
+preferencias += "&ordinarionormal="+mipreferencia["ordinarionormal"]
+window.localStorage.setItem('preferencias', preferencias);
+
+}
+
+
+var estoymac = window.localStorage.getItem('estoymac')
+
+</script>
+<style>
+.boton  {
+background: url("../boton.png") top right no-repeat;
+	color: white;
+	font-weight: bold;
+ line-height:150%;
+ height:100%;
+ padding-right:10px;
+ padding-left:10px;
+ display:inline-block;
+ width:fill-wrap;
+ text-decoration:none;
+ font-style: normal;
+}
+ .botonBueno {
+
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	padding: .3em 1em .31em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#dd0000), to(#440000));
+/* background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#dd0000), color-stop(44%,#880000), color-stop(100%,#440000));
+	*/
+	-webkit-box-shadow: 3px 3px 2px 0px #777;
+   }
+.botonBueno:hover {
+	text-decoration: none;
+	border-top-color: #7a3232;
+   background: #7a3232;
+}
+.botonBueno:active {
+	position: relative;
+	top: 1px;
+	border-top-color: #5c0b0b;
+   background: #5c0b0b;
+
+}
+
+span.pestana { display: inline-block; background-color: white; color: red; padding: 5px; }
+
+</style>
+</head>
+<body onload="document.addEventListener('deviceready', onDeviceReady, false);" >
+<div data-role='page' id='ayuda'>
+<div data-role='header' data-position='fixed' >
+<h1>Missale Romanum</h1><a href="#"  id='boton_ingles' ><span class='cast'>English...</span><span class='engl'>Deutsch...</span><span class='germ'>Español...</span></a>
+
+<div data-role='navbar'>
+<ul>
+<li><a href='javascript: if (estoymac!=1) { navigator.app.exitApp(); } else window.location="../index.html";' >Index</a></li>
+<li><a href="#" class="ui-btn-active">Auxilium</a></li>
+<li><a href='javascript:window.location="feria_actual.html"+preferencias;'>Calendarium</a></li>
+<li><a href='javascript:window.location="ordinario/ordinario.html"+preferencias;' >MR</a></li>
+</ul>
+</div>
+</div>
+<div data-role='content' id='contenedor' >
+<div data-role='collapsible' id=mensaje class=solo_android style=' color: red;'>
+<h6>(Si hay problemas en la presentación de esta pantalla, pruebe a cambiar la opción de preferencias "Calendario/ayuda/devocionario".)<br>(If there's any problem in this page layout, try to change the preference option set in "Calendario/ayuda/devocionario".)</h6>
+</div>
+	<div class='cast'>
+<div data-role='collapsible'>
+<h3>Posibles Idiomas</h3>
+
+<div>
+<span class=red>ACLARACIÓN IMPORTANTE: Esta aplicación nace únicamente con la finalidad de ayudar al seguimiento de la Misa en latín, incluyendo una de las posibles traducciones al español y/o inglés. Somos conscientes de que estas traducciones pueden no coincidir exactamente con la que se escucharía en la Santa Misa celebrada en esa lengua, pues eso requeriría, en primer lugar, disponer de todas las versiones actualizadas aprobadas por cada Conferencia Episcopal y, en segundo lugar, un ingente trabajo continuo que no estamos en condiciones de asumir.<br>Dejamos, por tanto, al buen criterio de los usuarios la comprensión de esas posibles diferencias, especialmente cuando no se utilice el latín como idioma principal.<br><br>Nota: aunque entre los idiomas de traducciones puedan aparecer varios, no se incluirán entre los posibles idiomas por defecto, hasta que no estén completos.</span><br><br><span class=red>Latín<br>Español<br>Inglés</span></div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Pantalla de inicio</h3>
+
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Silentium</span>: Establece el audio del teléfono/tablet... en modo Silencio.
+</div>
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Semper fulgens</span>: Impide que la pantalla se apague mientras la aplicación esté en primer plano.
+</div>
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Extra omnes</span>: Esconde la barra superior del sistema.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Devotionarium & Sacerdotale</span>: Se recogen algunas oraciones de preparación y acción de gracias para la Misa (Devotionarium), así como un pequeño prontuario para sacerdotes para diversas situaciones, en cuatro idiomas (latín, español, inglés e italiano).
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Missale</span>: Abre el Misal, sin alterar el contenido de las pestañas.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Calendarium</span>: Muestra un calendario perpetuo, con referencias al calendario litúrgico universal. Al escoger una fecha, se presentan las posibles celebraciones para ese día. Al cambiar de mes, o de año, siempre se debe pulsar después un día concreto. Si se pulsa el botón <span class=boton>Fiat</span>, prepara las pestañas del Tiempo, Lecturas y Santo señaladas, y abre el Misal en la pestaña del Ordinario. Cuando hay varias posibilidades, se debe escoger una del correspondiente menu desplegable.
+</div>Si hay problemas en la presentación de esta pantalla, pruebe a cambiar la opción de preferencias "Calendario  y ayuda".
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Auxilium</span>: Esta pantalla.
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Dilectus</span>: Muestra, y permite cambiar, las preferencias de la aplicación.
+</div>
+<div>
+<h3>Preferencias</h3>
+</div>
+<div>
+Se puede elegir entre distintos tamaños de fuente, de rúbricas, el modo de presentar las pestañas y botones, el modo de presentar la traducción al segundo idioma, y el rango de desplazamiento de la pantalla al pulsar los botones arriba/abajo.<br><b>IMPORTANTE</b><br>Conviene tener cuidado al elegir el formato de dos columnas: en pantallas muy pequeñas, o con tamaño de fuente muy grande, puede ocurrir que algunos párrafos aparezcan en algún lugar en el que no debieran.<br>Sobre todo puede ocurrir esto cuando haya mucha diferencia en la longitud de los textos equivalentes en uno y otro idioma.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Barra de pestañas</h3>
+
+<div>
+Su configuración puede ser:<br><br>1. <span style='color:red;'>Emergente</span>: desaparece al cargar una nueva página, y aparece al tocar en la zona superior de la pantalla (donde estaría habitualmente)<br><br>2. <span style='color:red;'>Siempre presente</span>.<br><br>3. <span style='color:red;'>Emergente mediante botón lateral</span>: permanece oculta y sólo se ve el botón <img src='../derecha2.png' style="width: 1em; height: 1em;"> a la izquierda de la pantalla, que la hace aparecer/ocultarse.
+</div>
+<div>
+En cada una de las pestañas se guarda la posición en la que se encuentra, de forma que al pulsar la pestaña correspondiente, se vuelve a la posición anterior.<br>También se puede ir a una posición anterior<img src='../bot_previous.png' style="height: 1em;">, o posterior<img src='../bot_next.png' style="height: 1em;">, dentro de esa pestaña.
+Sólo se borra el historial de cada pestaña al pulsar la opción índice dentro del menú del botón diamante<img src='../bot_ksokoban.png' style=" height: 1.0em;">.
+</div>
+<div>
+<span class=pestana>Ord</span> Contiene el ordinario de la Misa. Habitualmente se encuentra con cada parte plegada, para poder ir con rápidez en cada momento de la Misa.
+</div>
+<div>
+<span class=pestana>Tmp</span> Contiene los textos de las Misas propias de cada tiempo litúrgico.
+</div>
+<div>
+<span class=pestana>Snt</span> Contiene los textos de las Misas de las celebraciones de los Santos. Desde cada uno de ellos se puede acceder a los textos comunes a los que hagan referencia, ya sus lecturas propias.
+</div>
+<div>
+<span class=pestana>Com</span> Contiene los textos de las Misas Comunes, Votivas, para diversas necesidades, y Difuntos.
+</div>
+<div>
+<span class=pestana>Lct</span> Es el leccionario. Desde el menú principal se accede a todas las lecturas, salvo las de los Santos, que se acceden desde la misa de cada uno.
+</div>
+<div>
+<span class=pestana>Pf</span> Contiene todos los prefacios.
+</div>
+<div>
+<span class=pestana>PE</span> Contiene todas las Plegarias Eucarísticas.
+</div>
+</div>
+
+<div data-role='collapsible'>
+<h3>Barra de botones</h3>
+
+<div>
+Su configuración puede ser:<br>1. Emergente: desaparece al cargar una nueva página, y aparece al tocar en la zona inferior de la pantalla (donde estaría habitualmente)<br>2. Siempre presente.<br>3. Emergente mediante botón lateral: permanece oculta y sólo se ve el botón <img src='../izquierda2.png' style="height: 1em;"> a la derecha de la pantalla, que la hace aparecer/ocultarse.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-down2.png' style=" height: 1.6em;"></span> Desplaza el texto hacia arriba.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-up2.png' style=" height: 1.6em;"></span> Desplaza el texto hacia abajo.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../asterisk2.png' style="height: 1.6em;"></span> Presenta un submenú:
+</div>
+<div class=solo_mac style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>Initium</span> Vuelve a la pantalla de inicio.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&#9632;</span> Borra el historial de la pestaña, y presenta el menú raíz correspondiente (generalmente, el índice).</div>
+<div class=solo_mac style='display: block; margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>calend</span> Para ir a la pantalla del Calendario, y cambiar de día.</div>
+<div class=solo_mac style='margin-left: 1em;'><br><br><span style='color: white; background-color: maroon; padding: 3pt;'>aux</span> Presenta esta pantalla de ayuda.</div>
+<!--
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>auto</span> Activa/desactiva la <span style='color:red;'>opción de autoscroll</span>.</div>
+-->
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'> &#9664;&#xFE0E; &#9654;&#xFE0E; </span> Intercambia los idiomas primario/secundario. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'><span style=' font-family: Times New Roman; '>ABC</span> &#9664;&#xFE0E; &#9654;&#xFE0E; <span style=' font-family: Arial; '>ABC</span></span> Cambia el tipo de letra. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>nn &#9654;&#xFE0E; NN</span> Aumenta el tamaño de la letra. Los valores se corresponden con  las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>NN &#9654;&#xFE0E; nn</span> Disminuye el tamaño de la letra. Los valores se corresponden con  las posibilidades señaladas en las preferencias, y el señalado a la izquierda es el actual.<br>Los cambios sólo afectan a la sesión actual, no alteran el valor de las preferencias.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&nbsp;&nbsp;<img style='height: 1em;' id='bot_copy' src="../copy-icon.png">&nbsp;&nbsp;</span> Activa/desactiva el <span style='color:red;'>modo de copia</span>. Cuando está activado, sólo se puede desplazar la pantalla los botones de página anterior/siguiente.</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block; height: 2em;'>
+<img src='../chevron-left2.png' style="height: 1.6em;"></span> Navega hacia la página anterior <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../chevron-right2.png' style="height: 1.6em;"></span> Navega hacia la página siguiente <span style='font-weight: bold; font-size: 110%'>de la misma pestaña</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../bookmark-o2.png' style=" height: 1.6em;"></span> Graba la posición actual de la pantalla en una de las memorias que se presentan. Sólo cuando se encuentra en las pestaña del Leccionario, aparecen memorias con nombres de las lecturas.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../goto_bookmark2.png' style=" height: 1.6em;"></span> Navega hacia la posición de memoria escogida.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Botones en el texto</h3>
+
+
+
+<div><br><span class=botonBueno>&#9654;&#xFE0E;</span> Generalmente, expande un submenú.
+</div>
+
+<div><br><span class=botonBueno>...</span> Muestra/oculta un determinado texto. Generalmente, una rúbrica o una oración opcional.
+</div>
+
+<div><br><span class=botonBueno>+</span> Expande un determinado texto. Generalmente, una oración opcional.
+</div>
+
+<div><br><span class=botonBueno>&mdash;</span> Contrae un determinado texto. Generalmente, una oración opcional, expandida anteriormente.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Últimos consejos</h3>
+<div>
+1. Se aconseja escoger el Misal correspondiente (latín, español o inglés) al que vaya a utilizar el sacerdote en la celebración, porque puede ocurrir que algunas oraciones sólo estén en esa versión del Misal.
+</div>
+<div><br>2. También aconsejamos, y agradecemos, hacer un memento en la Santa Misa por los autores de la aplicación. También puede rezar la Liturgia de las Horas con la aplicación <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.liturgia.horarum' >Liturgia Horarum</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/liturgia-horarum/id794535058?mt=8' >Liturgia Horarum</a></span>.
+</div>
+<div><br>3. Por último, recomendamos y agradecemos la difusión de la aplicación <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.evangelium' >Evangelium</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/evangelium/id765086030?mt=8' >Evangelium</a></span>, como forma de difundir la Palabra de Dios y ayudar a contemplarla.<br><br>Y no dejes de calificar las aplicaciones con<br><br><img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" ><br><br>¡Muchas gracias!
+</div>
+
+</div>
+
+
+</div>
+	<div class='engl'>
+
+
+<div data-role='collapsible'>
+<h3>Languages</h3>
+
+<div>
+<span class=red>
+IMPORTANT DISCLAIMER: This application was created for the purpose of assisting those participating in the Mass in Latin, with the ready availability of one of two possible alternate translations - Spanish and English. We are aware that these translations may not exactly match what would be heard in the Mass in that language, for that would require we, first, have all updated and approved texts by each Episcopal Conference versions, and, second, an enormous ongoing work we are currently unable to assume.<br>We leave, therefore, to the discretion of the users to understand these potential differences, especially when Latin is not the main language used.<br>Note: Although there may appear several other translation languages, only those which are complete appear among the possible default languages: </span><br><br><span class=red>Latin<br>Spanish<br>English</span></div>
+</div>
+
+
+
+
+<div data-role='collapsible'>
+<h3>Home screen</h3>
+
+<div class=solo_android ><br><img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Silentium</span>: Sets the audio of the phone / tablet … to silent mode.
+</div>
+<div class=solo_android ><br><img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Semper fulgens</span>: Prevents the screen from turning off when the application is in the foreground.
+</div>
+<div class=solo_android ><br><img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Extra omnes</span>: Hides the top bar of the system.
+</div>
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Devotionarium & Sacerdotale</span>: Here you can find several  preparation/thanksgiving prayers for before/after Mass (Devotionarium), and a small handbook for Priests, in four languages (Latin, Spanish, English and Italian).
+</div>
+<div><br><span style="color: maroon; font-weight: bold; font-size: 110%;">Missale Romanum</span>: Opens missal to the place at which left off last time accessed.
+</div>
+
+<div><br><span style="color: maroon; font-weight: bold; font-size: 110%;">Calendarium</span>: Displays a perpetual calendar, with references to the universal liturgical calendar. When choosing a date, possible celebrations for the day are presented. To change the month or year, you should always make that selection after selecting the particular day. If the button <span class=boton>Fiat</span> is pressed, this app takes you to the tabs of Time, Readings and Saint identified, and opens the Misal. When there are several possibilities, you must choose one from the corresponding drop-down menu.
+</div>
+<div><br><span style="color: maroon; font-weight: bold; font-size: 110%;">Dilectus</span>: Displays and lets you change the preferences of the application.
+</div>
+<div>
+<h3 style='color: red;'>Preferences</h3>
+</div>
+<div>
+You can choose between different font sizes of headings, how to present the tabs and buttons, how to present the translation into the second language, and the screen shift range when pressing up/down buttons.<br><b style='color: red;'>IMPORTANT</b><br>Be careful in choosing the format of two columns in very small or very large font size screens; it may happen that some paragraphs appear somewhere they should not. This can occur when there is much difference in the length of the equivalent text between the two languages.
+</div>
+</div>
+
+<div data-role='collapsible'>
+<h3>Tab bar</h3>
+
+<div>
+Configuration can be:<br><br>1. <span style='color:red;'>Emerging</span>: disappears when loading a new page, and appears when you tap the top of the screen (where it would normally be)<br><br>2. <span style='color:red;'>Always present</span>.<br><br>3. <span style='color:red;'>Side emerging</span>: remains hidden and only the button <img src='../derecha2.png' style="width: 1em; height: 1em;"> - which makes it appear / hide - can be seen to the left of the screen.
+</div>
+<div><br>This app always saves the actual position in each of the tabs so that when pressing the appropriate tab, it returns to the previously saved position.<br>You can also go to an earlier or later position within that tab using the buttons <img src='../bot_previous.png' style="width: 1em; height: 1em;"> <img src='../bot_next.png' style="width: 1em; height: 1em;">. The history of each tab is cleared by pressing the index option (small white square) in the menu button diamond <img src='../bot_ksokoban.png' style="width: 1.0em; height: 1.0em;">.
+</div>
+<div>
+<span class=pestana>Ord</span> Ordinary of the Mass. It's usually collapsed, in order to have a quick access to each part of the Mass.
+</div>
+<div>
+<span class=pestana>Tmp</span> Contains the texts for the liturgical season.
+</div>
+<div>
+<span class=pestana>Snt</span> Contains the texts of the celebrations of the Saints. From each one you can go to its own readings (if they exist) and to the common texts to which they may refer.
+</div>
+<div>
+<span class=pestana>Com</span> Contains the texts of the Common and Votive Masses, and those for various needs as well as for the Dead.
+</div>
+<div>
+<span class=pestana>Lct</span> Lectionary. From its main menu you can access all readings, except those of the Saints, which can be accessed from within each Saint's own Mass.
+</div>
+<div>
+<span class=pestana>Pf</span> Contains the Prefaces.
+</div>
+<div>
+<span class=pestana>PE</span> Contains Eucharistic Prayers.
+</div>
+</div>
+<div data-role='collapsible'>
+<h3>Button Bar</h3>
+
+<div>
+Configuration can be:<br><br>1. <span style='color:red;'>Emerging</span>: disappears when loading a new page, and appears when you tap the top of the screen (where it would normally be)<br><br>2. <span style='color:red;'>Always present</span>.<br><br>3. <span style='color:red;'>Side emerging</span>: remains hidden and only the button <img src='../izquierda2.png' style="width: 1em; height: 1em;"> - which makes it appear / hide - can be seen to the left of the screen.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../angle-double-down2.png' style="width: 1.6em; height: 1.6em;"></span> Scrolls text up.</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../angle-double-up2.png' style="width: 1.6em; height: 1.6em;"></span> Scrolls text down.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../asterisk2.png' style="width: 1.6em; height: 1.6em;"></span> Presents a submenu:
+</div>
+<div class=solo_mac style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>Initium</span> Returns to Home page.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&#9632;</span> Deletes the history tab and presents the corresponding root menu (usually the index).</div>
+<div class=solo_mac style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>calend</span> Goes to the Calendar screen (where you will be able to change day)</div>
+<div class=solo_mac style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>aux</span> Presents this Help Screen</div>
+<!--
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>auto</span> on / off   <span style='color:red;'>autoscroll</span> option: When green, autoscroll is on. Otherwise, red.</div>
+-->
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'> &#9664;&#xFE0E; &#9654;&#xFE0E; </span> Interchanges the languages default/secondary. </div>
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'><span style=' font-family: Times New Roman; '>ABC</span> &#9664;&#xFE0E; &#9654;&#xFE0E; <span style=' font-family: Arial; '>ABC</span></span> Changes the font family. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>nn &#9654;&#xFE0E; NN</span> Increases font size. The values correspond to the possibilities mentioned in the preferences, and pointed to the left is the current.<br>The changes affect only the current session (do not alter the value selected in preferences).</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>NN &#9654;&#xFE0E; nn</span> Decreases font size. The values correspond to the possibilities mentioned in the preferences, and pointed to the left is the current.<br>The changes affect only the current session (do not alter the value selected in preferences).</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&nbsp;&nbsp;<img style='height: 1em;' id='bot_copy' src="../copy-icon.png">&nbsp;&nbsp;</span> Enables/disables <span style='color:red;'>copy mode</span>. When enabled, the screen can only be shifted through the previous/next page buttons.</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../chevron-left2.png' style="width: 1.6em; height: 1.6em;"></span> Navigates to the previous page <span style='font-weight: bold; font-size: 110%'>in the same tab</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../chevron-right2.png' style="width: 1.6em; height: 1.6em;"></span> Navigates to the next page <span style='font-weight: bold; font-size: 110%'>in the same tab</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../bookmark-o2.png' style="width: 1.6em; height: 1.6em;"></span> Sets bookmark: Records the current position of the screen in one of the memory positions presented.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt;  display: inline-block; height: 2em;'><img src='../goto_bookmark2.png' style="width: 1.6em; height: 1.6em;"></span> Goes to Bookmark: Navigates to the selected memory position.
+</div>
+</div>
+<div data-role='collapsible'>
+<h3>Buttons in the text</h3>
+
+
+
+<div><br><span class=botonBueno>&#9654;&#xFE0E;</span> Generally, expands a submenu.
+</div>
+
+<div><br><span class=botonBueno>...</span> Shows / hides certain text (generally, a heading or an optional prayer)<br></div>
+
+<div><br><span class=botonBueno>+</span> Expands a given text (generally, an optional prayer)
+</div>
+
+<div><br><span class=botonBueno>&mdash;</span> Collapses a given text (generally, an optional sentence previously expanded)
+</div>
+</div>
+
+<div data-role='collapsible'>
+<h3>Last tips</h3>
+
+
+<div>
+The authors suggest and appreciate your continued prayer that they may continue the work to glorify God.<br><br>You may also like to pray the Liturgy of the Hours with the application <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.liturgia.horarum' >Liturgia Horarum</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/liturgia-horarum/id794535058?mt=8' >Liturgia Horarum</a></span> .<br><br>And finally, we suggest and appreciate spreading the word of the application <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.evangelium' >Evangelium</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/evangelium/id765086030?mt=8' >Evangelium</a></span> as a way to spread the Gospel and help other contemplate it.<br><br>And do not forget to rate the applications with<br><br><img src="../estrella.png" style=" width: 1.6em; height: 1.6em;" > <img src="../estrella.png" style=" width: 1.6em; height: 1.6em;" > <img src="../estrella.png" style=" width: 1.6em; height: 1.6em;" > <img src="../estrella.png" style=" width: 1.6em; height: 1.6em;" > <img src="../estrella.png" style=" width: 1.6em; height: 1.6em;" ><br><br>Thank you!
+</div>
+
+</div>
+
+
+
+</div>
+	<div class='germ'>
+<div data-role='collapsible'>
+<h3>Wählbare Sprachen</h3>
+
+<div>
+<span class=red>WICHTIGE KLARSTELLUNG: Diese App hat ausschließlich das Ziel, das Mitfeiern der auf Latein gefeierten Messe zu unterstützen. Den Autoren ist bewusst, dass die angegebenen Übersetzungen
+nicht immer genau den Messtexten in der Landessprache entsprechen; dies würde erfordern, dass man über alle Textversionen, die von jeder Bischofskonferenz approbiert wurden, in aktueller Form verfügt,
+was einen enormen, nicht leistbaren Arbeitsaufwand bedeuten würde.<br>
+Wir bitten die Nutzer um wohlwollendes Verständnis für die möglichen Abweichungen vor allem in den Fällen, wo nicht Latein als erste Sprache verwendet wird.<br>
+<br>Bemerkung: Eine Sprache, die als wählbar angezeigt wird, kann man erst dann als Erstsprache (Default) wählen, wenn sie vollständig implementiert ist.</span><br><br><span class=red>Latein<br>Spanisch<br>Englisch<br>Portugiesisch<br>Deutsch</span></div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Startseite</h3>
+
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Silentium</span>: Schaltet den Ton des Smartphone/Tablet/... auf Stumm.
+</div>
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Semper fulgens</span>: Verhindert das Verschwinden des Bildschirms solange die App aktiv ist.
+</div>
+<div class=solo_android >
+<img src='../unchecked.png'>&nbsp;<img src='../checked.png'> <span style="color: maroon; font-weight: bold; font-size: 110%;">Extra omnes</span>: Verbirgt die obere Statuszeile des Systems.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Devotionarium & Sacerdotale</span>: Dieser Teil enthält einige Gebete zur Vorbereitung vor und Danksagung nach der Hl. Messe (Devotionarium), dazu ein "Gebetsbüchlein" für Priester, in vier Sprachen (Latein, Spanisch, Englisch und Italienisch).
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Missale</span>: Öffnet das Messbuch, ohne den Inhalt der Registerkarten zu ändern.
+</div>
+
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Calendarium</span>: Es erscheint ein fortlaufender Kalender mit Verweisen auf den "Allgemeinen Römischen Kalender".
+Falls man einen anderen Monat oder ein anderes Jahr gewählt hat, muss man immer einen bestimmten Tag drücken.
+Sobald ein Datum ausgewählt wurde, erscheinen die an diesem Tag wählbaren Messfeiern.
+Wenn mehrere Möglichkeiten zur Wahl stehen, muss man eine aus dem entsprechenden Pop-Up-Menü wählen.
+Wenn man den Button <span class=boton>Fiat</span> drückt, werden die Registerkarten "Tmp", "Lct" und "Snt" entsprechend vorbereitet und es wird die Registerkarte "Ord" geöffnet, die die gewählten Messtexte zeigt.
+
+</div>Falls es Probleme bei der Darstellung dieses Bildschirms gibt, versuchen Sie die Option "Kalendarium/Hilfe/Devotionarium" unter 'Dilectus' (Präferenzen) zu ändern.
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Auxilium</span>: Die vorliegende Seite.
+</div>
+
+<div>
+<span style="color: maroon; font-weight: bold; font-size: 110%;">Dilectus</span>: Zeigt die eingestellten Präferenzen dieser App und ermöglicht deren Änderung.
+</div>
+<div>
+<h3>Präferenzen</h3>
+</div>
+<div>
+Folgende Einstellungen sind wählbar: Schriftgröße der Messtexte und der Rubriken, Anzeigeart der Registerkarten und Buttons, Anzeigeform des Textes der Zweitsprache, Ausmaß der Versetzung des Bildschirms bei Drücken des Aufwärts-/Abwärtspfeils.<br>
+<b>WICHTIG</b>
+<br>Vorsicht bei Auswahl der zweispaltigen Anzeige: Auf schmalen Bildschirmen oder wenn man große Schriftgröße gewählt hat, erscheinen manche Absätze möglicherweise etwas deplaziert.<br>
+Das kann vor allem vorkommen, wenn die Länge des Textes in den zwei Sprachen sehr unterschiedlich ist.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Kopfzeile (Registerkarten-Leiste)</h3>
+
+<div>
+Folgende Darstellungsweisen sind wählbar:<br>
+<br>1. <span style='color:red;'>Ein/Aus</span>: Kopfzeile verschwindet, sobald eine neue Seite geladen wird, aber erscheint wieder, wenn man am oberen Bildrand drückt (an ihrem gewohnten Platz).<br>
+<br>2. <span style='color:red;'>Immer sichtbar</span>.<br>
+<br>3. <span style='color:red;'>Ein/Aus mittels Pfeilsymbol</span>: Kopfzeile bleibt verborgen, es erscheint nur am linken Bildrand oben ein Pfeilsymbol <img src='../derecha2.png' style="width: 1em; height: 1em;">, mit dem man die Kopfzeile anzeigen oder verbergen kann.
+</div>
+<div>
+Jede Registerkarte bleibt in der Position eingestellt, die sie bei ihrem letzten Aufruf gehabt hat.<br>
+Innerhalb der Registerkarte kann man frühere Positionen <img src='../bot_previous.png' style="height: 1em;"> oder spätere Positionen <img src='../bot_next.png' style="height: 1em;"> anzeigen.
+Die bisherigen Einstellungen ('history') jeder Registerkarte werden erst gelöscht, wenn man die Option "Index" im Menü des Stern-Button <img src='../bot_ksokoban.png' style=" height: 1.0em;"> drückt.
+</div>
+<div>
+<span class=pestana>Ord</span> Enthält das Ordinarium (gleichbleibende Teile) der Messe. Üblicherweise erscheinen die einzelnen Teile "kontrahiert", sodass man rasch zu jedem Teil gelangen kann.
+</div>
+<div>
+<span class=pestana>Tmp</span> Enthält die Texte der Messen "de tempore" (im Jahreskreis, Advent, Fastenzeit, Osterzeit).
+</div>
+<div>
+<span class=pestana>Snt</span> Enthält die Texte der Messen der Heiligenfeste und -gedenktage. Von dort gelangt man gegebenenfalls zu den entsprechenden Commune-Texten und zu eigenen Lesungen.
+</div>
+<div>
+<span class=pestana>Com</span> Enthält die Texte der Commune-Messen, der Votivmessen, der Messen für besondere Anliegen und für Verstorbene.
+</div>
+<div>
+<span class=pestana>Lct</span> Lektionar. Vom Hauptmenü gelangt man zu allen Lesungen mit Ausnahme der Eigenlesungen der Heiligen: diese sind über die Messe der betreffenden Heiligen aufrufbar.
+</div>
+<div>
+<span class=pestana>Pf</span> Enthält alle Präfationen.
+</div>
+<div>
+<span class=pestana>PE</span> Enthält alle Eucharistischen Hochgebete.
+</div>
+</div>
+
+<div data-role='collapsible'>
+<h3>Fußzeile (Buttons-Leiste)</h3>
+
+<div>Folgende Darstellungsweisen sind wählbar:<br>
+1. Ein/Aus: Fußzeile verschwindet, sobald eine neue Seite geladen wird, aber erscheint wieder, wenn man am unteren Bildrand drückt (an ihrem gewohnten Platz).<br>
+2. Immer sichtbar.<br>
+3. Ein/Aus mittels Pfeilsymbol: Fußzeile bleibt verborgen, es erscheint nur am rechten Bildrand ein Pfeilsymbol <img src='../izquierda2.png' style="height: 1em;">, mit dem man die Fußzeile anzeigen oder verbergen kann.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-down2.png' style=" height: 1.6em;"></span> Verschiebt den Text nach oben.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../angle-double-up2.png' style=" height: 1.6em;"></span> Verschiebt den Text nach unten.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../asterisk2.png' style="height: 1.6em;"></span> Zeigt ein Untermenü:
+</div>
+<div class=solo_mac style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>Initium</span> Zurück zur Startseite.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&#9632;</span> Löscht die 'history' der Registerkarte und zeigt das übergeordnete Menü (in der Regel: Index).</div>
+<div class=solo_mac style='display: block; margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>calend</span> Geht zum Calendarium (zum Ändern des Datums).</div>
+<div class=solo_mac style='margin-left: 1em;'><br><br><span style='color: white; background-color: maroon; padding: 3pt;'>aux</span> Zeigt den Hilfe-Bildschirm.</div>
+<!--
+<div style='margin-left: 1em;'><span style='color: white; background-color: maroon; padding: 3pt;'>auto</span> Aktiviert/Desaktiviert die <span style='color:red;'>Autoscroll-Option</span>.</div>
+-->
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'> &#9664;&#xFE0E; &#9654;&#xFE0E; </span> Wechselt zwischen Erst- und Zweitsprache.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'><span style=' font-family: Times New Roman; '>ABC</span> &#9664;&#xFE0E; &#9654;&#xFE0E; <span style=' font-family: Arial; '>ABC</span></span> Ändert den Schrifttyp. </div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>nn &#9654;&#xFE0E; NN</span> Erhöht die Schriftgröße. Die angezeigten Größen richten sich nach den Angaben in den "Präferenzen", die linke Größe ist der aktuelle Wert.<br>
+Die Änderung betrifft nur die aktuelle Sitzung, nicht die in den "Präferenzen" angegebenen Werte.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>NN &#9654;&#xFE0E; nn</span> Vermindert die Schriftgröße. Die angezeigten Größen richten sich nach den Angaben in den "Präferenzen", die erstgenannte Größe ist der aktuelle Wert.<br>
+Die Änderung betrifft nur die aktuelle Sitzung, nicht die in den "Präferenzen" angegebenen Werte.</div>
+<div style='margin-left: 1em;'><br><span style='color: white; background-color: maroon; padding: 3pt;'>&nbsp;&nbsp;<img style='height: 1em;' id='bot_copy' src="../copy-icon.png">&nbsp;&nbsp;</span> Aktiviert/Deaktiviert den <span style='color:red;'>Kopier-Modus</span>. Wenn er aktiviert ist, kann der Bildschirm nur mit den Buttons Seite zurück/vorwärts verschoben werden.</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block; height: 2em;'>
+<img src='../chevron-left2.png' style="height: 1.6em;"></span> Geht zur vorangehenden Seite <span style='font-weight: bold; font-size: 110%'>derselben Registerkarte</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../chevron-right2.png' style="height: 1.6em;"></span> Geht zur nächsten Seite <span style='font-weight: bold; font-size: 110%'>derselben Registerkarte</span>.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../bookmark-o2.png' style=" height: 1.6em;"></span> Speichert das aktuelle Bildschirmbild in einem der Speicherplätze ('Memory'), die angezeigt werden. Wenn man sich in der Registerkarte Lektionar befindet, erscheinen 'Memories' mit den Namen der Lesungen.
+</div>
+<div><br><span style='color: white; background: #aa0000; padding: 3pt; display: inline-block;  height: 2em;'>
+<img src='../goto_bookmark2.png' style=" height: 1.6em;"></span> Geht zum gewählten 'Memory'.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Buttons im Text</h3>
+
+
+
+<div><br><span class=botonBueno>&#9654;&#xFE0E;</span> Öffnet in der Regel ein Untermenü.
+</div>
+
+<div><br><span class=botonBueno>...</span> Zeigt/Verbirgt einen Text; in der Regel eine Rubrik oder eine optionale Oration.
+</div>
+
+<div><br><span class=botonBueno>+</span> Expandiert einen Text; in der Regel eine optionale Oration.
+</div>
+
+<div><br><span class=botonBueno>&mdash;</span> Kontrahiert einen Text; in der Regel eine optionale Oration, die zuvor expandiert wurde.
+</div>
+</div>
+
+
+<div data-role='collapsible'>
+<h3>Abschließende Hinweise</h3>
+<div>
+1. Es wird angeraten, die App auf jene Sprache einzustellen (Latein, Spanisch, Englisch, Portugiesisch oder Deutsch), in der die Messe zelebriert wird, da möglicherweise einige Texte nur in dieser Sprache enthalten sind.
+</div>
+<div><br>2. Ebenso regen wir an, in der Hl. Messe ein Memento für die Autoren dieser App einzulegen - vielen Dank! Außerdem bieten wir für das Beten des Breviers die App <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.liturgia.horarum' >Liturgia Horarum</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/liturgia-horarum/id794535058?mt=8' >Liturgia Horarum</a></span> .
+</div>
+<div><br>3. Schließlich sind wir dankbar für die Verwendung und Weiterempfehlung der App <span class=solo_android><a style= 'color: white;' class=botonBueno href='market://details?id=rcr.evangelium' >Evangelium</a></span> <span class=solo_mac><a style= 'color: white;' class=botonBueno href='itms-apps://itunes.apple.com/es/app/evangelium/id765086030?mt=8' >Evangelium</a></span>, die ein Werkzeug zur Verbreitung des Wortes Gottes und eine Hilfe zu dessen Betrachtung darstellt.<br>
+<br>Und vergessen Sie nicht, diese Apps mit <br><br><img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style=" height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" > <img src="../estrella.png" style="  height: 1.6em;" >zu bewerten.<br><br>Vielen Dank!
+</div>
+
+</div>
+
+
+</div>
+
+
+<div data-role='collapsible' >
+<h3><span class="cast">Si algo no funciona bien...</span><span class="engl">If there's something wrong...</span></h3>
+
+<form name=formulario ><input type=hidden name="ajuste" id=ajuste value="1" >
+<div class="ui-field-contain" >
+<p style="color: red;" class="engl" >If you have any problems with this application, please feel free to e-mail us with a description of the problem and we will do our best to help you solve it. Please do not rate the app lowly without first communicating to us any issues. (Be sure to include what device you are using<span class=solo_android>and what version of the Android operating system it has</span>.)</p><p style="color: red;" class="cast" >Si tiene cualquier problema con la aplicación, por favor, contacte con nosotros por email, describiéndonos el problema con el mayor detalle posible, y le intentaremos ayudar a solucionarlo (no se olvide de decirnos el dispositivo y la versión del Sistema Operativo que está utilizando).  Le rogamos que no dé una puntuación baja a la aplicación sin haber intentado comunicarnos los problemas previamente.</p><p style="color: red;" class="cast" >Dirección de contacto: <span class=red>hodie.evangelium@gmail.com</span></p><p style="color: red;" class="engl" >Contact address: <span class=red>hodie.evangelium@gmail.com</span></p></div>
+</form>
+</div>
+
+
+
+</div>
+
+
+</div>
+</body>
+<script>
+		$('.engl , .germ  , .port').css('display','none');
+		$('.cast').css('display','inline');
+
+		$('#ayuda').page();
+		$('#ajuste').val(dime_pref("ajuste",10));
+		$('#ajuste').slider('refresh');
+
+		if (estoymac != 1 ) {
+estoymac = false;
+$('.solo_android').css('display','inline');
+$('.solo_mac').css('display','none');
+} else {
+estoymac = true ;
+$('.solo_android').css('display','none');
+$('.solo_mac').css('display','inline');
+}
+
+
+//window.addEventListener("load",  function () { setTimeout(loaded, ajuste*100); }, false);
+//document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, ajuste*100); }, false);
+</script>
+</html>

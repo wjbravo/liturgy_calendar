@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+<title>TEMPORA</title>
+<link rel="stylesheet" href="misal.css" type="text/css">
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="../iscroll-lite.js"></script> 
+<script type="text/javascript" charset="utf-8" src="../../jquery.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="mis_funciones_misal.js"></script>
+<script> var mipestana='xx' </script>
+</head>
+<body  onload="alCargar(mipestana);" >	
+<script type="text/javascript"> pinta_tabs('../',mipestana); </script>
+<script>
+function probar (elque) {
+document.formulario.action="ordinario/ordinario.html"
+document.formulario.submit()
+}
+</script>
+<div id='contenedor' >
+<div id='scroller'>
+<!-- Todo lo anterior debe estar al comienzo de todos los archivos -->
+<div style='margin-left: 50px;'>
+<form name=formulario method=GET >
+<p>Emulador de preferencias</p>
+
+<p>Tipo de fondo: <select name=fondo>
+<option value=0>Blanco</option>
+<option value=1 selected>Sepia</option>
+</select>
+</p>
+<p>Tipo de fuente: <select name=fuente>
+<option value=1 selected>no operativo</option>
+<option value=2>bbb</option>
+</select>
+</p>
+<p>Tamaño fuente: <select name=tamanotexto>
+
+<option value=20>20</option>
+<option value=18>18</option>
+<option value=16>16</option>
+<option value=14>14</option>
+<option value=12 selected>12</option>
+<option value=10>10</option>
+</select>
+</p>
+<p>Tamaño fuente rúbricas: <select name=tamanorubrica>
+<option value=100>Grande</option>
+<option value=80 selected >Normal</option>
+<option value=60>Pequeño</option>
+</select>
+</p>
+<p>Idioma: <select name=misal_pral>
+<option value=0 selected>Latino</option>
+<option value=1  >Hispano</option>
+</select>
+</p>
+<p>Segundo idioma: <select name=segundoidioma>
+<option value=1 selected>español</option>
+</select>
+</p>
+
+
+<p>Tipo de presentación: <select name=presentaciontexto>
+<option value=0>Sin traducción</option>
+<option value=1>2 columnas</option>
+<option value=2 selected>cambio tocando texto</option>
+<option value=3>cambio mediante botón</option>
+
+</select>
+</p>
+<p>Tipo de rúbricas: <select name=presentacionrubrica>
+<option value=1>Idioma misal</option>
+<option value=2>2º idioma</option>
+<option value=3>Ambas</option>
+<option value=4>Ninguna</option>
+</select>
+</p>
+<p>Respuestas en lecturas: <select name=presentacionrespuestas>
+<option value=1>Idioma misal</option>
+<option value=2>2º idioma</option>
+<option value=3>Ambas (filas)</option>
+<option value=4>Ambas (columnas)</option>
+<option value=5>cambio tocando texto</option>
+</select>
+<p>Pestañas: <select name=presentacionpestanas>
+<option value=0>Siempre vistas</option>
+<option value=1>Emergentes</option>
+
+</select>
+<p>Botones: <select name=presentacionbotones>
+<option value=0>Siempre vistos</option>
+<option value=1>Emergentes</option>
+
+</select>
+</p>
+
+<input type=button value="ordinario" ontouchend='probar("ordinario")'>
+
+</form>
+</div>
+	<!-- Todo lo siguiente debe estar al final de todos los archivos -->
+</div>
+</div>
+<script>pinta_botones('../',mipestana);</script>
+</body>
+</html>

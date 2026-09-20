@@ -1,0 +1,600 @@
+﻿/* Style Sheet for Breviarium
+Author: Bernard
+Updated: 6 Nov 2007
+*/
+body {
+background-image: url('../fondo_libro.png'); 
+padding: 0;
+margin: 0;
+/*
+-webkit-user-select:none;
+*/
+-webkit-text-size-adjust:none;
+
+ }
+
+
+
+
+a.rlnk {text-decoration:none; color: red;}
+a.blnk {text-decoration:none; color: black;}
+a.glnkd {color: green;}
+a.rlnkd {color: red;}
+a.bllnkd {color: blue;}
+
+p {margin-top: 0pt; margin-bottom: 8pt; width: 100%; clear: both;} 
+
+.ind1 {margin-left: 1%}
+.ind2 {margin-left: 1.5%;}
+.ind3 {margin-left: 2%;}
+.ind4 {margin-left: 2.5%;}
+.indhym {margin-left: 2%;}
+
+.ps1i { margin-left: 2em; text-indent: -1.5em; margin-bottom: 0pt;}
+.ps1e { margin-left: 2em; text-indent: -1.5em; margin-bottom: 8pt; }
+.ps2i { margin-left: 2em; text-indent: -0.75em; margin-bottom: 0pt; }
+.ps2e { margin-left: 2em; text-indent: -0.75em; margin-bottom: 8pt; }
+
+.boce		{font-weight: bold; text-align: center; }
+.re		{color: red}
+.bo		{font-weight: bold;}
+.rebo		{color:red; font-weight: bold;}
+.rebo5		{color:red; font-weight: bold; font-size: 150%; }
+.rece		{color: red; text-align: center; }
+.reboce		{color:red; font-weight: bold; text-align: center; }
+.reboce4	{color:red; font-weight: bold; text-align: center; font-size: 125%; }
+.reboce5	{color:red; font-weight: bold; text-align: center; font-size: 150%; }
+
+.renm		{color:red; margin-bottom: 0pt;}
+.recenm		{color:red; text-align: center; margin-bottom: 0pt; }
+.rebonm		{color:red; font-weight: bold; margin-bottom: 0pt; }
+.rebocenm	{color:red; font-weight: bold; text-align: center; margin-bottom: 0pt; }
+
+.blce	{color: blue; text-align: center; }
+.blboce	{color: blue; font-weight: bold; text-align: center; }
+.bilingue {display: block; }
+
+/* Special large hanging indent used in file zto1.html */
+.ztoind { margin-left: 3.5em; text-indent: -3.5em; color:red;} 
+
+hr {}
+hr.thinred {width:85%; border:1px; height: 1px; color: red; background-color: red;}
+
+p {margin-top: 2%; clear: both;}
+h5 {text-align: center; font-weight: bold; color: black; }
+
+/* ******** END ******** */
+
+
+
+ul.ul_normal { text-align: center; 
+margin-bottom: .4em;
+padding: 0;}
+ul.ul_normal li { /* do not change */
+display: inline-block;
+
+width: 11%;
+}
+
+ul.ul_normal li.tab0 {
+text-align: center; /* set to left, right or center */
+margin: 0 0 1em 0; /* set margins as desired */
+font: bold 100% verdana, arial, sans-serif; /* set font as desired */
+ border-bottom: 1px solid #f40000;  /* set border COLOR as desired */
+ list-style-type: none; 
+padding: 3px 10px 3px 10px;
+width: 5%;
+}
+
+.ul_normal ul#tabnav1 , .ul_normal ul#tabnav2 , .ul_normal ul#tabnav3 , .ul_normal ul#tabnav4 , .ul_normal ul#tabnav5 , .ul_normal ul#tabnav6 , .ul_normal ul#tabnav7 , .ul_normal ul#tabnav8 { /* general settings */
+text-align: center; /* set to left, right or center */
+margin: 0 0 0em ; /* set margins as desired */
+font: bold 100% verdana, arial, sans-serif; /* set font as desired */
+border-bottom: 1px solid #aa0000; /* set border COLOR as desired */
+list-style-type: none;
+padding: 0em 0.3em 0.3em 0.6em; /* THIRD number must change with respect to padding-top (X) below */
+height: 1.3em;
+
+}
+
+
+.ul_normal ul#tabnav1 li.tab1, .ul_normal ul#tabnav2 li.tab2, .ul_normal ul#tabnav3 li.tab3, .ul_normal ul#tabnav4 li.tab4, .ul_normal ul#tabnav5 li.tab5, .ul_normal ul#tabnav6 li.tab6, .ul_normal ul#tabnav7 li.tab7, .ul_normal ul#tabnav8 li.tab8 { /* settings for selected tab */
+border-bottom: 1px solid white; /* set border color to page background color */
+background-color: white; /* set background color to match above border color */
+}
+
+
+ 
+.ul_normal ul#tabnav1 li.tab1 , .ul_normal ul#tabnav2 li.tab2 , .ul_normal ul#tabnav3 li.tab3 , .ul_normal ul#tabnav4 li.tab4 , .ul_normal ul#tabnav5 li.tab5 , .ul_normal ul#tabnav6 li.tab6 , .ul_normal ul#tabnav7 li.tab7 , .ul_normal ul#tabnav8 li.tab8 { /* settings for selected tab link */
+background-color: white; /* set selected tab background color as desired */
+color: #aa0000; /* set selected tab link color as desired */
+position: relative;
+top: 1px;
+padding-top: 4px; /* must change with respect to padding (X) above and below */
+}
+
+
+
+ul.ul_normal li , ul.ul_normal li a , ul.ul_normal li a:link , ul.ul_normal li a:visited { /* settings for all tab links */
+padding: 0.3em 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 1px solid white; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: #aa0000; /* set unselected tab background color as desired */
+color: white; /* set unselected tab link color as desired */
+margin-right: 0px; /* set additional spacing between tabs as desired */
+text-decoration: none;
+border-bottom: none;
+height: 1em;
+overflow: hidden;
+}
+
+ul.ul_pestanas li , ul.ul_pestanas li a , ul.ul_pestanas li a:link , ul.ul_pestanas li a:visited { /* settings for all tab links */
+padding: 0.3em 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 0 1px 0 1px solid white; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: transparent; /* set unselected tab background color as desired */
+color: white; /* set unselected tab link color as desired */
+margin-right: 0px; /* set additional spacing between tabs as desired */
+text-decoration: none;
+border-bottom: none;
+line-height: 3em;
+overflow: hidden;
+
+}
+
+
+
+ul.ul_normal li.botonabajo {
+padding: 0.3em 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 0px ; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: transparent; 
+width: 11%;
+overflow: visible;
+}
+
+
+ul#tab_grabar li {
+display: block;
+width: 90%;
+padding: 10px;
+background-color: red;
+
+}
+ul#tab_ira li {
+display: block;
+width: 90%;
+padding: 10px;
+background-color: green;
+
+}
+ul#tab_diamante li {
+display: block;
+width: 90%;
+padding: 10px;
+background-color: maroon;
+color: white;
+height: 1.2em;
+
+}
+
+
+/* end css tabs */
+span.cap {color: #B50000 ;font-weight: bold; font-size: 150%; font-style: normal;}
+ .pueblo {font-weight: bold; }
+ .tomate {color:tomato;}
+h1 {border: 2px solid; width: 90%; padding: 10px; color: #660000; font-size: 130%;font-weight: normal; text-align: center;
+margin-left: auto;
+margin-right: auto;}
+h2 {border: 1px solid; width: 90%; padding: 10px; color: #660000; font-size: 120%;font-weight: normal; margin-left: auto; text-align: center;
+margin-right: auto;}
+h3 {color:#660000; text-align: center;}
+
+h4 {color:#660000;margin-top: 10px;margin-bottom: 2px; margin-bottom: 1em; }
+
+.alindcha {color: #B50000; float: right; font-weight: normal;}
+.alindcha:after { clear: both; }
+.letania { float: right; font-weight: normal;}
+h2 span.botonesnav { float: left;}
+.alindcha + br { clear:both; }
+
+ 
+
+
+div, div .re , hr .re {
+float: left;
+width: 98%;
+display: block;
+
+}
+.latin {
+width: 49%;
+display: block;
+
+}
+ 
+.cast {
+display: block;
+
+width: 49%;
+
+}
+table {
+margin-left: 1%;
+text-align: center;
+}
+table th {
+padding-left: 1%;
+padding-right: 1%;
+}
+
+
+#contenedor {
+	position:absolute; z-index:1;
+	top: 2.1em; bottom: 2.1em; left:0;
+	width:100%;
+	overflow:auto;
+}
+#micontenedor {
+	position:absolute; z-index:1;
+	top: 1%; bottom: 0; left:0;
+	width:100%;
+	overflow:auto;
+}
+
+#scroller {
+	position:absolute; z-index:1;
+	margin-left: 2%;
+	margin-right: 2%;
+	width:96%;
+	padding:0;
+	padding-left: 3px;
+	padding-top: 1em;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-transition-duration:0;
+	-webkit-transform:translate3d(0,0,0);
+}
+#contenedor2 {
+	position:absolute; z-index:1;
+	top: 0; left:0; width: 100%;
+	height: 2.1em; 
+	overflow:auto;
+	font-size: 300%;
+}
+#scroller2 {
+	transform-origin: 0px 0px 0px;
+	position:absolute; top: 0px;
+	z-index:1;
+	width: 100%;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-transition-duration:0;
+	-webkit-transform:translate3d(0,0,0);
+}
+/* ---------------------------------------------------------------------------------------------
+ Aquí meto las especificaciones css para botones
+ --------------------------------------------------------------------------------------------- */
+.boton , .botonlengua {
+ color: #660000; 
+		 font-weight: bold;
+ line-height:150%;
+ height:100%;
+ padding-right:10px;
+ padding-left:10px;
+ display:inline-block;
+ 
+ text-decoration:none;}
+a.boton , a.boton:visited { color:white; /* #660000; */
+ text-decoration:none;}
+img {border:"0"; vertical-align:middle; }
+
+
+
+  p.Areadingfrom, li.Areadingfrom, div.Areadingfrom 	{	margin-top:13.15pt; 	 	 	 	 	line-height:17.5pt; 	page-break-after:avoid; 	 	 	 	 	color:black;}
+  p.ReadingGospelTitle, li.ReadingGospelTitle, div.ReadingGospelTitle 	{	margin-top:17.5pt; 	 	 	 	 	 	line-height:17.5pt; 	 	page-break-after:avoid;  	font-variant:small-caps; 	color:#B50000;}
+ p.Summary, li.Summary, div.Summary 	{	margin-top:8.75pt; 	margin-right:9.0pt; 	 		 	 	line-height:120%; 	 	page-break-after:avoid; 		 	color:#B50000; 		font-style:italic; 	}
+ p.TextofReading, li.TextofReading, div.TextofReading 	{	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	 		 	 	 	 	 	color:black;}
+ p.TextofReading3, li.TextofReading3, div.TextofReading3 	{	 	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	 		 	 	 	 	 	color:black;}
+ p.TextofReading-keepwithnext1, li.TextofReading-keepwithnext1, div.TextofReading-keepwithnext1 	{	 	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black;}
+ p.PsalmAlleluiaTitle, li.PsalmAlleluiaTitle, div.PsalmAlleluiaTitle 	{	margin-top:17.5pt; 	 	margin-bottom:4.35pt; 	 	line-height:17.5pt; 	 	page-break-after:avoid;  		 	 	 	 	 	font-variant:small-caps; 	color:#B50000;}
+ p.Psalmresponse, li.Psalmresponse, div.Psalmresponse 	{	margin-top:8.75pt; 	 	 	 	text-indent:-18.0pt; 	line-height:120%; 	 	page-break-after:avoid; 	 	 	 	color:black;}
+ p.PsalmAlleluiaVerse, li.PsalmAlleluiaVerse, div.PsalmAlleluiaVerse 	{	margin-top:4.5pt; 	 	 	 	 	line-height:120%; 	 		 	 	 	 	 	color:black;}
+ p.TextofReading-keepwithnext1-10, li.TextofReading-keepwithnext1-10, div.TextofReading-keepwithnext1-10 	{ 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.15pt;}
+ p.Rubric, li.Rubric, div.Rubric 	{margin-top:4.5pt; 	 	 	 	 	text-align:justify; 	line-height:120%; 	 		 	 	 	 	 	color:#B50000;}
+ p.PsalmAlleluiaVerse-keepwithnext1, li.PsalmAlleluiaVerse-keepwithnext1, div.PsalmAlleluiaVerse-keepwithnext1 	{	margin-top:4.5pt; 	 	 	 	 	line-height:120%; 	 	page-break-after:avoid; 		 	 	 	 	 	color:black;}
+ p.TextofReading-10, li.TextofReading-10, div.TextofReading-10 	{ 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	 		 	 	 	 	 	color:black; 	letter-spacing:-.15pt;}
+ p.TextofReading-keepwithnext1-20, li.TextofReading-keepwithnext1-20, div.TextofReading-keepwithnext1-20 	{	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.TextofReading-20, li.TextofReading-20, div.TextofReading-20 	{	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+  p.TextofReading3-keepwithnext1, li.TextofReading3-keepwithnext1, div.TextofReading3-keepwithnext1 	{ 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 	 	 	 	color:black;}
+  p.SequenceVerse, li.SequenceVerse, div.SequenceVerse 	{margin-top:4.5pt; 	 	 	 	 	 	line-height:120%; 	 	 	 	 	 	color:black;}
+ p.Rule-SectionSeparator, li.Rule-SectionSeparator, div.Rule-SectionSeparator 	{	 	text-align:justify; 	line-height:120%; 	 		border:none; 		padding:0cm; 		 	 	 	 	color:#B50000;}
+ p.Rule-SectionSeparator-keepwithnext1, li.Rule-SectionSeparator-keepwithnext1, div.Rule-SectionSeparator-keepwithnext1 	{ 	 	text-align:justify; 	page-break-after:avoid; 		 		border:none; 	padding:0cm; 		 	 	 	 	color:#B50000;}
+ p.TextofReading3-10, li.TextofReading3-10, div.TextofReading3-10 	{	 	text-align:justify; 	text-indent:21.0pt; 	 	 		 	 	 	 	 	color:black; 	letter-spacing:-.15pt;}
+ p.TextofReading3-10-keepwithnext1, li.TextofReading3-10-keepwithnext1, div.TextofReading3-10-keepwithnext1 	{		 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.15pt;}
+ p.TextofReading3-20, li.TextofReading3-20, div.TextofReading3-20 	{ 	 	text-align:justify; 	text-indent:21.0pt; 		 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.TextofReading3-20-keepwithnext1, li.TextofReading3-20-keepwithnext1, div.TextofReading3-20-keepwithnext1 	{	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.SequenceVerse-keepwithnext1, li.SequenceVerse-keepwithnext1, div.SequenceVerse-keepwithnext1 	{margin-top:4.5pt; 	 	 	 	 	 	line-height:120%; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black;}
+ p.SEASONOFADVENT, li.SEASONOFADVENT, div.SEASONOFADVENT 	{	 	 	margin-bottom:17.5pt;	color:#B50000; 	font-weight:bold;}
+ p.TheWordoftheLord, li.TheWordoftheLord, div.TheWordoftheLord 	{	margin-top:8.75pt; 	 	 	 	text-indent:21.0pt; 	 		 	 	 	 	 	color:black;}
+ p.Incipit-multiplelines, li.Incipit-multiplelines, div.Incipit-multiplelines 	{	margin-top:8.75pt; 	 	 	 	line-height:17.5pt; 	 	 		 	 	 	 	 	color:black;}
+ p.TheWordoftheLord4, li.TheWordoftheLord4, div.TheWordoftheLord4 	{	margin-top:8.75pt; 	 	 /*		text-indent:-1em each-line; margin-left: 1em; */ 			 	 	 	 	 	color:black;}
+ p.TheWordoftheLord4-keepwithnext1, li.TheWordoftheLord4-keepwithnext1, div.TheWordoftheLord4-keepwithnext1 	{	margin-top:8.75pt; 	 	 	 	text-indent:21.0pt; 	 	 	 	 	color:black;}
+ p.TheWordoftheLord4-10, li.TheWordoftheLord4-10, div.TheWordoftheLord4-10 	{	margin-top:8.75pt; 	 text-indent:21.0pt; 		 		 	 	 	 	 	color:black; }
+ p.TheWordoftheLord4-10-keepwithnext1, li.TheWordoftheLord4-10-keepwithnext1, div.TheWordoftheLord4-10-keepwithnext1 	{		margin-top:8.75pt; 	  	 	color:black; }
+ p.TheWordoftheLord4-20, li.TheWordoftheLord4-20, div.TheWordoftheLord4-20 	{	margin-top:8.75pt; 	 	 text-indent:21.0pt; 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.TheWordoftheLord4-20-keepwithnext1, li.TheWordoftheLord4-20-keepwithnext1, div.TheWordoftheLord4-20-keepwithnext1 	{	margin-top:8.75pt; 	 	 	text-indent:21.0pt;	 	 	color:black; }
+
+ p.Incipit-oneline-20, li.Incipit-oneline-20, div.Incipit-oneline-20 	{	margin-top:8.75pt; 	 	 	 	 	text-align:justify; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.TheWordoftheLord-keepwithnext1, li.TheWordoftheLord-keepwithnext1, div.TheWordoftheLord-keepwithnext1 	{margin-top:8.75pt; 	 	 	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black;}
+ p.TheWordoftheLord-keepwithnext1-20, li.TheWordoftheLord-keepwithnext1-20, div.TheWordoftheLord-keepwithnext1-20 	{ 	margin-top:8.75pt; 	 	 	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.25pt;}
+ p.TheWordoftheLord-keepwithnext1-10, li.TheWordoftheLord-keepwithnext1-10, div.TheWordoftheLord-keepwithnext1-10 	{	margin-top:8.75pt; 	 	 	 	 	text-align:justify; 	text-indent:21.0pt; 	line-height:17.5pt; 	 	page-break-after:avoid; 	 		 	 	 	 	 	color:black; 	letter-spacing:-.15pt;}
+ p.Titolo0, li.Titolo0, div.Titolo0 	{	 	margin-bottom:6.0pt; 	 	 		page-break-after:avoid; 	color:red; 		}
+ p.Sollemnitas, li.Sollemnitas, div.Sollemnitas 	{	 	 	line-height:17.5pt; 	 	page-break-after:avoid; 		 	color:#B50000;}
+ span.Rx 	{	color:#B50000;}
+ span.CfPs241-3 	{color:#B50000;}
+ span.Cross 	{	color:#B50000; font-weight: bold;	 }
+ .red { 	color:#B50000; font-size: 80%;}	
+ .red .boton ,  .red .botonBueno  {font-size: 120%; }
+ .cruzroja { 	color:#B50000; font-size: 100%; font-weight: bold;}	
+ span.Black 	{color:black;}
+ span.Lower-caseBold 	{	font-weight:bold;}
+ span.Italic 	{	font-style:italic;}
+ span.msoIns 	{	text-decoration:underline; color:red;}
+ span.msoDel 	{	text-decoration:line-through; 	color:red;}
+ span.msoChangeProp 	{color:black;}
+ div.Section1 	{page:Section1;}	
+ div.indice { padding-left: 5%; margin-top: 1%; color: red; font-weight: bold; width: 94%;}
+ div.indice a, div.indice a:visited {font-weight: normal; text-decoration: none; color: black; font-style: italic; line-height:150%; }
+div.indice a.boton, div.indice a.boton:visited {color: white; font-style: normal; }
+div.indice a.botonBueno, div.indice a.botonBueno:visited {color: white; font-style: normal; }
+div.indice span {font-weight: normal;}
+ .dia {display: none; padding-top: 2.1em;}
+ .normal {font-weight: normal; color: black; }
+a.enlacepref , a.enlacepref:visited {color: black; text-decoration: none; font-style: italic;}
+ .indiceplegarias{ margin-left: 2em; line-height: 200%; }
+.verde {color: green; }
+
+.final_pagina {margin-top: 20%; margin-bottom: 60%;}
+
+.rubrica {font-size: 80%; margin-top: 1%;}
+.rubrica span.red {font-size: 100%; }
+.consagracion { font-size: 130%; font-weight: bold;} 
+hr {margin-top: 3%; margin-bottom: 3%;}
+ .indicepref , .indicepref.red{ width: 98%; margin-left: 1%; line-height: 150%; font-size: 100%;}
+
+.marc_dcha { width: auto; float: right; text-align: right; margin-right: 1em;}
+.marc_izda { width: auto;float: left; }
+
+.annosecundo , .parcial { display: none; }
+.lectionarium {margin-top: 5%; margin-bottom: 5%; }
+div.separador { margin-top: 1em; margin-bottom: 0; height: 1px;}
+
+.tipo1 { display: block; }
+.tipo2 { display: none; visibility: hidden; }
+.cursiva { font-style: italic; }
+
+.latin , .misal_latin { display: none; }
+.cast , .misal_cast { display: none; }
+.engl , .misal_engl { display: none; }
+.germ , .misal_germ { display: none; }
+.ital , .misal_ital { display: none; }
+.franc , .misal_franc { display: none; }
+.port , .misal_port { display: none; }
+.lengua1 { display: none; }
+.lengua2 { display: none; }
+.titulo_orac { font-size: 110%; color: #B50000; }
+ li { text-overflow:clip; }
+ 
+ .botonBueno {
+
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	padding: .3em 1em .31em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #ffffff;
+	line-height: 1.8;
+	margin-bottom: 1em;
+
+
+background: #aa0002; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #aa0002 0%, #8f0222 44%, #560001 100%); /* FF3.6+ */
+
+
+background: -webkit-linear-gradient(top,  #aa0002 0%,#8f0222 44%,#560001 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #aa0002 0%,#8f0222 44%,#560001 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #aa0002 0%,#8f0222 44%,#560001 100%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #aa0002 0%,#8f0222 44%,#560001 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0002', endColorstr='#560001',GradientType=0 ); /* IE6-9 */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aa0002), color-stop(44%,#8f0222), color-stop(100%,#560001)); /* Chrome,Safari4+ */
+
+
+	-webkit-box-shadow: 3px 3px 2px 0px #777;
+   }
+.botonBueno:hover {
+	text-decoration: none;
+	border-top-color: #7a3232;
+   background: #7a3232;
+}
+.botonBueno:active {
+	position: relative;
+	top: 1px;
+	border-top-color: #5c0b0b;
+   background: #5c0b0b;
+	
+}
+div#cabecera { padding: 0; margin: 0; display: table;}
+		ul.pestanas {
+			display: table-row;
+		    text-align: center;
+		    list-style: none;
+margin: 0;
+		    padding: 0;
+		    line-height: 2em;
+		    height: 2.1em;
+		    
+			font:  100% verdana, arial, sans-serif; 
+		    position: relative;
+			
+			white-space:nowrap;
+			background: transparent;
+			
+		}
+		ul.pestanas li {
+		    border: 1px solid #AAA;
+		    background: #aa0000;
+
+	background: -webkit-gradient(linear, left top, left bottom, from(#aa0000), to(#440000)); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aa0000), color-stop(55%,#990000), color-stop(100%,#440000)); /* Chrome,Safari4+ */
+		    background: -webkit-linear-gradient(top, #aa0000 50%, #440000 100%);
+		    position: relative;
+		    z-index: 0;
+		    border-top-left-radius: 6px;
+		    border-top-right-radius: 6px;
+		    box-shadow: 0 0px 0px rgba(0, 0, 0, .4), inset 0 1px 0 #FFF;
+		    text-shadow: 0 1px #000;
+		    margin: 0 0px;
+		    padding: 6px 0;
+			color: white;
+			display: table-cell; overflow: hidden; text-overflow: hidden;
+		    border-bottom: 2px solid #440000;
+		}
+		ul.pestanas li.tab0 {
+			  color: #ffffff;
+			  text-decoration: none;
+		}
+		ul#tabnav1 li.tab1 , ul#tabnav2 li.tab2 , ul#tabnav3 li.tab3 , ul#tabnav4 li.tab4 , ul#tabnav5 li.tab5 , ul#tabnav6 li.tab6 , ul#tabnav7 li.tab7 , ul#tabnav8 li.tab8 {
+		    background: #ffffff;
+		    color: #aa0000;
+		    z-index: 2;
+		    border-bottom: 2px solid #FFF;
+			text-shadow: 0 0px #000;
+		}
+
+		ul#tabnav1 li.tab1:before , ul#tabnav2 li.tab2:before , ul#tabnav3 li.tab3:before , ul#tabnav4 li.tab4:before , ul#tabnav5 li.tab5:before , ul#tabnav6 li.tab6:before , ul#tabnav7 li.tab7:before , ul#tabnav8 li.tab8:before {
+		    box-shadow: 0px 0px 0 #FFF;
+		}
+		ul#tabnav1 li.tab1:after , ul#tabnav2 li.tab2:after , ul#tabnav3 li.tab3:after , ul#tabnav4 li.tab4:after , ul#tabnav5 li.tab5:after , ul#tabnav6 li.tab6:after , ul#tabnav7 li.tab7:after , ul#tabnav8 li.tab8:after {
+		    box-shadow: -0px 0px 0 #FFF;
+		}
+
+#piedepantalla { display: table; 
+width: 100%; 
+padding-top: .2em; 
+/*
+background: -webkit-linear-gradient(top, #880000 50%, #440000 100%);
+*/
+}
+#piedepantalla   ol { 
+		list-style-type: none; 
+		width: 100%; 
+		display: table-row;
+}
+#piedepantalla   ol   li { 
+
+		display: table-cell; 
+		text-align: center; 
+		height: 2.1em;
+		padding-bottom: 0;
+
+}
+#piedepantalla   ol:after { 
+		content:' '; 
+		display: inline-block; 
+		width: 100%; 
+		height: 0; 
+} 
+#piedepantalla   ol   li:active { 
+opacity: .5;
+} 
+
+.gradienterojo {
+background: #a90329; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.div-botones{
+margin-top: .6em;
+margin-bottom: .6em;
+  display:table;         
+  width:100%;         
+     
+  border-spacing:1px;/*cellspacing:poor IE support for  this*/
+}
+
+.div-botones-row{
+  display:table-row;
+  width:100%;
+  clear:both;
+}
+.div-botones-col{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:25%;      
+  background-color:gainsboro;
+  /*#B1F5B1;*/      
+  color: white;
+  text-align: center;
+  border-right: 0px solid  #B1F5B1;  
+	-webkit-border-radius: .2em;   
+}
+
+.div-botones-col.prefacio{
+  width:16%;         
+}
+.div-botones-col.activo{
+  background-color: gainsboro; /* #B1F5B1;  */
+  color: slateGray;
+}
+.div-botones-col.noactivo{
+  background-color: slateGray;
+  color: white;
+}
+#bot_global .div-botones-col{
+  color: white;
+    background-color: peachpuff;   
+}
+#bot_global .div-botones-col.activo{
+  background-color: peachpuff;   
+  color: maroon;
+}
+#bot_global .div-botones-col.noactivo{
+  background-color: maroon;    
+  color: white;
+}
+.cursores { margin-bottom: 1em; }
+.texto_incluido { 
+background-color: whitesmoke; /*#E0FEE0; */
+padding: 5px; 
+display: none;
+width: 95%;
+border: 1px solid  gainsboro; 
+}
+
+.sugerido div:not(.nosugerido) { color: darkgreen;}
+	
